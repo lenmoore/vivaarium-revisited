@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted, reactive, ref, watch } from 'vue';
-import { getCurrentInstance } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { slides } from '@/views/Intro/slides';
 

@@ -61,7 +61,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/quiz',
         name: 'quiz',
-        redirect: { name: 'quiz.intro ' },
+        redirect: { name: 'quiz.intro' },
         children: [
             {
                 path: 'intro',
