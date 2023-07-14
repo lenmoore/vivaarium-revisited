@@ -4,7 +4,6 @@ import router from './router';
 // import store from './views/Shop/store';
 import { createI18n } from 'vue-i18n';
 import et from './locales/et.json';
-
 const i18n = createI18n({
     locale: 'et',
     fallbackLocale: 'et',
