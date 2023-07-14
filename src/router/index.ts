@@ -72,7 +72,7 @@ const routes: Array<RouteRecordRaw> = [
                     ),
             },
             {
-                path: ':quiz/question/:id',
+                path: ':quiz/question/:step',
                 name: 'question-step',
                 component: () =>
                     import(
