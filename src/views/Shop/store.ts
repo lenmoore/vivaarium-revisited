@@ -2,8 +2,15 @@ import { reactive } from 'vue';
 
 interface Product {
     id: number;
-    name: string;
+    title: string;
     price: number;
+    humanityValues: {
+        fuchsia: number;
+        lime: number;
+        silver: number;
+        turq: number;
+    };
+    image: string;
 }
 
 interface State {
@@ -20,6 +27,7 @@ const state: State = reactive({
 fetch('/products.json')
     .then((response) => response.json())
     .then((data) => {
+        console.log(data);
         state.products = data;
     });
 

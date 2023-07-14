@@ -22,4 +22,8 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.main {
+    margin: 4rem 1rem 1rem;
+}
 </style>
