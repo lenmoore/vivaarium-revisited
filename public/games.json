@@ -1,0 +1,2317 @@
+[
+  {
+    "_id": "63bef96d28a69a85e5bb45cb",
+    "name": "1. Humanity Shop",
+    "game_type": "SHOP",
+    "game_steps": [],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia",
+      "lime",
+      "silver",
+      "turq",
+      "none"
+    ],
+    "pre_capsule": true,
+    "gameId": "game_ktw59abg1n",
+    "createdAt": "2023-01-11T18:01:17.356Z",
+    "updatedAt": "2023-01-11T18:01:17.356Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bef97628a69a85e5bb45d5",
+    "name": "2.3 Olen. Usun",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf1cf528a69a85e5bb4bee",
+        "question_text": "A",
+        "question_options": [
+          {
+            "option_text": "Inimene on planeedi viirus",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Inimene on oma maaga üks",
+            "humanity_values": {
+              "fuchsia": 1,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Inimene on maailma valitseja",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 0,
+              "turq": 2
+            }
+          },
+          {
+            "option_text": "Inimese saatus ei olene planeedist",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_kgt3ls7fyb",
+        "createdAt": "2023-01-11T20:32:53.120Z",
+        "updatedAt": "2023-01-11T20:39:16.821Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1d2e28a69a85e5bb4bff",
+        "question_text": "B",
+        "question_options": [
+          {
+            "option_text": "Suurema eesmärgi nimel võib suhteid rikkuda",
+            "humanity_values": {
+              "fuchsia": 3,
+              "lime": 5,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Oskan leida inimestega ühise keele",
+            "humanity_values": {
+              "fuchsia": 1,
+              "lime": 0,
+              "silver": 5,
+              "turq": 3
+            }
+          },
+          {
+            "option_text": "Tähtis on fakt, mitte emotsioon",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 3,
+              "silver": 0,
+              "turq": 1
+            }
+          },
+          {
+            "option_text": "Oskan inimeste meelt muuta",
+            "humanity_values": {
+              "fuchsia": 3,
+              "lime": 0,
+              "silver": 1,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_l0f1qm27hs",
+        "createdAt": "2023-01-11T20:33:50.382Z",
+        "updatedAt": "2023-01-11T20:39:16.897Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1d6c28a69a85e5bb4c11",
+        "question_text": "C",
+        "question_options": [
+          {
+            "option_text": "Ühiskond vajab rohkem korda, et keskkond ei hävineks",
+            "humanity_values": {
+              "fuchsia": 1,
+              "lime": 5,
+              "silver": 2,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Vaim ei vaja reegleid",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 5,
+              "turq": 3
+            }
+          },
+          {
+            "option_text": "Mulle meeldib rutiin ja kord",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Minu jaoks on kõige olulisem isiklik vabadus",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 1,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_948xz0o0ac",
+        "createdAt": "2023-01-11T20:34:52.184Z",
+        "updatedAt": "2023-01-11T20:39:16.965Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1d9328a69a85e5bb4c23",
+        "question_text": "D",
+        "question_options": [
+          {
+            "option_text": "Suurem osa kunsti on puhas ressursi raiskamine",
+            "humanity_values": {
+              "fuchsia": 3,
+              "lime": 5,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Kunst on minu arust üllaim kõigist tegevustest",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Kunst säilitab traditsioone ja rahu",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 3,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Kunsti naudid siis, kui töö on tehtud",
+            "humanity_values": {
+              "fuchsia": 4,
+              "lime": 2,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_3xwkhwgoss",
+        "createdAt": "2023-01-11T20:35:31.884Z",
+        "updatedAt": "2023-01-11T20:39:17.033Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1dc328a69a85e5bb4c36",
+        "question_text": "E",
+        "question_options": [
+          {
+            "option_text": "Loodus on meie jumal",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 1,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Jumal on kodumaa nägu",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Religioon on hea töövahend inimeste suunamiseks",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 1,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Religioonide aeg on läbi",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 4,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_ijmxptgt8p",
+        "createdAt": "2023-01-11T20:36:19.724Z",
+        "updatedAt": "2023-01-11T20:39:17.106Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1df228a69a85e5bb4c4b",
+        "question_text": "F",
+        "question_options": [
+          {
+            "option_text": "Pere on ülehinnatud",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 0,
+              "turq": 4
+            }
+          },
+          {
+            "option_text": "Minu pere on Maarjamaa",
+            "humanity_values": {
+              "fuchsia": 1,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Pere on ülim eesmärk",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 3,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Traditsiooniline pere on igand",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 3,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_06pjacxfcp",
+        "createdAt": "2023-01-11T20:37:06.955Z",
+        "updatedAt": "2023-01-11T20:39:17.163Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1e4028a69a85e5bb4c61",
+        "question_text": "G",
+        "question_options": [
+          {
+            "option_text": "Eesmärk on otsida tasakaalu keskkonnaga",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 2,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Eesmärk on kulgeda iseenda parimas jõesängis",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 5,
+              "turq": 1
+            }
+          },
+          {
+            "option_text": "Ülesanne on jätkata sugu",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 3,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Eesmärk on pidevalt areneda koos tehnoloogiaga",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 1,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_k71jqyt7eq",
+        "createdAt": "2023-01-11T20:38:24.202Z",
+        "updatedAt": "2023-01-11T20:39:17.232Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1e7528a69a85e5bb4c77",
+        "question_text": "H",
+        "question_options": [
+          {
+            "option_text": "Tulevik on tume",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 1,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Olevik on tähtsaim",
+            "humanity_values": {
+              "fuchsia": 4,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Minevik on tähtsaim",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 4,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Tulevik on tähtsaim",
+            "humanity_values": {
+              "fuchsia": 2,
+              "lime": 3,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_t3dgehfqom",
+        "createdAt": "2023-01-11T20:39:17.293Z",
+        "updatedAt": "2023-01-11T20:39:17.293Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia",
+      "lime",
+      "silver",
+      "turq",
+      "none"
+    ],
+    "pre_capsule": true,
+    "gameId": "game_iwq88501yy",
+    "createdAt": "2023-01-11T18:01:26.909Z",
+    "updatedAt": "2023-01-11T20:39:17.358Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bef98d28a69a85e5bb45e0",
+    "name": "2.4 Jah/ei",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf1fae28a69a85e5bb4ce6",
+        "question_text": "Lastetutele täiskasvanutele peaks alates 30ndast eluaastast kehtestama maksu.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 3,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 2,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_z1ge9u5kuk",
+        "createdAt": "2023-01-11T20:44:30.695Z",
+        "updatedAt": "2023-01-11T20:46:55.596Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1fc328a69a85e5bb4cf7",
+        "question_text": "Inimkond kolib varem või hiljem täielikult virtuaalreaalsusesse.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 1,
+              "silver": 0,
+              "turq": 5
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 4,
+              "lime": 4,
+              "silver": 5,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_4vl8rqcyil",
+        "createdAt": "2023-01-11T20:44:51.675Z",
+        "updatedAt": "2023-01-11T20:46:55.663Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1fd928a69a85e5bb4d08",
+        "question_text": "Eesti keele kaitsmiseks pole ükski meede üleliigne.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 4,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 1,
+              "lime": 5,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_2nak0j1fx6",
+        "createdAt": "2023-01-11T20:45:13.814Z",
+        "updatedAt": "2023-01-11T20:46:55.742Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf1ff128a69a85e5bb4d1a",
+        "question_text": "Inimkonna tulevik saab siin planeedil jätkuda vaid kapitalismist loobudes.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 2,
+              "lime": 5,
+              "silver": 3,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 3,
+              "lime": 0,
+              "silver": 2,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_aueskokeym",
+        "createdAt": "2023-01-11T20:45:37.751Z",
+        "updatedAt": "2023-01-11T20:46:55.812Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf200b28a69a85e5bb4d2d",
+        "question_text": "Tuleviku inimene ei vaja hakkamasaamiseks kogukonda.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 1,
+              "silver": 0,
+              "turq": 5
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 4,
+              "silver": 5,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_mt5ioi6sij",
+        "createdAt": "2023-01-11T20:46:03.439Z",
+        "updatedAt": "2023-01-11T20:46:55.880Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf201c28a69a85e5bb4d41",
+        "question_text": "Edukas on vaid selline ühiskond, kus inimesed täidavad oma traditsioonilisi soorolle.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 2,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 3,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_knu1p5ai80",
+        "createdAt": "2023-01-11T20:46:20.966Z",
+        "updatedAt": "2023-01-11T20:46:55.933Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf202f28a69a85e5bb4d57",
+        "question_text": "Rahvariie ning laulu- ja tantsupidu kuuluvad vaid eestlastele.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 4,
+              "lime": 0,
+              "silver": 5,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 1,
+              "lime": 5,
+              "silver": 0,
+              "turq": 5
+            }
+          }
+        ],
+        "stepId": "step_n3h5wppx3e",
+        "createdAt": "2023-01-11T20:46:39.514Z",
+        "updatedAt": "2023-01-11T20:46:55.994Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bf204028a69a85e5bb4d6d",
+        "question_text": "Rahvaarvu vähenemine on tõhusaim viis keskkonnaprobleemide seljatamiseks.",
+        "question_options": [
+          {
+            "option_text": "nõustun",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 5,
+              "silver": 1,
+              "turq": 4
+            }
+          },
+          {
+            "option_text": "ei nõustu",
+            "humanity_values": {
+              "fuchsia": 5,
+              "lime": 0,
+              "silver": 4,
+              "turq": 1
+            }
+          }
+        ],
+        "stepId": "step_6gccd6g0ya",
+        "createdAt": "2023-01-11T20:46:56.063Z",
+        "updatedAt": "2023-01-11T20:46:56.063Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia",
+      "lime",
+      "silver",
+      "turq",
+      "none"
+    ],
+    "pre_capsule": true,
+    "gameId": "game_cko3ze0owo",
+    "createdAt": "2023-01-11T18:01:49.958Z",
+    "updatedAt": "2023-01-11T20:46:56.119Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf20cd28a69a85e5bb4d80",
+    "name": "3.3 Elu kapslis - Violett",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63c714940b3a453498f6358e",
+        "question_text": "Ma olen",
+        "question_options": [
+          {
+            "option_text": "mees",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "naine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ma ei soovi, et mind sooliselt määratletakse",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_10j33tia3u",
+        "createdAt": "2023-01-17T21:35:16.311Z",
+        "updatedAt": "2023-01-17T21:36:45.629Z",
+        "__v": 0
+      },
+      {
+        "_id": "63c714a50b3a453498f6359c",
+        "question_text": "Minu vanus on",
+        "question_options": [
+          {
+            "option_text": "0-17",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "18-23",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "24-...",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_r43cnpfxeo",
+        "createdAt": "2023-01-17T21:35:33.849Z",
+        "updatedAt": "2023-01-17T21:36:45.688Z",
+        "__v": 0
+      },
+      {
+        "_id": "63c714b70b3a453498f635ab",
+        "question_text": "Ma olen valmis panustama ",
+        "question_options": [
+          {
+            "option_text": "füüsiliselt",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ideeliselt",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "mitte kuidagi, oleksin vaatleja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_0tjg29xl3s",
+        "createdAt": "2023-01-17T21:35:51.079Z",
+        "updatedAt": "2023-01-17T21:36:45.748Z",
+        "__v": 0
+      },
+      {
+        "_id": "63c714cc0b3a453498f635bb",
+        "question_text": "Millise rutiiniga algab meie päev?",
+        "question_options": [
+          {
+            "option_text": "ühisvõimlemine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ühispalvus",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "päevaplaani ülevaatamine ",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "viis fakti maailma ajaloost",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_jgvjnc9x6n",
+        "createdAt": "2023-01-17T21:36:12.317Z",
+        "updatedAt": "2023-01-17T21:36:45.806Z",
+        "__v": 0
+      },
+      {
+        "_id": "63c714de0b3a453498f635cc",
+        "question_text": "Kas soovid lapsi?",
+        "question_options": [
+          {
+            "option_text": "Jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Mul on juba piisavalt lapsi",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_pvw4eo3uee",
+        "createdAt": "2023-01-17T21:36:30.348Z",
+        "updatedAt": "2023-01-17T21:36:45.856Z",
+        "__v": 0
+      },
+      {
+        "_id": "63c714ed0b3a453498f635df",
+        "question_text": "Geenide jätkusuutlikkuse hoidmiseks loobume",
+        "question_options": [
+          {
+            "option_text": "suitsetamisest",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "alkoholist",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "GMOst",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_adqeazvscj",
+        "createdAt": "2023-01-17T21:36:45.910Z",
+        "updatedAt": "2023-01-17T21:36:45.910Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_vhqbhpq1wq",
+    "createdAt": "2023-01-11T20:49:17.619Z",
+    "updatedAt": "2023-01-17T21:36:45.967Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf20dd28a69a85e5bb4d88",
+    "name": "3.3 Elu kapslis - Laim",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bff44528a69a85e5bb654d",
+        "question_text": "Mis on tähtsam?",
+        "question_options": [
+          {
+            "option_text": "sinu heaolu",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "planeedi heaolu",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_7oa7mmc9ph",
+        "createdAt": "2023-01-12T11:51:33.325Z",
+        "updatedAt": "2023-01-12T11:52:40.339Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff44e28a69a85e5bb655d",
+        "question_text": "Kas oled taimetoitlane?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_efrr356f0v",
+        "createdAt": "2023-01-12T11:51:42.551Z",
+        "updatedAt": "2023-01-12T11:52:40.364Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff45a28a69a85e5bb6574",
+        "question_text": "Mitu korda nädalas sa end pesta tahad?",
+        "question_options": [
+          {
+            "option_text": "1",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "3",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "7",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "üldse mitte",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_qhs39hsy3k",
+        "createdAt": "2023-01-12T11:51:54.940Z",
+        "updatedAt": "2023-01-12T11:52:40.386Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff46a28a69a85e5bb6587",
+        "question_text": "Mitu last peaks inimesel olema?",
+        "question_options": [
+          {
+            "option_text": "0",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "1",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "2",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "rohkem kui 2",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_w87wpip5ae",
+        "createdAt": "2023-01-12T11:52:10.542Z",
+        "updatedAt": "2023-01-12T11:52:40.418Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff47b28a69a85e5bb659b",
+        "question_text": "Mitu tundi ööpäevas kasutame tehisvalgust?",
+        "question_options": [
+          {
+            "option_text": "8h",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "4h",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "2h",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "0h",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_375q8b18v0",
+        "createdAt": "2023-01-12T11:52:27.185Z",
+        "updatedAt": "2023-01-12T11:52:40.442Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff48828a69a85e5bb65af",
+        "question_text": "Eelistad",
+        "question_options": [
+          {
+            "option_text": "fossiilkütust",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "taastuvenergiat",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_aa88ujnyds",
+        "createdAt": "2023-01-12T11:52:40.462Z",
+        "updatedAt": "2023-01-12T11:52:40.462Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "lime"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_0sbvksmii2",
+    "createdAt": "2023-01-11T20:49:33.796Z",
+    "updatedAt": "2023-01-12T11:52:40.482Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf20eb28a69a85e5bb4d91",
+    "name": "3.3 Elu kapslis - Türkiis",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bff59628a69a85e5bb675c",
+        "question_text": "Sinu panus kapslisse:",
+        "question_options": [
+          {
+            "option_text": "looja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "liikuja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "teostaja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "hoidja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_385it8obh4",
+        "createdAt": "2023-01-12T11:57:10.333Z",
+        "updatedAt": "2023-01-12T11:58:18.701Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff5a228a69a85e5bb6780",
+        "question_text": "Kuidas ennast määratled? ",
+        "question_options": [
+          {
+            "option_text": "mees",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "naine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "nemad",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_8kgnqjo781",
+        "createdAt": "2023-01-12T11:57:22.855Z",
+        "updatedAt": "2023-01-12T11:58:18.724Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff5b128a69a85e5bb6791",
+        "question_text": "Kumb on olulisem?",
+        "question_options": [
+          {
+            "option_text": "eneseteostus",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "perekond",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "üks ei välista teist",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_8dvgdhuju9",
+        "createdAt": "2023-01-12T11:57:37.909Z",
+        "updatedAt": "2023-01-12T11:58:18.748Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff5c228a69a85e5bb67a9",
+        "question_text": "Sõltuvused pärsivad loomet ja hoiavad meid inimestena ja loojatena tagasi, millisest mürgist me kollektiivselt loobume?",
+        "question_options": [
+          {
+            "option_text": "alkohol",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "suitsetamine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "suhkur",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_btl1oiat43",
+        "createdAt": "2023-01-12T11:57:54.099Z",
+        "updatedAt": "2023-01-12T11:58:18.769Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff5da28a69a85e5bb67bc",
+        "question_text": "Rituaalsed ühistegevused kapslis",
+        "question_options": [
+          {
+            "option_text": "Arenguvestlus korra kuus",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Tantsupidu korra nädalas",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Jooga ja meditatsioon igal hommikul",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Vestlusring ja päeva kokkuvõte igal õhtul",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_8ak2ra8u35",
+        "createdAt": "2023-01-12T11:58:18.791Z",
+        "updatedAt": "2023-01-12T11:58:18.791Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "turq"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_vlf55ye1qn",
+    "createdAt": "2023-01-11T20:49:47.067Z",
+    "updatedAt": "2023-01-12T11:58:18.812Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf20f728a69a85e5bb4d99",
+    "name": "3.3 Elu kapslis - Hõbevalge",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bff49628a69a85e5bb65e3",
+        "question_text": "Riigikeeleks olgu…",
+        "question_options": [
+          {
+            "option_text": "eesti keel",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "vähemalt kolm erinevat keelt",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_2lcuvorpuw",
+        "createdAt": "2023-01-12T11:52:54.699Z",
+        "updatedAt": "2023-01-12T11:53:55.517Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff4a228a69a85e5bb65f3",
+        "question_text": "Kas Eesti kooliharidus peab olema eestikeelne?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_6o5nt9bita",
+        "createdAt": "2023-01-12T11:53:06.521Z",
+        "updatedAt": "2023-01-12T11:53:55.537Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff4ae28a69a85e5bb660a",
+        "question_text": "Kas Eesti peaks olema… ",
+        "question_options": [
+          {
+            "option_text": "iseseisev",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "osa mingist suuremast riiklusest",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_qb2rpwpgtf",
+        "createdAt": "2023-01-12T11:53:18.848Z",
+        "updatedAt": "2023-01-12T11:53:55.558Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff4ba28a69a85e5bb6628",
+        "question_text": "Kas rahvuskultuur on sulle tähtis?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_ws2amv3a1i",
+        "createdAt": "2023-01-12T11:53:30.068Z",
+        "updatedAt": "2023-01-12T11:53:55.579Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff4c628a69a85e5bb663c",
+        "question_text": "Kas igale eestlasele peab kuuluma killuke Eestimaast?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_03wdfq7gxe",
+        "createdAt": "2023-01-12T11:53:42.712Z",
+        "updatedAt": "2023-01-12T11:53:55.601Z",
+        "__v": 0
+      },
+      {
+        "_id": "63bff4d328a69a85e5bb6656",
+        "question_text": "Kui Eestit rünnatakse,…",
+        "question_options": [
+          {
+            "option_text": "oled valmis riiki kaitsma",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "otsid võimalust Eestist lahkumiseks",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_ftf6ew991l",
+        "createdAt": "2023-01-12T11:53:55.624Z",
+        "updatedAt": "2023-01-12T11:53:55.624Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "silver"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_6dxhbn6taj",
+    "createdAt": "2023-01-11T20:49:59.101Z",
+    "updatedAt": "2023-01-12T11:53:55.647Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf213828a69a85e5bb4da2",
+    "name": "3.8 I maailmavaateline hääletus - Violett",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf214128a69a85e5bb4da8",
+        "question_text": "HÄÄLETUS: Seome inimesele eraldatava ressursihulga tema laste hulgaga. ",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_p8g13ldxuw",
+        "createdAt": "2023-01-11T20:51:13.903Z",
+        "updatedAt": "2023-01-11T20:51:13.903Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_4kzopmeprj",
+    "createdAt": "2023-01-11T20:51:04.503Z",
+    "updatedAt": "2023-01-11T20:51:13.962Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf215928a69a85e5bb4db7",
+    "name": "3.8 I maailmavaateline hääletus - Laim",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf215f28a69a85e5bb4dbd",
+        "question_text": "Kas kehtestame lastemaksu (mida rohkem, seda enam maksad)?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_e7qkj5smwx",
+        "createdAt": "2023-01-11T20:51:43.930Z",
+        "updatedAt": "2023-01-11T20:51:43.930Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "lime"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_b66gx7cqlt",
+    "createdAt": "2023-01-11T20:51:37.269Z",
+    "updatedAt": "2023-01-11T20:51:43.988Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf217428a69a85e5bb4dcb",
+    "name": "3.8 I maailmavaateline hääletus - Türkiis",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf21a628a69a85e5bb4de6",
+        "question_text": "HÄÄLETUS: Lapsi saadakse vaid kunstliku viljastamisega?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_j4cmigaz0s",
+        "createdAt": "2023-01-11T20:52:54.126Z",
+        "updatedAt": "2023-01-11T20:52:54.126Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "turq"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_egxphaf30k",
+    "createdAt": "2023-01-11T20:52:04.561Z",
+    "updatedAt": "2023-01-11T20:52:54.179Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf21bb28a69a85e5bb4df4",
+    "name": "3.8 I maailmavaateline hääletus - Hõbevalge",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf21cb28a69a85e5bb4dfa",
+        "question_text": "HÄÄLETUS: Kinnisvara omamine on Eestis võimalik vaid vähemalt viiendat põlve eesti rahvusest ja kehtiva eesti kodakondsusega inimestele",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_8eug6d9kro",
+        "createdAt": "2023-01-11T20:53:31.757Z",
+        "updatedAt": "2023-01-11T20:53:31.757Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "silver"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_tlu425rf3o",
+    "createdAt": "2023-01-11T20:53:15.100Z",
+    "updatedAt": "2023-01-11T20:53:31.826Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf21f128a69a85e5bb4e09",
+    "name": "3.11 radikaalne/\"süüdi\" kõne - Violett",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf220128a69a85e5bb4e0f",
+        "question_text": "HÄÄLETUS: Vallalised inimesed kaotavad hääletusõiguse?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_nh2wbenqf4",
+        "createdAt": "2023-01-11T20:54:25.115Z",
+        "updatedAt": "2023-01-11T20:54:25.115Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_dfoit5wiup",
+    "createdAt": "2023-01-11T20:54:09.774Z",
+    "updatedAt": "2023-01-11T20:54:25.170Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf221028a69a85e5bb4e1e",
+    "name": "3.11 radikaalne/\"süüdi\" kõne - Laim",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf221d28a69a85e5bb4e24",
+        "question_text": "HÄÄLETUS: Inimesed lähevad 65-aastaseks saades vabasurma?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_o7zmr31cpx",
+        "createdAt": "2023-01-11T20:54:53.056Z",
+        "updatedAt": "2023-01-11T20:54:53.056Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "lime"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_qua02chwy3",
+    "createdAt": "2023-01-11T20:54:40.728Z",
+    "updatedAt": "2023-01-11T20:54:53.108Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf224228a69a85e5bb4e32",
+    "name": "3.11 radikaalne/\"süüdi\" kõne - Türkiis",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf225728a69a85e5bb4e3e",
+        "question_text": "HÄÄLETUS: Hakkame arendama VIVAGY energiageneraatorit, mis toitub orgaanilisest materjalist?",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_w470yrzyrm",
+        "createdAt": "2023-01-11T20:55:51.004Z",
+        "updatedAt": "2023-01-11T20:55:51.004Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "turq"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_25yebpdap7",
+    "createdAt": "2023-01-11T20:55:30.586Z",
+    "updatedAt": "2023-01-11T20:55:51.060Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf226528a69a85e5bb4e4c",
+    "name": "3.11 radikaalne/\"süüdi\" kõne - Hõbevalge",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf226f28a69a85e5bb4e52",
+        "question_text": "HÄÄLETUS: Eestist väljarändamine on ühesuunaline, tagasiteed ei ole.",
+        "question_options": [
+          {
+            "option_text": "jah",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "ei",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_zl8h6dnmvf",
+        "createdAt": "2023-01-11T20:56:15.885Z",
+        "updatedAt": "2023-01-11T20:56:15.885Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "silver"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_brhnk3xfta",
+    "createdAt": "2023-01-11T20:56:05.964Z",
+    "updatedAt": "2023-01-11T20:56:15.940Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf22a928a69a85e5bb4e77",
+    "name": "3.12 - Agendi saatus - Violett",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf22c328a69a85e5bb4e7d",
+        "question_text": "Milline karistus määrata vastutöötajale?",
+        "question_options": [
+          {
+            "option_text": "Hääleõiguse äravõtmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Ühiskondlikult kasulik töö",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Väljaheitmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Hukkamine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_xebvetd7zo",
+        "createdAt": "2023-01-11T20:57:39.394Z",
+        "updatedAt": "2023-01-11T20:57:39.394Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_mh1mgvdo3h",
+    "createdAt": "2023-01-11T20:57:13.460Z",
+    "updatedAt": "2023-01-11T20:57:39.465Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf22d428a69a85e5bb4e8b",
+    "name": "3.12 - Agendi saatus - Laim",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf22e728a69a85e5bb4e91",
+        "question_text": "Milline karistus määrata vastutöötajale?",
+        "question_options": [
+          {
+            "option_text": "Hääleõiguse äravõtmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Ühiskondlikult kasulik töö",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Väljaheitmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Hukkamine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_ybulp3fxh8",
+        "createdAt": "2023-01-11T20:58:15.108Z",
+        "updatedAt": "2023-01-11T20:58:15.108Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "lime"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_1uripet93m",
+    "createdAt": "2023-01-11T20:57:56.091Z",
+    "updatedAt": "2023-01-11T20:58:15.180Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf231a28a69a85e5bb4ea0",
+    "name": "3.12 - Agendi saatus - Türkiis",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf232a28a69a85e5bb4ea6",
+        "question_text": "Milline karistus määrata vastutöötajale?",
+        "question_options": [
+          {
+            "option_text": "Hääleõiguse äravõtmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Ühiskondlikult kasulik töö",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Väljaheitmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Hukkamine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_qvrttng5ib",
+        "createdAt": "2023-01-11T20:59:22.380Z",
+        "updatedAt": "2023-01-11T20:59:22.380Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "turq"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_m2e3k280cj",
+    "createdAt": "2023-01-11T20:59:06.720Z",
+    "updatedAt": "2023-01-11T20:59:22.429Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf233828a69a85e5bb4eb5",
+    "name": "3.12 - Agendi saatus - Hõbevalge",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf234a28a69a85e5bb4ebb",
+        "question_text": "Milline karistus määrata vastutöötajale?",
+        "question_options": [
+          {
+            "option_text": "Hääleõiguse äravõtmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Ühiskondlikult kasulik töö",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Väljaheitmine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "Hukkamine",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_bg7q5w1z5y",
+        "createdAt": "2023-01-11T20:59:54.735Z",
+        "updatedAt": "2023-01-11T20:59:54.735Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "silver"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_rjdj1ynci9",
+    "createdAt": "2023-01-11T20:59:36.509Z",
+    "updatedAt": "2023-01-11T20:59:54.791Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf237928a69a85e5bb4ec9",
+    "name": "3.16 - Kapteni kukutamine - Violett",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63c0097728a69a85e5bb8109",
+        "question_text": "Mida teed?",
+        "question_options": [
+          {
+            "option_text": "kukutad oma kapteni ja võtad hõbevalged oma kapslisse",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "jääd oma kapteni selja taha ja kuulutad ülejäänud kapslitele sõja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_064t6nwq3k",
+        "createdAt": "2023-01-12T13:21:59.372Z",
+        "updatedAt": "2023-01-12T13:21:59.372Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_hr3osatqho",
+    "createdAt": "2023-01-11T21:00:41.462Z",
+    "updatedAt": "2023-01-12T13:21:59.412Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf238628a69a85e5bb4ed1",
+    "name": "3.16 - Kapteni kukutamine - Laim",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63c009b428a69a85e5bb8150",
+        "question_text": "Mida teed?",
+        "question_options": [
+          {
+            "option_text": "kukutad oma kapteni ja võtad hõbevalged oma kapslisse",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "jääd oma kapteni selja taha ja kuulutad ülejäänud kapslitele sõja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_i94y4kgw0m",
+        "createdAt": "2023-01-12T13:23:00.576Z",
+        "updatedAt": "2023-01-12T13:23:00.576Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "lime"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_pzcrdaeu7c",
+    "createdAt": "2023-01-11T21:00:54.648Z",
+    "updatedAt": "2023-01-12T13:23:00.605Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf239328a69a85e5bb4ed9",
+    "name": "3.16 - Kapteni kukutamine - Türkiis",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63c0094628a69a85e5bb80cf",
+        "question_text": "Mida teed?",
+        "question_options": [
+          {
+            "option_text": "kukutad oma kapteni ja võtad hõbevalged oma kapslisse",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": "jääd oma kapteni selja taha ja kuulutad ülejäänud kapslitele sõja",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_viskp51dki",
+        "createdAt": "2023-01-12T13:21:10.173Z",
+        "updatedAt": "2023-01-12T13:21:10.173Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "turq"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_5mu42ox9gg",
+    "createdAt": "2023-01-11T21:01:07.669Z",
+    "updatedAt": "2023-01-12T13:21:10.211Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf23a228a69a85e5bb4ee1",
+    "name": "3.16 - Kapteni kukutamine - Hõbevalge",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63c5c430e491c21fbcd4d1ea",
+        "question_text": "Mida teed?",
+        "question_options": [
+          {
+            "option_text": "kukutad oma kapteni ja assimileerud kapslisse, mis sind vastu võtab",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          },
+          {
+            "option_text": " jääd oma kapteni selja taha ja asud teisi kapsleid vallutama",
+            "humanity_values": {
+              "fuchsia": 0,
+              "lime": 0,
+              "silver": 0,
+              "turq": 0
+            }
+          }
+        ],
+        "stepId": "step_w9i5qysynh",
+        "createdAt": "2023-01-16T21:40:00.576Z",
+        "updatedAt": "2023-01-16T21:40:00.576Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "silver"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_w7azpns63e",
+    "createdAt": "2023-01-11T21:01:22.774Z",
+    "updatedAt": "2023-01-16T21:40:00.695Z",
+    "__v": 0
+  }
+]

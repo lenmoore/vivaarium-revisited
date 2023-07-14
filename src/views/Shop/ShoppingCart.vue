@@ -12,7 +12,7 @@
         <div v-if="cart.length === 0">Your cart is empty.</div>
         <div v-else>
             Total Items: {{ cart.length }}
-            <button @click="submitCart">Submit Cart</button>
+            <button @click="submit">Submit Cart</button>
         </div>
     </div>
 </template>
@@ -20,16 +20,19 @@
 <script setup>
 import { computed } from 'vue';
 import { useStore } from './store';
+import { useRoute, useRouter } from 'vue-router';
 
 const store = useStore();
+const router = useRouter();
 
 const cart = computed(() => store.state.cart);
 
 const removeFromCart = (item) => {
-    store.addToCart(item);
+    store.removeFromCart(item);
 };
 
-const submitCart = () => {
-    store.submitCart();
-};
+async function submit() {
+    await store.submitCart();
+    await router.push({ name: 'quiz.intro' });
+}
 </script>

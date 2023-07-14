@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div>
         <h1>{{ $t('Humanity shop') }}</h1>
         <RouterLink :to="{ name: 'cart' }">Cart</RouterLink>
         <ul class="product-list">
