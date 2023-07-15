@@ -76,10 +76,24 @@ function back() {
         params: { quiz: quizNumber, step: parseInt(stepNumber) - 1 },
     });
 }
-function forward() {
-    router.push({
-        name: route.name,
-        params: { quiz: quizNumber, step: parseInt(stepNumber) + 1 },
-    });
+
+async function forward() {
+    console.log(parseInt(stepNumber) < quizSteps.length - 1);
+    console.log(stepNumber, quizSteps.length);
+    if (parseInt(stepNumber) < quizSteps.length - 1) {
+        console.log('if');
+        await router.push({
+            name: route.name,
+            params: { quiz: quizNumber, step: parseInt(stepNumber) + 1 },
+        });
+    } else {
+        console.log('else');
+        await router.push({
+            name: 'quiz-done',
+            query: {
+                quiz: quizNumber,
+            },
+        });
+    }
 }
 </script>
