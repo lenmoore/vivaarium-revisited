@@ -42,7 +42,7 @@ const addToCart = (product: Product) => {
 
     state.cart.push(product);
     console.log(state.cart);
-    localStore.setItem('items', state.cart.length);
+    localStore.setItem('items', state.cart);
 };
 
 const removeFromCart = (product: Product) => {
@@ -50,7 +50,7 @@ const removeFromCart = (product: Product) => {
     if (index !== -1) {
         state.cart.splice(index, 1);
     }
-    localStore.setItem('items', state.cart.length);
+    localStore.setItem('items', state.cart);
 };
 
 function submitCart() {
