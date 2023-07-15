@@ -1,4 +1,7 @@
 import { reactive } from 'vue';
+import { LocalStore } from '../../store/local-store';
+
+const localStore = new LocalStore('cart');
 
 interface Product {
     id: number;
@@ -39,6 +42,7 @@ const addToCart = (product: Product) => {
 
     state.cart.push(product);
     console.log(state.cart);
+    localStore.setItem('items', state.cart.length);
 };
 
 const removeFromCart = (product: Product) => {
@@ -46,12 +50,13 @@ const removeFromCart = (product: Product) => {
     if (index !== -1) {
         state.cart.splice(index, 1);
     }
+    localStore.setItem('items', state.cart.length);
 };
 
-const submitCart = () => {
-    // Implement your logic for saving/submitting the cart
+function submitCart() {
     console.log('Cart submitted:', state.cart);
-};
+    localStore.setItem('submitted', state.cart);
+}
 
 export const useStore = () => {
     return {

@@ -2,6 +2,7 @@
 import { onMounted, reactive, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { slides } from '@/views/Intro/slides';
+import { LocalStore } from '@/store/local-store';
 
 const router = useRouter();
 const route = useRoute();
@@ -9,6 +10,7 @@ const route = useRoute();
 let slideId = parseInt(route.params.id);
 let htmlContent = reactive(slides[0].html);
 let isLast = reactive(slides[0].isLast);
+const localStore = new LocalStore('intro_slide');
 watch(
     () => route.params.id,
     () => {
@@ -16,13 +18,18 @@ watch(
         const slide = slides.find((slide) => slide.id === slideId);
         htmlContent = ref(slide.html);
         isLast = slide.isLast || false;
+
+        localStore.setItem(`${slideId}_viewed`, 1);
     }
 );
 onMounted(async () => {
     slideId = parseInt(route.params.id);
+
+    localStore.setItem(`${slideId}_viewed`, 1);
     const slide = slides.find((slide) => slide.id === slideId);
     htmlContent = slide?.html;
 });
+
 function nextSlide() {
     if (isLast) {
         router.push({ name: 'shop' });
