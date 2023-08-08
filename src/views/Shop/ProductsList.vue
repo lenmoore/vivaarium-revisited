@@ -7,7 +7,15 @@
                 <img width="200" :src="product.image" alt="" />
                 <div class="title">
                     <span> {{ product.title }} - ${{ product.price }} </span>
-                    <button @click="addToCart(product)">Add to Cart</button>
+                    <div v-if="isInCart(product)">
+                        {{ $t('Already in cart') }}
+                    </div>
+                    <div v-else-if="cartFull">
+                        {{ $t('Cart full') }}
+                    </div>
+                    <button v-else @click="addToCart(product)">
+                        {{ $t('Add to Cart') }}
+                    </button>
                 </div>
             </li>
         </ul>
@@ -22,6 +30,14 @@ const store = useStore();
 
 const products = computed(() => store.state.products);
 
+const localCart = JSON.parse(localStorage.getItem('cart_items'));
+store.state.cart = localCart;
+const cart = computed(() => store.state.cart);
+const isInCart = (product) => {
+    console.log(cart);
+    return cart.value.find((prod) => prod.title === product.title) != null;
+};
+const cartFull = computed(() => cart.value?.length >= 9);
 const addToCart = (product) => {
     store.addToCart(product);
 };

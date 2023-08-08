@@ -9,7 +9,7 @@
                 <button @click="removeFromCart(item)">Remove</button>
             </li>
         </ul>
-        <div v-if="cart.length === 0">Your cart is empty.</div>
+        <div v-if="cart && cart.length === 0">Your cart is empty.</div>
         <div v-else>
             Total Items: {{ cart.length }}
             <button @click="submit">Submit Cart</button>
@@ -25,6 +25,8 @@ import { useRoute, useRouter } from 'vue-router';
 const store = useStore();
 const router = useRouter();
 
+const localCart = JSON.parse(localStorage.getItem('cart_items'));
+store.state.cart = localCart;
 const cart = computed(() => store.state.cart);
 
 const removeFromCart = (item) => {
