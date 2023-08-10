@@ -35,9 +35,9 @@ store.state.cart = localCart;
 const cart = computed(() => store.state.cart);
 const isInCart = (product) => {
     console.log(cart);
-    return cart.value.find((prod) => prod.title === product.title) != null;
+    return cart?.value?.find((prod) => prod.title === product.title) != null;
 };
-const cartFull = computed(() => cart.value?.length >= 9);
+const cartFull = computed(() => cart?.value?.length >= 9);
 const addToCart = (product) => {
     store.addToCart(product);
 };

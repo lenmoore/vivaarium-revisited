@@ -26,6 +26,17 @@ body {
 }
 
 .main {
-    margin: 4rem 1rem 1rem;
+    //margin: 4rem 1rem 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    color: turquoise;
+    font-size: 4rem;
+}
+
+.monospaced {
+    font-family: monospace;
 }
 </style>

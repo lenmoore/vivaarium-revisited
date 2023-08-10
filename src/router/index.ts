@@ -38,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/shop',
         name: 'shop',
-        redirect: { name: 'cart' },
+        redirect: { name: 'products' },
         children: [
             {
                 path: 'cart',
@@ -88,6 +88,14 @@ const routes: Array<RouteRecordRaw> = [
                     ),
             },
         ],
+    },
+    {
+        path: '/humanity-result',
+        name: 'humanity-result',
+        component: () =>
+            import(
+                /* webpackChunkName: "about" */ '../views/Results/ResultsScreen.vue'
+            ),
     },
     {
         path: '/audit',

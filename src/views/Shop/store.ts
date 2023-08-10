@@ -35,6 +35,9 @@ fetch('/products.json')
     });
 
 const addToCart = (product: Product) => {
+    if (!state.cart) {
+        localStore.setItem('items', '');
+    }
     if (state.cart.length >= 9) {
         console.log('Cart is full');
         return;

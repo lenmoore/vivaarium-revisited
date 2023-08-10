@@ -17,13 +17,12 @@ watch(
 </script>
 <template>
     <div :class="bodyStyleClass">
-        {{ bodyStyleClass }} | {{ router.currentRoute }}
-        <h1>{{ $t('welcome to vivaarium') }}</h1>
         <RouterLink
             class="first-link"
             :to="{ name: 'intro.slide', params: { id: 1 } }"
-            >start</RouterLink
         >
+            start
+        </RouterLink>
         <RouterView />
     </div>
 </template>
@@ -42,11 +41,15 @@ watch(
 // blue
 .intro-wrapper {
     background-color: gray;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     width: 100%;
     h1 {
-        color: turquoise;
-        font-size: 4rem;
+        margin-top: -3rem;
+        padding-top: 0;
     }
 
     .first-link {

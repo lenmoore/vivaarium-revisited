@@ -1,12 +1,10 @@
 <template>
     <div>
-        <h1>{{ $t('Dont lie') }}</h1>
-
         <div class="slider" v-if="quizSteps">
             <div class="slide">
-                <div>
-                    {{ quizSteps[stepNumber].question_text }}
-                </div>
+                <h2>
+                    {{ quizSteps[stepNumber].questionText }}
+                </h2>
 
                 <div
                     :key="option.option_text"
@@ -42,6 +40,7 @@ const route = useRoute();
 
 let stepNumber = parseInt(route.params.step);
 let quizNumber = parseInt(route.params.quiz);
+console.log(quizNumber);
 // setup
 const store = useStore();
 watch(
@@ -58,11 +57,12 @@ const activeQuiz = quizzes.value.find((quiz) => {
         return quiz;
     }
     if (quizNumber === 2 && quiz.name.includes('2.4')) {
+        console.log('hey!');
         return quiz;
     }
 });
 
-const quizSteps = activeQuiz.gameSteps;
+const quizSteps = activeQuiz?.gameSteps;
 
 // answer questions, save in localstorage
 function selectAnswer(val) {
