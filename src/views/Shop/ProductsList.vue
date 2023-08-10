@@ -6,7 +6,9 @@
         <div class="infobox">
             {{ $t('infobox-humanity-shop-intro-text') }}
         </div>
-        <RouterLink v-if="cart.length" :to="{ name: 'cart' }">Cart</RouterLink>
+        <RouterLink v-if="cart && cart.length" :to="{ name: 'cart' }"
+            >Cart</RouterLink
+        >
         <ul class="product-list">
             <li class="product" v-for="product in products" :key="product.id">
                 <img width="200" :src="product.image" alt="" />
@@ -39,9 +41,15 @@ const store = useStore();
 
 const products = computed(() => store.state.products);
 
-const localCart = JSON.parse(localStorage.getItem('cart_items'));
-store.state.cart = localCart;
+const localCart = localStorage.getItem('cart_items');
+
+if (!localCart) {
+    localStorage.setItem('cart_items', '[]');
+}
+store.state.cart = JSON.parse(localCart);
+console.log(localCart);
 const cart = computed(() => store.state.cart);
+console.log(cart);
 const isInCart = (product) => {
     console.log(cart);
     return (
@@ -64,11 +72,13 @@ const addToCart = (product) => {
     list-style: none;
 
     .product {
-        width: 300px;
+        width: 10rem;
         margin: 1rem;
-        padding: 1rem;
         border: 8px solid transparent;
-
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
         .title {
             display: flex;
             flex-direction: column;

@@ -112,6 +112,7 @@ button {
     font-size: 2rem;
     background-color: $dark-turquoise;
     border: none;
+    text-align: center;
     cursor: pointer;
     line-height: 1.5;
 }

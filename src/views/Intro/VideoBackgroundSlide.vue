@@ -8,12 +8,14 @@
                         v-html="htmlContent"
                         v-if="htmlContent"
                     ></div>
-                    <button @click="nextSlide">{{ $t('continue') }}</button>
+                    <button class="btn draw-border" @click="nextSlide">
+                        {{ $t('continue') }}
+                    </button>
                 </div>
             </div>
             <video autoplay muted loop class="bg-video" controls="controls">
                 <source
-                    src="https://www.dropbox.com/s/brjxnflvm072u32/NewRecording.mp4?raw=1"
+                    src="https://www.dropbox.com/scl/fi/fh30eod0erjmq5vke74ff/viva_pov_helenale.mp4?raw=1"
                     type="video/mp4"
                 />
             </video>

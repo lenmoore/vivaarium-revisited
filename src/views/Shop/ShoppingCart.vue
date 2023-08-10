@@ -16,7 +16,9 @@
         </div>
         <div v-else>
             {{ $t('Total Items') }}: {{ cart.length }}
-            <button @click="submit">{{ $t('Submit Cart') }}</button>
+            <button @click="submit">
+                {{ $t('Submit Cart') }}
+            </button>
         </div>
     </div>
 </template>
@@ -52,7 +54,6 @@ async function submit() {
     width: 30rem;
     text-align: left;
     list-style: none;
-    border: 1px solid red;
     .item-in-cart {
         display: flex;
         justify-content: space-between;

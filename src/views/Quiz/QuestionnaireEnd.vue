@@ -3,6 +3,7 @@ import { onMounted, reactive, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { LocalStore } from '@/store/local-store';
 import { useStore } from '@/views/Quiz/store';
+import ResultsScreen from '@/views/Results/ResultsScreen';
 
 const store = useStore();
 const router = useRouter();
@@ -62,12 +63,16 @@ onMounted(async () => {
 </script>
 <template>
     <div>
-        <h1>Congrats u did it</h1>
-        <div>{{ quizId }}</div>
-        {{ nextContent }}
+        <h1>
+            {{
+                nextContent && nextContent.goingToCapsuleVideo
+                    ? $t('Your results')
+                    : $t('Finished')
+            }}
+        </h1>
 
         <div v-if="nextContent && nextContent.goingToCapsuleVideo === true">
-            capsule video start
+            <ResultsScreen />
         </div>
         <div
             v-if="nextContent && nextContent.nextLink.name === 'question-step'"
