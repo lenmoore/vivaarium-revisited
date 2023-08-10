@@ -66,6 +66,8 @@ function nextSlide() {
 }
 </script>
 <style lang="scss">
+@import '../../vars';
+
 .video-background-slide-wrapper {
     padding: 1rem;
     border: 1px dotted black;
@@ -77,6 +79,7 @@ function nextSlide() {
         border: 1px solid black;
         display: inline-block;
         position: relative;
+        width: 100%;
 
         .overlay {
             z-index: 1;
@@ -88,8 +91,8 @@ function nextSlide() {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            color: turquoise;
-            background-color: rgba(50, 50, 50, 0.3);
+            color: $turquoise;
+            background-color: rgba(50, 50, 50, 0.5);
 
             .content {
                 display: flex;

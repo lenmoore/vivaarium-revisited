@@ -1,6 +1,9 @@
 <template>
     <div>
         <h1>{{ $t('Humanity shop') }}</h1>
+        <div class="infobox">
+            {{ $t('infobox-humanity-shop-intro-text') }}
+        </div>
         <RouterLink :to="{ name: 'cart' }">Cart</RouterLink>
         <ul class="product-list">
             <li class="product" v-for="product in products" :key="product.id">
@@ -44,6 +47,8 @@ const addToCart = (product) => {
 </script>
 
 <style lang="scss">
+@import '../../vars';
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -61,8 +66,13 @@ const addToCart = (product) => {
             flex-direction: column;
         }
         &:hover {
-            border: 1px solid turquoise;
+            border: 1px solid $turquoise;
         }
     }
+}
+.infobox {
+    border: 1px dotted fuchsia;
+    margin: 3rem;
+    padding: 1rem;
 }
 </style>
