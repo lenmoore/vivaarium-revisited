@@ -1,18 +1,22 @@
 <template>
-    <div>
+    <div class="cart-page">
         <h2>Shopping Cart</h2>
         <RouterLink :to="{ name: 'products' }">Shop</RouterLink>
 
-        <ul>
-            <li v-for="item in cart" :key="item.id">
-                {{ item.title }} - ${{ item.price }}
-                <button @click="removeFromCart(item)">Remove</button>
+        <ul class="cart-wrapper">
+            <li class="item-in-cart" v-for="item in cart" :key="item.id">
+                {{ item.title }} - {{ item.price }}€
+                <button @click="removeFromCart(item)">
+                    {{ $t('Remove') }}
+                </button>
             </li>
         </ul>
-        <div v-if="cart && cart.length === 0">Your cart is empty.</div>
+        <div v-if="cart && cart.length === 0">
+            {{ $t('Your cart is empty.') }}
+        </div>
         <div v-else>
-            Total Items: {{ cart.length }}
-            <button @click="submit">Submit Cart</button>
+            {{ $t('Total Items') }}: {{ cart.length }}
+            <button @click="submit">{{ $t('Submit Cart') }}</button>
         </div>
     </div>
 </template>
@@ -38,3 +42,27 @@ async function submit() {
     await router.push({ name: 'quiz.intro' });
 }
 </script>
+<style lang="scss">
+.cart-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cart-wrapper {
+    width: 30rem;
+    text-align: left;
+    list-style: none;
+    border: 1px solid red;
+    .item-in-cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.5rem;
+        font-size: 2rem;
+
+        button {
+            margin-left: 1rem;
+        }
+    }
+}
+</style>

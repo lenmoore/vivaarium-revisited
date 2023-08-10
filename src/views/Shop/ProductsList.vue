@@ -1,10 +1,12 @@
 <template>
-    <div>
-        <h1>{{ $t('Humanity shop') }}</h1>
+    <div class="shop-background">
+        <header>
+            <div>{{ $t('Humanity shop') }}</div>
+        </header>
         <div class="infobox">
             {{ $t('infobox-humanity-shop-intro-text') }}
         </div>
-        <RouterLink :to="{ name: 'cart' }">Cart</RouterLink>
+        <RouterLink v-if="cart.length" :to="{ name: 'cart' }">Cart</RouterLink>
         <ul class="product-list">
             <li class="product" v-for="product in products" :key="product.id">
                 <img width="200" :src="product.image" alt="" />
@@ -16,7 +18,11 @@
                     <div v-else-if="cartFull">
                         {{ $t('Cart full') }}
                     </div>
-                    <button v-else @click="addToCart(product)">
+                    <button
+                        class="btn draw-border"
+                        v-else
+                        @click="addToCart(product)"
+                    >
                         {{ $t('Add to Cart') }}
                     </button>
                 </div>
@@ -38,7 +44,10 @@ store.state.cart = localCart;
 const cart = computed(() => store.state.cart);
 const isInCart = (product) => {
     console.log(cart);
-    return cart?.value?.find((prod) => prod.title === product.title) != null;
+    return (
+        cart.value &&
+        cart.value?.find((prod) => prod.title === product.title) != null
+    );
 };
 const cartFull = computed(() => cart?.value?.length >= 9);
 const addToCart = (product) => {
@@ -58,15 +67,15 @@ const addToCart = (product) => {
         width: 300px;
         margin: 1rem;
         padding: 1rem;
-        border: 1px solid transparent;
-        border-radius: 1rem;
+        border: 8px solid transparent;
 
         .title {
             display: flex;
             flex-direction: column;
         }
         &:hover {
-            border: 1px solid $turquoise;
+            //border: 8px solid $turquoise;
+            //background-color: white;
         }
     }
 }
@@ -74,5 +83,8 @@ const addToCart = (product) => {
     border: 1px dotted fuchsia;
     margin: 3rem;
     padding: 1rem;
+}
+.hover-grey:hover {
+    background-color: gray;
 }
 </style>

@@ -35,11 +35,14 @@ fetch('/products.json')
     });
 
 const addToCart = (product: Product) => {
+    if (!state.cart) {
+        localStore.setItem('items', '[]');
+        state.cart = [];
+    }
     if (state.cart.length >= 9) {
         console.log('Cart is full');
         return;
     }
-
     state.cart.push(product);
     console.log(state.cart);
     localStore.setItem('items', state.cart);
