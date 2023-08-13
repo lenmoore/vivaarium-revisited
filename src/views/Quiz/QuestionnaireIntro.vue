@@ -1,15 +1,11 @@
 <template>
     <div>
-        <h1>
-            {{ $t('take the quiz') }}
-        </h1>
-
         <div>
             {{ $t('quiz intro') }}
         </div>
 
         <button @click="startQuiz1">
-            {{ $t('Start quiz 1') }}
+            {{ $t('Alusta') }}
         </button>
     </div>
 </template>
