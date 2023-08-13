@@ -5,4 +5,5 @@ module.exports = {
         allowedHosts: 'all',
         https: false,
     },
+    publicPath: 'https://stingray-app-l9aym.ondigitalocean.app/',
 };

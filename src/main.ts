@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import { initializeApp } from 'firebase/app';
 // import store from './views/Shop/store';
 import { createI18n } from 'vue-i18n';
 import et from './locales/et.json';
@@ -12,6 +13,7 @@ const i18n = createI18n({
 });
 
 const app = createApp(App);
+
 // app.use(store);
 app.use(router);
 app.use(i18n);
