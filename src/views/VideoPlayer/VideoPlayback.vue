@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <FloatingWindow id="chapter-controller">
-            Im the chapter controller
-        </FloatingWindow>
-    </div>
+    <FloatingWindow id="video-playback">
+        Im the video playback window
+    </FloatingWindow>
 </template>
 <script>
 import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
