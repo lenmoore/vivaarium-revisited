@@ -47,4 +47,12 @@ module.exports = {
         // 👇️ set this property
         allowedHosts: 'all',
     },
+    optimization: {
+        minimize: true,
+        removeAvailableModules: true,
+        flagIncludedChunks: true,
+        usedExports: true,
+        concatenateModules: true,
+        sideEffects: false, // <----- in prod defaults to true if left blank
+    },
 };
