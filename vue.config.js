@@ -1,5 +1,8 @@
 module.exports = {
     devServer: {
+        https: true, // Enable HTTPS for the development server
+        host: 'localhost', // Hostname for the development server
+        port: 8080, // Port for the development server
         allowedHosts: [
             'localhost',
             'example.com',
