@@ -7,6 +7,7 @@
 </template>
 <script>
 import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
+import { ref } from 'vue';
 export default {
     components: { FloatingWindow },
 };

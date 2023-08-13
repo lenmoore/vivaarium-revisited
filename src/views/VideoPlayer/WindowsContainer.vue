@@ -1,6 +1,6 @@
 <template>
     <div class="windows-container">
-        <FloatingWindow id="help-window">
+        <FloatingWindow enable-minimise id="help-window">
             Sa saad aknaid liigutada.
         </FloatingWindow>
         <ColorSelector />

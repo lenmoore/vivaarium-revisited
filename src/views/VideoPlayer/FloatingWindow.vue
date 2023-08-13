@@ -1,11 +1,21 @@
 <template>
     <div :id="$props.id" class="window">
-        <slot></slot>
+        <UseDraggable :initialValue="{ x: 10, y: 10 }" v-slot="{ x, y }">
+            Drag me! I am at {{ x }}, {{ y }} <slot></slot>
+        </UseDraggable>
     </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { useDraggable } from '@vueuse/core';
+
+const el = (ref < HTMLElement) | (null > null);
+
+// `style` will be a helper computed for `left: ?px; top: ?px;`
+const { x, y, style } = useDraggable(el, {
+    initialValue: { x: 40, y: 40 },
+});
+import { defineProps, ref } from 'vue';
 defineProps({
     id: {
         type: String,
