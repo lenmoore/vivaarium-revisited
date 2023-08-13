@@ -6,9 +6,7 @@
             controls
             @ended="$router.push({ name: 'video-player' })"
             src="/videos/taskuviva_intro.mp4"
-        >
-            <track default src="/videos/fake-chapters/subs.vtt" />
-        </video>
+        ></video>
         <button
             style="display: none"
             id="begin-audit-link"
