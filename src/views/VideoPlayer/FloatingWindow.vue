@@ -1,22 +1,22 @@
 <template>
-    <div :style="getStyle" :id="$props.id" class="window">
+    <div :style="''" :id="$props.id" class="window">
         <slot></slot>
     </div>
 </template>
 
 <script setup>
-import { defineProps, reactive, ref } from 'vue';
-defineProps({
-    id: {
-        type: String,
-        default: '',
-    },
-});
-const positionX = ref(40);
-const positionY = ref(40);
-const getStyle = ref(
-    `left: ${positionX.value}px; right: ${positionY.value}px;`
-);
+// import { defineProps, reactive, ref } from 'vue';
+// defineProps({
+//     id: {
+//         type: String,
+//         default: '',
+//     },
+// });
+// const positionX = ref(40);
+// const positionY = ref(40);
+// const getStyle = ref(
+//     `left: ${positionX.value}px; right: ${positionY.value}px;`
+// );
 </script>
 
 <style lang="scss">
