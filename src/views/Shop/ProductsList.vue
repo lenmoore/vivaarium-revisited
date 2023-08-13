@@ -6,7 +6,10 @@
         <div class="infobox">
             {{ $t('infobox-humanity-shop-intro-text') }}
         </div>
-        <RouterLink v-if="cart && cart.length" :to="{ name: 'cart' }"
+        <RouterLink
+            class="cart-button"
+            v-if="cart && cart.length"
+            :to="{ name: 'cart' }"
             >Cart</RouterLink
         >
         <ul class="product-list">
@@ -113,5 +116,10 @@ const addToCart = (product) => {
 }
 .hover-grey:hover {
     background-color: gray;
+}
+.cart-button {
+    background-color: white;
+    color: black;
+    padding: 2rem;
 }
 </style>
