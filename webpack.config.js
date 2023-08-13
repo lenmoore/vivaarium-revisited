@@ -27,12 +27,6 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-        }),
-        new VueLoaderPlugin(),
-    ],
     resolve: {
         extensions: ['.js', '.vue'],
         alias: {
