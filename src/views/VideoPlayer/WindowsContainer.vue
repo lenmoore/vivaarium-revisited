@@ -1,10 +1,11 @@
 <template>
     <div class="windows-container">
+        <VideoPlayback />
         <div class="video-controls">
             <ColorSelector @select-color="(val) => selectColor(val)" />
             <ChapterController @select-chapter="(val) => selectChapter(val)" />
         </div>
-        <VideoPlayback />
+        <CapsuleData v-if="parseInt(activeChapter) > 1" />
     </div>
 </template>
 <script>
@@ -12,8 +13,10 @@ import ColorSelector from '@/views/VideoPlayer/ColorSelector';
 import ChapterController from '@/views/VideoPlayer/ChapterController';
 import VideoPlayback from '@/views/VideoPlayer/VideoPlayback';
 import { videos } from '@/views/VideoPlayer/video-data';
+import CapsuleData from '@/views/VideoPlayer/CapsuleData';
 export default {
     components: {
+        CapsuleData,
         VideoPlayback,
         ChapterController,
         ColorSelector,

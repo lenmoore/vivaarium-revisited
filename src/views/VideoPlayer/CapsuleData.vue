@@ -1,7 +1,7 @@
 <template>
     <div>
         <FloatingWindow id="capsule-data-window">
-            Im the capsule data info thing
+            Voeti kaasa 1100 L viskit.
         </FloatingWindow>
     </div>
 </template>

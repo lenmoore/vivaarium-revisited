@@ -26,12 +26,12 @@ defineProps({
     .window-row {
         background-color: #42b983;
         width: 100%;
-        height: 10px;
+        height: 24px;
     }
     background-color: white;
     border: 1px solid black;
-    width: 600px;
-    height: 500px;
+    //width: 600px;
+    //height: 500px;
     position: relative;
 
     &#capsule-data-window {
@@ -39,17 +39,20 @@ defineProps({
         width: 200px;
     }
     &#color-selector {
-        height: 90px;
-        width: 450px;
+        //height: 90px;
+        //width: 450px;
         background-color: black;
     }
     &#chapter-controller {
-        height: 600px;
-        width: 450px;
+        //height: 600px;
+        //width: 450px;
     }
     &#video-playback {
-        height: 500px;
-        width: 750px;
+        //height: 500px;
+        //width: 750px;
+        video {
+            padding: 1rem;
+        }
     }
 }
 </style>
