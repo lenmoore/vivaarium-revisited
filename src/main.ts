@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import { initializeApp } from 'firebase/app';
 // import store from './views/Shop/store';
 import { createI18n } from 'vue-i18n';
 import et from './locales/et.json';
