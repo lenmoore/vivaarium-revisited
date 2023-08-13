@@ -8,6 +8,20 @@
     "lint": "vue-cli-service lint",
     "build:digitalocean": "npm install --production=false && npm run build && npm ci"
   },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
