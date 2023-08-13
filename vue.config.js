@@ -16,7 +16,6 @@ module.exports = {
 
         resolve: {
             extensions: ['.js', '.vue', '.scss'],
-            alias: require(`${__dirname}/config/aliases`),
         },
 
         optimization: {
@@ -40,26 +39,6 @@ module.exports = {
         devtool: 'source-map',
     },
     pluginOptions: { storybook: { allowedPlugins: ['sass', 'postcss'] } },
-    chainWebpack(config) {
-        // Only enable performance hints for production builds, outside of tests.
-        config.performance.hints(
-            process.env.NODE_ENV === 'production' &&
-                !process.env.VUE_APP_TEST &&
-                'warning'
-        );
-    },
-
-    css: {
-        sourceMap:
-            process.env.NODE_ENV === 'development' || !!process.env.TEST_ENV,
-        loaderOptions: {
-            sass: {
-                prependData: `
-                    @import '@styles/_variables.scss';
-                `,
-            },
-        },
-    },
 
     lintOnSave: false,
 };
