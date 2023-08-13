@@ -10,12 +10,12 @@
                     </button>
                 </div>
             </div>
-            <video class="bg-overlay" autoplay muted loop>
-                <source
-                    src="/videos/01_welcome_2_vivaarium.mp4"
-                    type="video/mp4"
-                />
-            </video>
+            <!--            <video class="bg-overlay" autoplay muted loop>-->
+            <!--                <source-->
+            <!--                    src="/videos/01_welcome_2_vivaarium.mp4"-->
+            <!--                    type="video/mp4"-->
+            <!--                />-->
+            <!--            </video>-->
         </div>
     </div>
 </template>
