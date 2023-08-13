@@ -8,5 +8,6 @@ module.exports = {
             '.ondigitalocean.app',
             '*.ondigitalocean.app',
         ],
+        hot: true,
     },
 };
