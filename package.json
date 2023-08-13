@@ -19,11 +19,11 @@
     ],
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "rules": {}
+    }
   },
   "dependencies": {
     "@vue/preload-webpack-plugin": "^1.1.2",
+    "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",
     "core-js": "^3.8.3",
     "dotenv-webpack": "^8.0.1",

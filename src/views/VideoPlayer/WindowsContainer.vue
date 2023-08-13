@@ -1,28 +1,16 @@
 <template>
     <div class="windows-container">
-        <FloatingWindow enable-minimise id="help-window">
-            Sa saad aknaid liigutada.
-        </FloatingWindow>
         <ColorSelector />
         <CapsuleData />
         <ChapterController @select-chapter="(val) => selectChapter(val)" />
-        <VideoPlayback />
     </div>
 </template>
 <script>
 import ColorSelector from '@/views/VideoPlayer/ColorSelector';
 import CapsuleData from '@/views/VideoPlayer/CapsuleData';
 import ChapterController from '@/views/VideoPlayer/ChapterController';
-import VideoPlayback from '@/views/VideoPlayer/VideoPlayback';
-import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
 export default {
-    components: {
-        FloatingWindow,
-        VideoPlayback,
-        ChapterController,
-        CapsuleData,
-        ColorSelector,
-    },
+    components: { ChapterController, CapsuleData, ColorSelector },
 
     data() {
         return {
