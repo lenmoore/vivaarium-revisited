@@ -14,5 +14,6 @@ module.exports = {
 
         hot: false,
         liveReload: false,
+        webSocketServer: false,
     },
 };
