@@ -1,8 +1,5 @@
 module.exports = {
     devServer: {
-        host: 'localhost',
-        hot: true,
-        allowedHosts: 'all',
-        https: false,
+        proxy: 'http://localhost:80',
     },
 };
