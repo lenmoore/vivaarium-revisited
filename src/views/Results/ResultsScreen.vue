@@ -32,15 +32,9 @@
                 alt=""
             />
         </div>
-        <div class="video-background-wrapper">
-            siia tuleb kapslisse mineku video (taustale nii nagu intros):
-            <video autoplay muted loop class="bg-video" controls="controls">
-                <source
-                    src="https://www.dropbox.com/scl/fi/fh30eod0erjmq5vke74ff/viva_pov_helenale.mp4?raw=1"
-                    type="video/mp4"
-                />
-            </video>
-        </div>
+        <RouterLink :to="{ name: 'welcome-video' }" class="btn">{{
+            $t('Continue to capsule')
+        }}</RouterLink>
     </div>
 </template>
 <script setup>

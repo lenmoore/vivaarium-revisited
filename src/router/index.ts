@@ -101,6 +101,11 @@ const routes: Array<RouteRecordRaw> = [
             ),
     },
     {
+        path: '/welcome-video',
+        name: 'welcome-video',
+        component: () => import('../views/Results/WelcomeVideo.vue'),
+    },
+    {
         path: '/audit',
         name: 'video-player',
         component: () =>
