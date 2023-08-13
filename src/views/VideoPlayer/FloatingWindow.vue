@@ -50,6 +50,7 @@ defineProps({
     &#video-playback {
         //height: 500px;
         //width: 750px;
+        height: 450px;
         video {
             padding: 1rem;
         }

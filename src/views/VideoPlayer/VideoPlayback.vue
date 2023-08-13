@@ -9,6 +9,7 @@
             width="600"
             id="intro-vid"
             muted
+            autoplay
             controls
             src="/videos/taskuviva_intro.mp4"
         ></video>
