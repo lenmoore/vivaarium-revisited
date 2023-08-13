@@ -5,13 +5,13 @@
 </template>
 
 <script setup>
-// import { defineProps, reactive, ref } from 'vue';
-// defineProps({
-//     id: {
-//         type: String,
-//         default: '',
-//     },
-// });
+import { defineProps } from 'vue';
+defineProps({
+    id: {
+        type: String,
+        default: '',
+    },
+});
 // const positionX = ref(40);
 // const positionY = ref(40);
 // const getStyle = ref(
