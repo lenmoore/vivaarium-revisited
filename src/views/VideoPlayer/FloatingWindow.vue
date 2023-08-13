@@ -1,5 +1,6 @@
 <template>
     <div :style="''" :id="$props.id" class="window">
+        <div class="window-row"></div>
         <slot></slot>
     </div>
 </template>
@@ -21,6 +22,12 @@ defineProps({
 
 <style lang="scss">
 .window {
+    margin: 1rem;
+    .window-row {
+        background-color: #42b983;
+        width: 100%;
+        height: 10px;
+    }
     background-color: white;
     border: 1px solid black;
     width: 600px;
@@ -32,12 +39,13 @@ defineProps({
         width: 200px;
     }
     &#color-selector {
-        height: 100px;
-        width: 400px;
+        height: 90px;
+        width: 450px;
+        background-color: black;
     }
     &#chapter-controller {
         height: 600px;
-        width: 200px;
+        width: 450px;
     }
     &#video-playback {
         height: 500px;
