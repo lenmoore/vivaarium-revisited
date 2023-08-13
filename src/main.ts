@@ -1,9 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';
 // import store from './views/Shop/store';
 import { createI18n } from 'vue-i18n';
 import et from './locales/et.json';
+import router from './router';
+
 const i18n = createI18n({
     locale: 'et',
     fallbackLocale: 'et',
