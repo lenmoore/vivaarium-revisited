@@ -7,7 +7,7 @@ module.exports = {
     },
 
     configureWebpack: {
-        entry: { app: './src/main.js' },
+        entry: { app: './src/main.ts' },
 
         output: {
             filename: 'js/[name].[hash].js',
