@@ -3,7 +3,8 @@ export const slides = [
         id: 1,
         html: {
             et:
-                '<h1>Tere tulemast Vivaariumisse.</h1> <h2>Sina oled Audiitor.</h2> <p> </br> It is a long established fact that a reader ' +
+                '<h1>Tere tulemast Vivaariumisse.</h1> <h2>Sina oled Audiitor.</h2> <p> ' +
+                '</br> It is a long established fact that a reader ' +
                 'will be distracted by the readable content of a page when looking at its layout. ' +
                 'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,' +
                 " as opposed to using 'Content here, content here', making it look like readable English. " +
@@ -20,7 +21,7 @@ export const slides = [
         id: 2,
         html: {
             et:
-                '<h2>Audiiori ylesanded.</h2> <p> ' +
+                '<h2>Audiitori ylesanded.</h2> <p> ' +
                 '</br> It is a long established fact that a reader ' +
                 'will be distracted by the readable content of a page when looking at its layout. ' +
                 '<ul><li>See on nimekiri</li> <li>asjadest</li> <li>mis on audiitori eesmargid</li></ul>' +

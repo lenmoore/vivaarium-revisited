@@ -1,9 +1,5 @@
 <template>
     <div>
-        <div>
-            {{ $t('quiz intro') }}
-        </div>
-
         <button @click="startQuiz1">
             {{ $t('Alusta') }}
         </button>

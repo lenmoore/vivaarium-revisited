@@ -23,7 +23,14 @@
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
         </p>
+
+        <RouterLink :to="{ name: 'welcome-video' }" class="btn">
+            {{ $t('Sisene oma kapslisse') }}
+        </RouterLink>
+
+        <h1>Sinu andmed</h1>
         <div class="cart-wrapper">
+            <h2>Tooted</h2>
             <img
                 v-for="item in cart"
                 :key="item.id"
@@ -32,9 +39,6 @@
                 alt=""
             />
         </div>
-        <RouterLink :to="{ name: 'welcome-video' }" class="btn">{{
-            $t('Continue to capsule')
-        }}</RouterLink>
     </div>
 </template>
 <script setup>

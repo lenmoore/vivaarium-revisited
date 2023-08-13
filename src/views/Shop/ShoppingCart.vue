@@ -1,7 +1,7 @@
 <template>
     <div class="cart-page">
-        <h2>Shopping Cart</h2>
-        <RouterLink :to="{ name: 'products' }">Shop</RouterLink>
+        <h2>Ostukorv</h2>
+        <RouterLink :to="{ name: 'products' }">POOD</RouterLink>
 
         <ul class="cart-wrapper">
             <li class="item-in-cart" v-for="item in cart" :key="item.id">
@@ -15,12 +15,12 @@
             </li>
         </ul>
         <div v-if="cart && cart.length === 0">
-            {{ $t('Your cart is empty.') }}
+            {{ $t('Su korv on tühi.') }}
         </div>
         <div v-else>
-            {{ $t('Total Items') }}: {{ cart.length }}
+            {{ $t('Asju') }}: {{ cart.length }}
             <button class="btn draw-border" @click="submit">
-                {{ $t('Submit Cart') }}
+                Kinnita ostukorv
             </button>
         </div>
     </div>

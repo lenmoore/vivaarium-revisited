@@ -34,13 +34,6 @@
                 </button>
             </div>
         </div>
-
-        <div style="border: 1px solid fuchsia; margin-top: 20rem">
-            <div>
-                {{ stepNumber }}
-            </div>
-            <small>{{ quizSteps[stepNumber] }}</small>
-        </div>
     </div>
 </template>
 

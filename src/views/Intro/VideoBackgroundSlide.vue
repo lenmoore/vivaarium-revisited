@@ -4,10 +4,9 @@
             <div class="overlay">
                 <div class="content">
                     <div v-html="htmlContent" v-if="htmlContent"></div>
-                    {{ $t('take the quiz') }}
 
                     <button class="btn draw-border" @click="nextSlide">
-                        {{ $t('continue') }}
+                        {{ $t('Jätka') }}
                     </button>
                 </div>
             </div>

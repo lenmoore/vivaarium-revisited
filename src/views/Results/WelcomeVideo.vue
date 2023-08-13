@@ -12,12 +12,12 @@
             id="begin-audit-link"
             class="btn draw-border"
         >
-            {{ $t('Begin audit') }}
+            {{ $t('Alusta auditit') }}
         </button>
 
         <div class="padding">
             <RouterLink :to="{ name: 'video-player' }">
-                {{ $t('skip intro') }}
+                {{ $t('Jäta video vahele') }}
             </RouterLink>
         </div>
     </div>

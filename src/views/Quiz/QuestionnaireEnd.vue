@@ -66,8 +66,8 @@ onMounted(async () => {
         <h1>
             {{
                 nextContent && nextContent.goingToCapsuleVideo
-                    ? $t('Your results')
-                    : $t('Finished')
+                    ? $t('Sinu tulemused')
+                    : $t('Valmis')
             }}
         </h1>
 
@@ -77,9 +77,8 @@ onMounted(async () => {
         <div
             v-if="nextContent && nextContent.nextLink.name === 'question-step'"
         >
-            you need to start the next quiz!
-
-            <RouterLink :to="nextContent.nextLink">Start it here.</RouterLink>
+            Järgmine küsimustik ootab sind.
+            <RouterLink :to="nextContent.nextLink">Alusta</RouterLink>
         </div>
     </div>
 </template>

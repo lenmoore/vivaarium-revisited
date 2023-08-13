@@ -4,7 +4,11 @@
             <h1>{{ $t('Humanity shop') }}</h1>
         </header>
         <div class="infobox">
-            {{ $t('infobox-humanity-shop-intro-text') }}
+            {{
+                $t(
+                    'humanity shopi mingi intro tekst mis võiks öelda et noh 9 toodet saab kaasa võtta ja üldse olge kõvad. btw selle lehe taustal on inimeste skännimisvideo.'
+                )
+            }}
         </div>
         <RouterLink
             class="cart-button"
@@ -18,17 +22,17 @@
                 <div class="title">
                     <span> {{ product.title }} </span>
                     <div v-if="isInCart(product)">
-                        {{ $t('Already in cart') }}
+                        {{ $t('Juba korvis') }}
                     </div>
                     <div v-else-if="cartFull">
-                        {{ $t('Cart full') }}
+                        {{ $t('Korv on TÄIS') }}
                     </div>
                     <button
                         class="btn draw-border"
                         v-else
                         @click="addToCart(product)"
                     >
-                        {{ $t('Add to Cart') }}
+                        {{ $t('Lisa korvi') }}
                     </button>
                 </div>
             </li>
