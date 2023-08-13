@@ -3,15 +3,16 @@
         <video
             autoplay
             controls
+            onended="showLink"
             src="/videos/fake-chapters/Ugly%20Betty%20S01E01%20Pilot.mkv"
         >
             <track default src="/videos/fake-chapters/subs.vtt" />
         </video>
 
         <div class="padding">
-            <RouterLink :to="{ name: 'video-player' }">{{
-                $t('skip intro')
-            }}</RouterLink>
+            <RouterLink :to="{ name: 'video-player' }">
+                {{ $t('skip intro') }}
+            </RouterLink>
         </div>
     </div>
 </template>
