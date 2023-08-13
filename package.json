@@ -31,6 +31,9 @@
     "vuex": "^4.0.0",
     "webpack": "^5.88.2"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
