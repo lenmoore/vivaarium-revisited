@@ -11,6 +11,8 @@ module.exports = {
             '.ondigitalocean.app',
             '*.ondigitalocean.app',
         ],
-        hot: true,
+
+        hot: false,
+        liveReload: false,
     },
 };
