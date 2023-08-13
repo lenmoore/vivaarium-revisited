@@ -8,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
+
     module: {
         rules: [
             {
@@ -42,5 +43,9 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         port: 8080,
+        compress: true,
+
+        // 👇️ set this property
+        allowedHosts: 'all',
     },
 };
