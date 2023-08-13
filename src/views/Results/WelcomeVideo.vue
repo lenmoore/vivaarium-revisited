@@ -1,13 +1,21 @@
 <template>
     <div class="video-wrapper">
         <video
+            id="intro-vid"
             autoplay
             controls
-            onended="showLink"
-            src="/videos/fake-chapters/Ugly%20Betty%20S01E01%20Pilot.mkv"
+            @ended="$router.push({ name: 'video-player' })"
+            src="/videos/taskuviva_intro.mp4"
         >
             <track default src="/videos/fake-chapters/subs.vtt" />
         </video>
+        <button
+            style="display: none"
+            id="begin-audit-link"
+            class="btn draw-border"
+        >
+            {{ $t('Begin audit') }}
+        </button>
 
         <div class="padding">
             <RouterLink :to="{ name: 'video-player' }">
@@ -16,7 +24,6 @@
         </div>
     </div>
 </template>
-
 <style lang="scss">
 .video-wrapper {
     background-color: black;
