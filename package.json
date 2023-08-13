@@ -6,8 +6,7 @@
     "start": "serve -s build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build:digitalocean": "npm install --production=false && npm run build && npm ci"
+    "lint": "vue-cli-service lint"
   },
   "eslintConfig": {
     "root": true,
@@ -20,8 +19,7 @@
     ],
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "rules": {}
+    }
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
