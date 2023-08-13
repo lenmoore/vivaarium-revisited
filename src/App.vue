@@ -105,7 +105,7 @@ h1 {
 }
 
 .draw-border {
-    @include btn-border-drawing(white, $turquoise, 4px, bottom, right);
+    @include btn-border-drawing(white, $turquoise, 1px, bottom, right);
 }
 
 button {

@@ -3,19 +3,15 @@
         <div class="inner-container">
             <div class="overlay">
                 <div class="content">
-                    <div
-                        class="monospaced"
-                        v-html="htmlContent"
-                        v-if="htmlContent"
-                    ></div>
+                    <div v-html="htmlContent" v-if="htmlContent"></div>
                     <button class="btn draw-border" @click="nextSlide">
                         {{ $t('continue') }}
                     </button>
                 </div>
             </div>
-            <video autoplay muted loop class="bg-video" controls="controls">
+            <video class="bg-overlay" autoplay muted loop>
                 <source
-                    src="https://www.dropbox.com/scl/fi/fh30eod0erjmq5vke74ff/viva_pov_helenale.mp4?raw=1"
+                    src="/videos/01_welcome_2_vivaarium.mp4"
                     type="video/mp4"
                 />
             </video>
@@ -44,6 +40,7 @@ watch(
         const slide = slides.find((slide) => slide.id === slideId);
         htmlContent = ref(slide.html[lang]);
         isLast = slide.isLast || false;
+        console.log(isLast);
 
         localStore.setItem(`${slideId}_viewed`, 1);
     }
@@ -69,9 +66,10 @@ function nextSlide() {
 </script>
 <style lang="scss">
 @import '../../vars';
-
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .video-background-slide-wrapper {
-    padding: 1rem;
     border: 1px dotted black;
     width: 100%;
     height: 100%;
@@ -80,28 +78,38 @@ function nextSlide() {
     .inner-container {
         border: 1px solid black;
         display: inline-block;
-        position: relative;
         width: 100%;
+        bottom: -100px;
+        height: 102vh;
+
+        object-fit: cover;
+        //position: fixed;
 
         .overlay {
             z-index: 1;
-            position: absolute;
+            //position: absolute;
             font-size: 20px;
-            width: 100%;
-            height: 100%;
+            width: auto;
+            min-width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            //height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             color: $turquoise;
-            background-color: rgba(50, 50, 50, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
 
             .content {
                 display: flex;
+                padding: 10rem 3rem;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 width: 50%;
+                background-color: rgba(0, 0, 0, 0.4);
             }
         }
 

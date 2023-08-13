@@ -3,9 +3,30 @@ import HomeView from '../views/HomeView.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: '/',
+        path: '',
         name: 'home',
         component: HomeView,
+        redirect: { path: 'intro/1' },
+        children: [
+            {
+                path: '/intro',
+                name: 'intro',
+                component: () =>
+                    import(
+                        /* webpackChunkName: "about" */ '../views/Intro/WelcomeScreen.vue'
+                    ),
+                children: [
+                    {
+                        path: ':id',
+                        name: 'intro.slide',
+                        component: () =>
+                            import(
+                                /* webpackChunkName: "about" */ '../views/Intro/VideoBackgroundSlide.vue'
+                            ),
+                    },
+                ],
+            },
+        ],
     },
     {
         path: '/about',
@@ -16,24 +37,6 @@ const routes: Array<RouteRecordRaw> = [
         // which is lazy-loaded when the route is visited.
         component: () =>
             import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
-    },
-    {
-        path: '/intro',
-        name: 'intro',
-        component: () =>
-            import(
-                /* webpackChunkName: "about" */ '../views/Intro/WelcomeScreen.vue'
-            ),
-        children: [
-            {
-                path: ':id',
-                name: 'intro.slide',
-                component: () =>
-                    import(
-                        /* webpackChunkName: "about" */ '../views/Intro/VideoBackgroundSlide.vue'
-                    ),
-            },
-        ],
     },
     {
         path: '/shop',

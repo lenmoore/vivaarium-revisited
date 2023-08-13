@@ -3,7 +3,7 @@ export const slides = [
         id: 1,
         html: {
             et:
-                '<h1>Tere tulemast Vivaariumisse.</h1> <p>It is a long established fact that a reader ' +
+                '<h1>Tere tulemast Vivaariumisse.</h1> <h2>Sina oled Audiitor.</h2> <p> </br> It is a long established fact that a reader ' +
                 'will be distracted by the readable content of a page when looking at its layout. ' +
                 'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,' +
                 " as opposed to using 'Content here, content here', making it look like readable English. " +
@@ -18,23 +18,16 @@ export const slides = [
     },
     {
         id: 2,
-        html: { et: '<p>See on teine slaid.</p>', en: 'ENG 2' },
-        buttonText: 'continue',
-        isLast: false,
-    },
-    {
-        id: 3,
-        html: { et: '<p>See on kolmas slaid.</p>', en: 'ENG 3' },
-        buttonText: 'continue',
-        isLast: false,
-    },
-    {
-        id: 4,
         html: {
-            et: '<p>See on neljas (tinglikult viimane) slaid.</p>',
-            en: 'ENG 4',
+            et:
+                '<h2>Audiiori ylesanded.</h2> <p> ' +
+                '</br> It is a long established fact that a reader ' +
+                'will be distracted by the readable content of a page when looking at its layout. ' +
+                '<ul><li>See on nimekiri</li> <li>asjadest</li> <li>mis on audiitori eesmargid</li></ul>' +
+                '<h3>See on kolmanda taseme pealkiri.</h3> <p>Audiitor peab poes kaima ja kysimustikele vastama.</p>',
+            en: 'ENG 2',
         },
-        buttonText: 'time to shop',
+        buttonText: 'continue',
         isLast: true,
     },
 ];

@@ -23,12 +23,15 @@
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
         </p>
-        <ul class="cart-wrapper">
-            <li class="item-in-cart" v-for="item in cart" :key="item.id">
-                <img width="100" :src="item.image" alt="" />
-                {{ item.title }}
-            </li>
-        </ul>
+        <div class="cart-wrapper">
+            <img
+                v-for="item in cart"
+                :key="item.id"
+                width="100"
+                :src="item.image"
+                alt=""
+            />
+        </div>
         <div class="video-background-wrapper">
             siia tuleb kapslisse mineku video (taustale nii nagu intros):
             <video autoplay muted loop class="bg-video" controls="controls">
@@ -88,19 +91,14 @@ const cart = computed(() => store.state.cart);
 
 .cart-wrapper {
     width: 30rem;
+    overflow-y: scroll;
     text-align: left;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 
-    .item-in-cart {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    img {
         margin: 0.5rem;
-        img {
-            margin-right: 1rem;
-        }
     }
 }
 </style>

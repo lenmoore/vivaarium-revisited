@@ -1,7 +1,7 @@
 <template>
     <div class="shop-background">
         <header>
-            <div>{{ $t('Humanity shop') }}</div>
+            <h1>{{ $t('Humanity shop') }}</h1>
         </header>
         <div class="infobox">
             {{ $t('infobox-humanity-shop-intro-text') }}
@@ -13,7 +13,7 @@
             <li class="product" v-for="product in products" :key="product.id">
                 <img width="200" :src="product.image" alt="" />
                 <div class="title">
-                    <span> {{ product.title }} - ${{ product.price }} </span>
+                    <span> {{ product.title }} </span>
                     <div v-if="isInCart(product)">
                         {{ $t('Already in cart') }}
                     </div>
@@ -65,7 +65,16 @@ const addToCart = (product) => {
 
 <style lang="scss">
 @import '../../vars';
-
+.shop-background {
+    background-color: black;
+    color: white;
+    header {
+        h1 {
+            padding-top: 5rem;
+            margin-top: 0;
+        }
+    }
+}
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -73,19 +82,26 @@ const addToCart = (product) => {
 
     .product {
         width: 10rem;
-        margin: 1rem;
+        margin: 1.5rem;
         border: 8px solid transparent;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
         .title {
+            padding: 1rem;
             display: flex;
             flex-direction: column;
+            font-size: 1.5rem;
         }
         &:hover {
             //border: 8px solid $turquoise;
             //background-color: white;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            font-size: 1.5rem;
         }
     }
 }
@@ -93,6 +109,7 @@ const addToCart = (product) => {
     border: 1px dotted fuchsia;
     margin: 3rem;
     padding: 1rem;
+    font-size: 1.5rem;
 }
 .hover-grey:hover {
     background-color: gray;

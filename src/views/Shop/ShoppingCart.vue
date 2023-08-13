@@ -5,8 +5,11 @@
 
         <ul class="cart-wrapper">
             <li class="item-in-cart" v-for="item in cart" :key="item.id">
-                {{ item.title }} - {{ item.price }}€
-                <button @click="removeFromCart(item)">
+                <div class="title">
+                    <img class="image" width="100" :src="item.image" alt="" />
+                    {{ item.title }}
+                </div>
+                <button class="btn draw-border" @click="removeFromCart(item)">
                     {{ $t('Remove') }}
                 </button>
             </li>
@@ -16,7 +19,7 @@
         </div>
         <div v-else>
             {{ $t('Total Items') }}: {{ cart.length }}
-            <button @click="submit">
+            <button class="btn draw-border" @click="submit">
                 {{ $t('Submit Cart') }}
             </button>
         </div>
@@ -49,17 +52,33 @@ async function submit() {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: black;
+    height: 100%;
+    overflow-y: clip;
+    color: white;
 }
 .cart-wrapper {
-    width: 30rem;
+    width: 40rem;
+    background-color: #343835;
+    overflow-y: scroll;
     text-align: left;
     list-style: none;
+    padding: 1rem;
     .item-in-cart {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0.5rem;
         font-size: 2rem;
+        width: 95%;
+        text-align: left;
+        .title {
+            display: flex;
+            align-items: center;
+        }
+        .image {
+            margin: 1rem;
+        }
 
         button {
             margin-left: 1rem;
