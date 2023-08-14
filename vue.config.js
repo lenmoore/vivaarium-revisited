@@ -1,14 +1,24 @@
 module.exports = {
     devServer: {
-        host: 'localhost', // Hostname for the development server
-        port: 8080, // Port for the development server
-        allowedHosts: [
-            'localhost',
-            'example.com',
-            '192.168.1.1',
-            'ondigitalocean.app',
-            '.ondigitalocean.app',
-            '*.ondigitalocean.app',
-        ],
+        client: {
+            logging: 'none',
+        },
+        compress: true,
+        host: 'localhost',
+        port: 3035,
+        https: false,
+        hot: true,
+        historyApiFallback: {
+            disableDotRule: true,
+        },
+        allowedHosts: 'all',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
+        static: {
+            watch: {
+                ignored: '/node_modules/',
+            },
+        },
     },
 };
