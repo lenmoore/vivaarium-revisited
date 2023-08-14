@@ -20,5 +20,11 @@ module.exports = {
                 ignored: '/node_modules/',
             },
         },
+        webSocketServer: {
+            type: 'ws',
+            options: {
+                path: '/wds',
+            },
+        },
     },
 };
