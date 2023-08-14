@@ -5,7 +5,6 @@
     <!--        <RouterLink class="btn btn-primary" to="/intro"-->
     <!--            >{{ $t('Enter the Vivarium') }}-->
     <!--        </RouterLink>-->
-    whys you not rebuilding
     <RouterView />
     <!--    </div>-->
 </template>
