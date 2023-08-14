@@ -1,5 +1,6 @@
 <template>
     <div class="main">
+        im so mad
         <router-view />
     </div>
 </template>
