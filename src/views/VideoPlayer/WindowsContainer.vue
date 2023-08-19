@@ -4,9 +4,9 @@
             <ColorSelector @select-color="(val) => selectColor(val)" />
             <ChapterController @select-chapter="(val) => selectChapter(val)" />
         </div>
-        <VideoPlayback />
+        <VideoPlayback ref="playback" />
 
-        <CapsuleData v-if="parseInt(activeChapter) > 1" />
+        <CapsuleData v-if="parseInt(activeChapter) === 3" />
     </div>
 </template>
 <script>
@@ -51,6 +51,7 @@ export default {
         selectChapter(chapterCode) {
             console.log(chapterCode);
             this.activeChapter = chapterCode.number.toString();
+            this.$refs.playback.quizDone = false;
         },
         selectColor(colorCode) {
             console.log(colorCode);

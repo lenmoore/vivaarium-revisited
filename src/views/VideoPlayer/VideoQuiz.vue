@@ -23,7 +23,10 @@
                 {{ $t('<<') }}
             </button>
             <button
-                v-if="activeStepNumber < activeStep.questionOptions.length"
+                v-if="
+                    quiz.gameSteps.length > 1 &&
+                    activeStepNumber < activeStep.questionOptions.length
+                "
                 class="btn draw-border"
                 @click="activeStepNumber += 1"
             >
@@ -83,6 +86,7 @@ export default {
 
     color: white;
     .title {
+        margin: 0.5rem 8rem;
         font-size: 2rem;
     }
     .option {

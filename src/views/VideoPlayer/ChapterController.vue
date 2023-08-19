@@ -8,7 +8,11 @@
             <li
                 v-for="(chapter, index) in chapters"
                 :class="{
-                    active: $route.query.code.includes(chapter.number),
+                    active:
+                        $route.query.code.substring(
+                            1,
+                            this.$route.query.code.length + 1
+                        ) === chapter.number.toString(),
                 }"
                 :key="`${index}_${chapter.title}`"
                 class="chapter-link"
@@ -44,6 +48,7 @@ export default {
     padding: 0;
     background-color: black;
     margin: 0;
+    height: 500px;
     .chapter-link {
         margin: 0.4rem;
         text-align: left;

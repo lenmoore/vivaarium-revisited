@@ -1716,7 +1716,7 @@
   },
   {
     "_id": "63bf21f128a69a85e5bb4e09",
-    "name": "3.11 radikaalne/\"süüdi\" kõne - Violett",
+    "name": "3.11 radikaalne süüdi kõne - Violett",
     "game_type": "QUIZ",
     "game_steps": [
       {
@@ -1760,7 +1760,7 @@
   },
   {
     "_id": "63bf221028a69a85e5bb4e1e",
-    "name": "3.11 radikaalne/\"süüdi\" kõne - Laim",
+    "name": "3.11 radikaalnesüüdi kõne - Laim",
     "game_type": "QUIZ",
     "game_steps": [
       {
@@ -1804,7 +1804,7 @@
   },
   {
     "_id": "63bf224228a69a85e5bb4e32",
-    "name": "3.11 radikaalne/\"süüdi\" kõne - Türkiis",
+    "name": "3.11 radikaalnesüüdi kõne - Türkiis",
     "game_type": "QUIZ",
     "game_steps": [
       {
@@ -1848,7 +1848,7 @@
   },
   {
     "_id": "63bf226528a69a85e5bb4e4c",
-    "name": "3.11 radikaalne/\"süüdi\" kõne - Hõbevalge",
+    "name": "3.11 radikaalnesüüdi kõne - Hõbevalge",
     "game_type": "QUIZ",
     "game_steps": [
       {
@@ -2312,6 +2312,89 @@
     "gameId": "game_w7azpns63e",
     "createdAt": "2023-01-11T21:01:22.774Z",
     "updatedAt": "2023-01-16T21:40:00.695Z",
+    "__v": 0
+  },
+  {
+    "_id": "63bf213828a69a85e5bb4da2",
+    "name": "1. Audiitor",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf214128a69a85e5bb4da8",
+        "question_text": "Audiitor, kui mõistlik on sinu meelest kapten?",
+        "question_options": [
+          {
+            "option_text": "1"
+          },
+          {
+            "option_text": "2"
+          },
+          {
+            "option_text": "3"
+          },
+          {
+            "option_text": "4"
+          },
+          {
+            "option_text": "5"
+          }
+        ],
+        "stepId": "step_p8g13ldxuw",
+        "createdAt": "2023-01-11T20:51:13.903Z",
+        "updatedAt": "2023-01-11T20:51:13.903Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_4kzopmeprj",
+    "createdAt": "2023-01-11T20:51:04.503Z",
+    "updatedAt": "2023-01-11T20:51:13.962Z",
+    "__v": 0
+  },
+
+  {
+    "_id": "63bf213828a69a85e5bb4da2",
+    "name": "2. Audiitor",
+    "game_type": "QUIZ",
+    "game_steps": [
+      {
+        "_id": "63bf214128a69a85e5bb4da8",
+        "question_text": "Audiitor, kui mõistlik on sinu meelest kapten NYYD?",
+        "question_options": [
+          {
+            "option_text": "1"
+          },
+          {
+            "option_text": "2"
+          },
+          {
+            "option_text": "3"
+          },
+          {
+            "option_text": "4"
+          },
+          {
+            "option_text": "5"
+          }
+        ],
+        "stepId": "step_p8g13ldxuw",
+        "createdAt": "2023-01-11T20:51:13.903Z",
+        "updatedAt": "2023-01-11T20:51:13.903Z",
+        "__v": 0
+      }
+    ],
+    "game_players": [],
+    "open_for_colors": [
+      "fuchsia"
+    ],
+    "pre_capsule": false,
+    "gameId": "game_4kzopmeprj",
+    "createdAt": "2023-01-11T20:51:04.503Z",
+    "updatedAt": "2023-01-11T20:51:13.962Z",
     "__v": 0
   }
 ]

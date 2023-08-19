@@ -11,12 +11,11 @@
             v-if="showQuiz && !quizDone"
             :quiz="quiz"
         />
-        {{ activeVideo.subtitle }}
+        {{ quizDone }} | {{ activeVideo.subtitle }}
         <video
             id="ssvid"
             autoplay
             @timeupdate="checkTimestamp"
-            muted
             controls
             :src="activeVideo && activeVideo.videoUrl"
         >
@@ -49,9 +48,11 @@ export default {
     },
     computed: {
         activeVideo() {
-            console.log(videos);
-            console.log(this.$route.query.code[0]);
-            return videos[this.$route.query.code[0]][this.$route.query.code[1]];
+            const videoNumber = this.$route.query.code.substring(
+                1,
+                this.$route.query.code.length + 1
+            );
+            return videos[this.$route.query.code[0]][videoNumber];
         },
         videoStartWidth() {
             return 800;
@@ -90,7 +91,23 @@ export default {
         },
         finishQuiz() {
             this.quizDone = true;
-            document.getElementById('ssvid').play();
+            const videoNumber = this.$route.query.code.substring(
+                1,
+                this.$route.query.code.length + 1
+            );
+
+            if (['6', '4', '16'].includes(videoNumber)) {
+                this.$router.push({
+                    name: this.$route.name,
+                    query: {
+                        code: `${this.$route.query.code[0]}${
+                            this.activeVideo.number + 1
+                        }`,
+                    },
+                });
+            } else {
+                document.getElementById('ssvid').play();
+            }
         },
     },
 };
