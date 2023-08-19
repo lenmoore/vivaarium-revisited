@@ -1,91 +1,48 @@
 export const videos = {
-    v1: {
-        capsule: 'violett',
-        title: 'esimene peatykk',
-        videoUrl: '',
-        number: 1,
-    },
-    l1: {
-        number: 2,
-        capsule: 'lime',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    t1: {
-        number: 2,
-        capsule: 'turq',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    h1: {
-        number: 2,
-        capsule: 'hobevalge',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-
-    v2: {
-        capsule: 'violett',
-        title: 'esimene peatykk',
-        videoUrl: '',
-        number: 2,
-    },
-    l2: {
-        number: 2,
-        capsule: 'lime',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    t2: {
-        number: 2,
-        capsule: 'turq',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    h2: {
-        number: 2,
-        capsule: 'hobevalge',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    v3: {
-        capsule: 'violett',
-        title: 'esimene peatykk',
-        videoUrl: '',
-        number: 3,
-    },
-    l3: {
-        number: 3,
-        capsule: 'lime',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    t3: {
-        number: 3,
-        capsule: 'turq',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    h3: {
-        number: 3,
-        capsule: 'hobevalge',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-    },
-    z1: {
-        number: 4,
-        capsule: 'zoom',
-        title: 'esimene videosild',
-        videoUrl:
-            'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
+    v: {
+        1: {
+            title: 'violett - tervist',
+            subtitle: 'sisenemine kapslisse. admini intro. pikk lause.',
+            videoUrl: 'http://167.71.52.104/violett_v01.mp4',
+            showLootBox: false,
+            showQuiz: null,
+            quizTimestamp: null,
+        },
+        2: {
+            title: 'violett - loot',
+            subtitle: 'vaatame siis, mis me kaasa võtsime. ',
+            videoUrl: 'http://167.71.52.104/violett_v02.mp4',
+            showLootBox: true,
+            showQuiz: null,
+            quizTimestamp: null,
+        },
+        3: {
+            title: 'violett - elu kapslis',
+            subtitle:
+                'nüüd violett küsib teilt küsimusi. lorem ipsum dolor sit amet. kes lorem ipsumit peast teab?',
+            videoUrl: 'http://167.71.52.104/violett_v03.mp4',
+            showLootBox: false,
+            showQuiz: '3.3 Elu kapslis - Violett',
+            quizTimestamp: null,
+        },
+        4: {
+            title: 'violett - videokõne',
+            subtitle:
+                'esimene videosild, kus kõik ütlevad tere ja soovivad teistele head.',
+            videoUrl: 'http://167.71.52.104/violett_v01.mp4',
+            showLootBox: false,
+        },
+        5: {
+            title: 'violett - esimene kõne',
+            subtitle: 'violett on parim kapsel maailmas! eks?',
+            videoUrl: 'https://vimeo.com/763941723',
+            showLootBox: false,
+        },
+        6: {
+            title: 'violett - ajahüpe-video',
+            subtitle: 'möödunud on esimene pikem periood',
+            videoUrl: 'https://vimeo.com/763941723',
+            showLootBox: false,
+        },
     },
 };

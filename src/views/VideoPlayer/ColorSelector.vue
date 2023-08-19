@@ -5,47 +5,39 @@
                 <span
                     class="violet"
                     :class="{
-                        disabled:
-                            $route.query.code.startsWith('z') ||
-                            $route.query.code.startsWith('a'),
                         active: $route.query.code.startsWith('v'),
                     }"
                     @click="select('violet')"
-                    >Violett</span
                 >
+                    Violett
+                </span>
                 <span
                     class="lime"
                     @click="select('lime')"
                     :class="{
                         active: $route.query.code.startsWith('l'),
-                        disabled:
-                            $route.query.code.startsWith('z') ||
-                            $route.query.code.startsWith('a'),
                     }"
-                    >Laim</span
                 >
+                    Laim
+                </span>
                 <span
                     class="turquoise"
                     @click="select('turq')"
                     :class="{
-                        disabled:
-                            $route.query.code.startsWith('z') ||
-                            $route.query.code.startsWith('a'),
                         active: $route.query.code.startsWith('t'),
                     }"
-                    >Turkiis</span
                 >
+                    Turkiis
+                </span>
                 <span
                     class="silver"
                     @click="select('hobevalge')"
                     :class="{
-                        disabled:
-                            $route.query.code.startsWith('z') ||
-                            $route.query.code.startsWith('a'),
                         active: $route.query.code.startsWith('h'),
                     }"
-                    >Hobevalge</span
                 >
+                    Hobevalge
+                </span>
             </div>
         </FloatingWindow>
     </div>
@@ -91,10 +83,6 @@ export default {
     }
     .active {
         border: 4px solid white;
-    }
-    .disabled {
-        background-color: lightgrey;
-        color: #00fff0;
     }
 }
 </style>
