@@ -8,7 +8,7 @@ export const videos = {
             showLootBox: false,
             showQuiz: null,
             number: 1,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
         },
         2: {
             title: 'violett - loot',
@@ -16,7 +16,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/violett_v02.mp4',
             showLootBox: true,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 2,
         },
         3: {
@@ -26,7 +26,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/violett_v03.mp4',
             showLootBox: false,
             showQuiz: '3.3 Elu kapslis - Violett',
-            quizTimestamp: null,
+            quizTimestampInSeconds: 3 * 60 + 10,
             number: 3,
         },
         4: {
@@ -60,7 +60,7 @@ export const videos = {
             subs: '',
             showLootBox: false,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 1,
         },
         2: {
@@ -69,7 +69,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/laim_v02.mp4',
             showLootBox: true,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 2,
         },
         3: {
@@ -79,7 +79,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/laim_v03.mp4',
             showLootBox: false,
             showQuiz: '3.3 Elu kapslis - laim',
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 3,
         },
         4: {
@@ -113,7 +113,7 @@ export const videos = {
             subs: '',
             showLootBox: false,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 1,
         },
         2: {
@@ -122,7 +122,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/turkiis_v02.mp4',
             showLootBox: true,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 2,
         },
         3: {
@@ -132,7 +132,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/turkiis_v03.mp4',
             showLootBox: false,
             showQuiz: '3.3 Elu kapslis - turkiis',
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 3,
         },
         4: {
@@ -166,7 +166,7 @@ export const videos = {
             subs: '',
             showLootBox: false,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 1,
         },
         2: {
@@ -175,7 +175,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/hobevalge_v02.mp4',
             showLootBox: true,
             showQuiz: null,
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 2,
         },
         3: {
@@ -185,7 +185,7 @@ export const videos = {
             videoUrl: 'http://167.71.52.104/hobevalge_v03.mp4',
             showLootBox: false,
             showQuiz: '3.3 Elu kapslis - hobevalge',
-            quizTimestamp: null,
+            quizTimestampInSeconds: null,
             number: 3,
         },
         4: {

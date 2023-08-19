@@ -1,13 +1,13 @@
 <template>
     <Vue3DraggableResizable
         :initW="startWidth + 100"
+        class="window"
         :initH="startHeight + 100"
         v-model:x="x"
         v-model:y="y"
         v-model:w="w"
         v-model:h="h"
         v-model:active="active"
-        class="window"
         :draggable="true"
         :resizable="true"
         @activated="print('activated')"
@@ -24,7 +24,7 @@
                 {{ title }}
             </span>
         </div>
-        <slot></slot>
+        <div class="drag-cancel"><slot></slot></div>
     </Vue3DraggableResizable>
 </template>
 
@@ -49,8 +49,8 @@ export default {
     },
     data() {
         return {
-            x: 100,
-            y: 100,
+            x: 0,
+            y: 0,
             h: 100,
             w: 100,
             active: false,
@@ -67,13 +67,15 @@ export default {
 <style lang="scss">
 .window {
     margin: 1rem;
+    user-select: none;
     .window-row {
-        background-color: #42b983;
+        background-color: #2d493c;
         width: 100%;
         height: 24px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        color: white;
         .title {
             margin-left: 1rem;
         }
@@ -105,5 +107,11 @@ export default {
             padding: 1rem;
         }
     }
+}
+.drag-cancel {
+    z-index: 1;
+    height: 100%;
+    position: relative;
+    width: 100%;
 }
 </style>

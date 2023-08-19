@@ -14,7 +14,8 @@
                 class="chapter-link"
                 @click="$emit('select-chapter', chapter)"
             >
-                {{ chapter.title }}
+                <div class="title">{{ chapter.title }}</div>
+                <div class="subtitle">{{ chapter.subtitle }}</div>
             </li>
         </ul>
     </FloatingWindow>
@@ -22,6 +23,7 @@
 <script>
 import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
 import { videos } from '@/views/VideoPlayer/video-data';
+
 export default {
     components: { FloatingWindow },
 
@@ -37,14 +39,20 @@ export default {
 </script>
 <style lang="scss">
 .chapters-list-wrapper {
-    height: 550px;
     overflow-y: scroll;
     list-style: none;
     padding: 0;
+    background-color: black;
+    margin: 0;
     .chapter-link {
         margin: 0.4rem;
-        background-color: lightgrey;
-        border: 1px solid grey;
+        text-align: left;
+        padding: 0.25rem;
+        color: white;
+        .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
         &.active {
             background-color: #42b983;
         }

@@ -19,8 +19,9 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 6rem;
+    padding-top: 1rem;
     height: 100%;
     width: 100%;
+    overflow: clip;
 }
 </style>

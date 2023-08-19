@@ -1,0 +1,107 @@
+<template>
+    <div v-if="quiz.gameSteps" class="quiz-wrapper">
+        <div>
+            <div class="title">{{ activeStep.questionText }}</div>
+            <div
+                v-for="option in activeStep.questionOptions"
+                :key="option.option_text"
+                class="option btn draw-border"
+                :class="{ selected: option.selected }"
+                @click="selectAnswer(option, activeStep.questionOptions)"
+            >
+                {{ option.option_text }}
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button
+                :disabled="activeStepNumber === 0"
+                class="btn draw-border"
+                :class="{ disabled: activeStepNumber === 0 }"
+                @click="activeStepNumber -= 1"
+            >
+                {{ $t('<<') }}
+            </button>
+            <button
+                v-if="activeStepNumber < activeStep.questionOptions.length"
+                class="btn draw-border"
+                @click="activeStepNumber += 1"
+            >
+                {{ $t('>>') }}
+            </button>
+            <button v-else @click="submitQuiz">Valmis</button>
+        </div>
+    </div>
+</template>
+<script>
+import { useStore } from '@/views/Quiz/store';
+
+const store = useStore();
+export default {
+    name: 'VideoQuiz',
+    props: {
+        quiz: {
+            type: Object,
+            default: () => ({}),
+        },
+    },
+    data() {
+        return {
+            activeStepNumber: 0,
+        };
+    },
+    computed: {
+        quizSteps() {
+            return this.quiz.gameSteps;
+        },
+        activeStep() {
+            return this.quizSteps[this.activeStepNumber];
+        },
+    },
+    methods: {
+        selectAnswer(val, allOptions) {
+            console.log(val);
+            allOptions.forEach((option) => (option.selected = false));
+            val.selected = true;
+            store.localStore.setItem(
+                `${this.$route.query.code}_${this.activeStepNumber}`,
+                val
+            );
+        },
+        submitQuiz() {
+            this.$emit('submit');
+        },
+    },
+};
+</script>
+<style lang="scss">
+.quiz-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+    .title {
+        font-size: 2rem;
+    }
+    .option {
+        font-size: 1.5rem;
+        margin: 0.5rem 8rem;
+        padding: 1rem;
+        cursor: pointer;
+        &.selected {
+            background-color: #42b983;
+        }
+    }
+}
+
+.buttons {
+    button {
+        margin: 1rem;
+    }
+}
+.disabled {
+    background-color: silver;
+}
+</style>
