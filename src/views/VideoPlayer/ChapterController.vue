@@ -1,21 +1,23 @@
 <template>
-    <div>
-        <FloatingWindow id="chapter-controller">
-            <ul class="chapters-list-wrapper">
-                <li
-                    :class="{
-                        active: $route.query.code.includes(chapter.number),
-                    }"
-                    :key="`${index}_${chapter.title}`"
-                    class="chapter-link"
-                    v-for="(chapter, index) in chapters"
-                    @click="$emit('select-chapter', chapter)"
-                >
-                    {{ chapter.title }}
-                </li>
-            </ul>
-        </FloatingWindow>
-    </div>
+    <FloatingWindow
+        :title="'Vali peatykk'"
+        :start-width="300"
+        id="chapter-controller"
+    >
+        <ul class="chapters-list-wrapper">
+            <li
+                v-for="(chapter, index) in chapters"
+                :class="{
+                    active: $route.query.code.includes(chapter.number),
+                }"
+                :key="`${index}_${chapter.title}`"
+                class="chapter-link"
+                @click="$emit('select-chapter', chapter)"
+            >
+                {{ chapter.title }}
+            </li>
+        </ul>
+    </FloatingWindow>
 </template>
 <script>
 import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
@@ -28,33 +30,7 @@ export default {
             return videos;
         },
         chapters() {
-            return {
-                v1: {
-                    capsule: 'violett',
-                    title: 'esimene peatykk',
-                    videoUrl: '',
-                    number: 1,
-                },
-                v2: {
-                    capsule: 'violett',
-                    title: 'teine peatykk',
-                    videoUrl: '',
-                    number: 2,
-                },
-                v3: {
-                    capsule: 'violett',
-                    title: 'kolmas peatykk',
-                    videoUrl: '',
-                    number: 3,
-                },
-                z1: {
-                    number: 4,
-                    capsule: 'zoom',
-                    title: 'esimene videosild (4. ptk)',
-                    videoUrl:
-                        'https://www.dropbox.com/l/scl/AABCFt-At8HmHG8EFXi0VhZOGNkxMxNd-oc&dl=1&raw=1',
-                },
-            };
+            return this.videos[this.$route.query.code[0]];
         },
     },
 };

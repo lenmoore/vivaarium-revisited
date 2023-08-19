@@ -1,8 +1,12 @@
 <template>
-    <FloatingWindow id="video-playback">
-        {{ activeVideo }}
+    <FloatingWindow
+        :title="activeVideo.title"
+        :start-width="videoStartWidth"
+        :start-height="videoStartHeight"
+        id="video-playback"
+    >
+        {{ activeVideo.subtitle }}
         <video
-            width="600"
             id="intro-vid"
             autoplay
             muted
@@ -16,14 +20,6 @@
                 srclang="en"
             />
         </video>
-        <!--        <iframe-->
-        <!--            src="https://player.vimeo.com/video/763941723?h=6623122890&title=0&byline=0&portrait=0"-->
-        <!--            width="640"-->
-        <!--            height="360"-->
-        <!--            frameborder="0"-->
-        <!--            allow="autoplay; fullscreen; picture-in-picture"-->
-        <!--            allowfullscreen-->
-        <!--        ></iframe>-->
     </FloatingWindow>
 </template>
 <script>
@@ -37,11 +33,20 @@ export default {
             console.log(this.$route.query.code[0]);
             return videos[this.$route.query.code[0]][this.$route.query.code[1]];
         },
+        videoStartWidth() {
+            return 800;
+        },
+        videoStartHeight() {
+            return this.videoStartWidth * 0.6;
+        },
     },
 };
 </script>
 
 <style lang="scss">
+video {
+    width: 90%;
+}
 video::cue {
     font-size: 1.5rem;
     font-family: monospace;

@@ -1,7 +1,12 @@
 <template>
     <div>
-        <FloatingWindow id="color-selector">
-            <div class="percents">
+        <FloatingWindow
+            :title="'Vaheta kapslit'"
+            :start-width="300"
+            :start-height="100"
+            id="color-selector"
+        >
+            <div class="colors">
                 <span
                     class="violet"
                     :class="{
@@ -39,6 +44,11 @@
                     Hobevalge
                 </span>
             </div>
+            <div class="active-capsule-data">
+                <div>Aktiivne kapsel: {{ activeCapsule }}</div>
+                <div>Populatsioon: 26</div>
+                <div>Kapslis veedetud aeg: 2 aastat 7 kuud</div>
+            </div>
         </FloatingWindow>
     </div>
 </template>
@@ -47,6 +57,22 @@ import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
 import { ref } from 'vue';
 export default {
     components: { FloatingWindow },
+    computed: {
+        activeCapsule() {
+            const code = this.$route.query.code;
+            switch (code) {
+                default:
+                case code.startsWith('v'):
+                    return 'violett';
+                case code.startsWith('l'):
+                    return 'laim';
+                case code.startsWith('t'):
+                    return 'turq';
+                case code.startsWith('h'):
+                    return 'hobevalge';
+            }
+        },
+    },
     methods: {
         select(color) {
             console.log(color);
@@ -59,13 +85,14 @@ export default {
 
 <style lang="scss">
 @import '../../vars';
-.percents {
+.colors {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0.5rem;
     span {
-        margin: 1rem;
         padding: 1rem;
         border: 4px solid transparent;
     }
@@ -84,5 +111,11 @@ export default {
     .active {
         border: 4px solid white;
     }
+}
+.active-capsule-data {
+    color: white;
+    text-align: left;
+    width: 100%;
+    margin: 0.5rem;
 }
 </style>

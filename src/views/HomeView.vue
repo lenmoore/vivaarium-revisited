@@ -1,12 +1,5 @@
 <template>
-    <!--    <div class="home">-->
-    <!--        <h1>Welcome, Auditor.</h1>-->
-
-    <!--        <RouterLink class="btn btn-primary" to="/intro"-->
-    <!--            >{{ $t('Enter the Vivarium') }}-->
-    <!--        </RouterLink>-->
     <RouterView />
-    <!--    </div>-->
 </template>
 
 <style lang="scss">

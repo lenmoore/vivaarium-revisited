@@ -1,23 +1,67 @@
 <template>
-    <div :style="''" :id="$props.id" class="window">
-        <div class="window-row"></div>
+    <Vue3DraggableResizable
+        :initW="startWidth + 100"
+        :initH="startHeight + 100"
+        v-model:x="x"
+        v-model:y="y"
+        v-model:w="w"
+        v-model:h="h"
+        v-model:active="active"
+        class="window"
+        :draggable="true"
+        :resizable="true"
+        @activated="print('activated')"
+        @deactivated="print('deactivated')"
+        @drag-start="print('drag-start')"
+        @resize-start="print('resize-start')"
+        @dragging="print('dragging')"
+        @resizing="print('resizing')"
+        @drag-end="print('drag-end')"
+        @resize-end="print('resize-end')"
+    >
+        <div class="window-row">
+            <span class="title">
+                {{ title }}
+            </span>
+        </div>
         <slot></slot>
-    </div>
+    </Vue3DraggableResizable>
 </template>
 
-<script setup>
-import { defineProps } from 'vue';
-defineProps({
-    id: {
-        type: String,
-        default: '',
+<script>
+import Vue3DraggableResizable from 'vue3-draggable-resizable';
+
+export default {
+    components: { Vue3DraggableResizable },
+    props: {
+        startWidth: {
+            type: Number,
+            default: 200,
+        },
+        startHeight: {
+            type: Number,
+            default: 400,
+        },
+        title: {
+            type: String,
+            default: 'Video',
+        },
     },
-});
-// const positionX = ref(40);
-// const positionY = ref(40);
-// const getStyle = ref(
-//     `left: ${positionX.value}px; right: ${positionY.value}px;`
-// );
+    data() {
+        return {
+            x: 100,
+            y: 100,
+            h: 100,
+            w: 100,
+            active: false,
+        };
+    },
+    methods: {
+        print(val) {
+            console.log(val);
+        },
+    },
+};
 </script>
 
 <style lang="scss">
@@ -27,6 +71,12 @@ defineProps({
         background-color: #42b983;
         width: 100%;
         height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .title {
+            margin-left: 1rem;
+        }
     }
     background-color: white;
     border: 1px solid black;

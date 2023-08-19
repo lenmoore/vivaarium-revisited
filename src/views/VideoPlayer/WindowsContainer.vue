@@ -51,9 +51,6 @@ export default {
             console.log(chapterCode);
             // todo set active video url
             this.activeChapter = chapterCode.number.toString();
-            if (chapterCode.capsule === 'zoom') {
-                this.selectColor('zoom');
-            }
         },
         selectColor(colorCode) {
             console.log(colorCode);
