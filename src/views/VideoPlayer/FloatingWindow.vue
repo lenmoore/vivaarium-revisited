@@ -1,8 +1,8 @@
 <template>
     <Vue3DraggableResizable
-        :initW="startWidth + 100"
+        :initW="startWidth + 60"
         class="window"
-        :initH="startHeight + 100"
+        :initH="startHeight + 60"
         v-model:x="x"
         v-model:y="y"
         v-model:w="w"
@@ -66,6 +66,9 @@ export default {
 
 <style lang="scss">
 .window {
+    -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
+    box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
     margin: 1rem;
     user-select: none;
     .window-row {

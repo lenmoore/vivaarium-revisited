@@ -11,8 +11,9 @@
             v-if="showQuiz && !quizDone"
             :quiz="quiz"
         />
-        {{ quizDone }} | {{ activeVideo.subtitle }}
+        {{ activeVideo.subtitle }}
         <video
+            v-if="activeVideo.videoUrl.length"
             id="ssvid"
             autoplay
             @timeupdate="checkTimestamp"
@@ -26,6 +27,7 @@
                 srclang="en"
             />
         </video>
+        <div class="no-video-error" v-else><span>Videot pole</span></div>
     </FloatingWindow>
 </template>
 <script>
@@ -127,5 +129,16 @@ video::cue {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
+}
+.no-video-error {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        background-color: lightcoral;
+        padding: 4rem;
+    }
 }
 </style>
