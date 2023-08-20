@@ -6,6 +6,7 @@ module.exports = {
     // Configure Nginx to handle the history mode of Vue Router
     devServer: {
         historyApiFallback: true,
+        host: '0.0.0.0',
     },
 
     // Production build settings
