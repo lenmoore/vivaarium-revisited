@@ -5,7 +5,6 @@
             <ChapterController @select-chapter="(val) => selectChapter(val)" />
         </div>
         <VideoPlayback ref="playback" />
-
         <CapsuleData v-if="parseInt(activeChapter) === 3" />
     </div>
 </template>

@@ -83,32 +83,24 @@ export default {
             margin-left: 1rem;
         }
     }
-    background-color: white;
+    background-color: black;
     border: 1px solid black;
-    //width: 600px;
-    //height: 500px;
+    color: white;
     position: relative;
 
+    #video-playback {
+        z-index: 3;
+    }
     &#capsule-data-window {
         height: 400px;
         width: 200px;
     }
     &#color-selector {
-        //height: 90px;
-        //width: 450px;
+        z-index: 1;
         background-color: black;
     }
     &#chapter-controller {
-        //height: 600px;
-        //width: 450px;
-    }
-    &#video-playback {
-        //height: 500px;
-        //width: 750px;
-        height: 450px;
-        video {
-            padding: 1rem;
-        }
+        z-index: 2;
     }
 }
 .drag-cancel {

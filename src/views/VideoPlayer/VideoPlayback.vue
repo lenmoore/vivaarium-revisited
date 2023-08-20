@@ -11,7 +11,7 @@
             v-if="showQuiz && !quizDone"
             :quiz="quiz"
         />
-        {{ activeVideo.subtitle }}
+        <div class="active-video-description">{{ activeVideo.subtitle }}</div>
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
@@ -117,7 +117,7 @@ export default {
 
 <style lang="scss">
 video {
-    width: 90%;
+    width: 99%;
 }
 video::cue {
     font-size: 1.5rem;
@@ -140,5 +140,14 @@ video::cue {
         background-color: lightcoral;
         padding: 4rem;
     }
+}
+
+#video-playback {
+    z-index: 2;
+}
+.active-video-description {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
 }
 </style>
