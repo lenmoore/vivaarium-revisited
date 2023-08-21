@@ -83,7 +83,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
     color: white;
     .title {
         margin: 0.5rem 8rem;
@@ -91,8 +91,8 @@ export default {
     }
     .option {
         font-size: 1.5rem;
-        margin: 0.5rem 8rem;
         padding: 1rem;
+        margin: 0.5rem;
         cursor: pointer;
         max-width: 50rem !important;
         max-height: 3rem !important;
