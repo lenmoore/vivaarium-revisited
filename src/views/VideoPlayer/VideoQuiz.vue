@@ -11,28 +11,28 @@
             >
                 {{ option.option_text }}
             </div>
-        </div>
 
-        <div class="buttons">
-            <button
-                :disabled="activeStepNumber === 0"
-                class="btn draw-border"
-                :class="{ disabled: activeStepNumber === 0 }"
-                @click="activeStepNumber -= 1"
-            >
-                {{ $t('<<') }}
-            </button>
-            <button
-                v-if="
-                    quiz.gameSteps.length > 1 &&
-                    activeStepNumber < activeStep.questionOptions.length
-                "
-                class="btn draw-border"
-                @click="activeStepNumber += 1"
-            >
-                {{ $t('>>') }}
-            </button>
-            <button v-else @click="submitQuiz">Valmis</button>
+            <div class="buttons">
+                <button
+                    :disabled="activeStepNumber === 0"
+                    class="btn draw-border"
+                    :class="{ disabled: activeStepNumber === 0 }"
+                    @click="activeStepNumber -= 1"
+                >
+                    {{ $t('<<') }}
+                </button>
+                <button
+                    v-if="
+                        quiz.gameSteps.length > 1 &&
+                        activeStepNumber < activeStep.questionOptions.length
+                    "
+                    class="btn draw-border"
+                    @click="activeStepNumber += 1"
+                >
+                    {{ $t('>>') }}
+                </button>
+                <button v-else @click="submitQuiz">Valmis</button>
+            </div>
         </div>
     </div>
 </template>
@@ -100,13 +100,13 @@ export default {
             background-color: #42b983;
         }
     }
-}
-
-.buttons {
-    button {
-        margin: 1rem;
+    .buttons {
+        button {
+            margin: 1rem;
+        }
     }
 }
+
 .disabled {
     background-color: silver;
 }
