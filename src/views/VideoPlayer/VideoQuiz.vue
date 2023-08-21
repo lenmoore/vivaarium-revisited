@@ -94,6 +94,8 @@ export default {
         margin: 0.5rem 8rem;
         padding: 1rem;
         cursor: pointer;
+        max-width: 50rem !important;
+        max-height: 3rem !important;
         &.selected {
             background-color: #42b983;
         }
