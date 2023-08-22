@@ -68,6 +68,14 @@ const routes: Array<RouteRecordRaw> = [
         children: [
             {
                 path: 'intro',
+                name: 'quizzes.intro',
+                component: () =>
+                    import(
+                        /* webpackChunkName: "about" */ '../views/Quiz/QuizShopFinishedIntro.vue'
+                    ),
+            },
+            {
+                path: 'intro',
                 name: 'quiz.intro',
                 component: () =>
                     import(

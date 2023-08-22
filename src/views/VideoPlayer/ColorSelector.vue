@@ -114,7 +114,7 @@ export default {
     }
 }
 .active-capsule-data {
-    color: white;
+    color: $text-color;
     text-align: left;
     background-color: black;
     width: 90%;

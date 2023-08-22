@@ -138,7 +138,7 @@ async function forward() {
     align-items: center;
     justify-content: center;
     .question-text {
-        color: white;
+        color: $text-color;
     }
 }
 .slide {

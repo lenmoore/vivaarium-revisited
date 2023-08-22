@@ -31,9 +31,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../vars';
 .timer-wrapper {
     margin-top: 6rem;
     font-size: 4rem;
-    color: white;
+    color: $text-color;
 }
 </style>

@@ -23,8 +23,9 @@
     </div>
 </template>
 <style lang="scss">
+@import '../../vars';
 .video-wrapper {
-    background-color: black;
+    background-color: $background-color;
     height: 100%;
     width: 100%;
     video {
@@ -37,7 +38,7 @@
     .padding {
         padding-bottom: 5rem;
         a {
-            color: white;
+            color: $text-color;
             padding-right: 1rem;
         }
     }

@@ -78,13 +78,14 @@ export default {
 };
 </script>
 <style lang="scss">
+@import '../../vars';
 .quiz-wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: $text-color;
     .title {
         margin: 0.5rem 8rem;
         font-size: 2rem;

@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../vars';
 .window {
     -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
@@ -78,14 +79,14 @@ export default {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        color: white;
+        color: $text-color;
         .title {
             margin-left: 1rem;
         }
     }
     background-color: black;
     border: 1px solid black;
-    color: white;
+    color: $text-color;
     position: relative;
 
     #video-playback {

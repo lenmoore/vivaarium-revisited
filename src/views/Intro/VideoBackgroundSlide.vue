@@ -100,7 +100,7 @@ function nextSlide() {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            color: $turquoise;
+            color: $text-color;
             background-color: rgba(0, 0, 0, 0.6);
 
             .content {

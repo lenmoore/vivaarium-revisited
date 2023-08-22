@@ -28,11 +28,12 @@ watch(
 </template>
 
 <style lang="scss">
+@import '../../vars';
 // white
 .body-intro {
     a {
         background-color: blue;
-        color: white;
+        color: $text-color;
         font-size: 2rem;
         padding: 1rem;
         text-decoration: none;

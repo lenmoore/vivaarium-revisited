@@ -62,15 +62,14 @@ onMounted(async () => {
 });
 </script>
 <template>
-    <div>
-        <h1>
+    <div class="">
+        <h2>
             {{
                 nextContent && nextContent.goingToCapsuleVideo
                     ? $t('Sinu tulemused')
                     : $t('Valmis')
             }}
-        </h1>
-
+        </h2>
         <div v-if="nextContent && nextContent.goingToCapsuleVideo === true">
             <ResultsScreen />
         </div>
@@ -82,3 +81,13 @@ onMounted(async () => {
         </div>
     </div>
 </template>
+
+<style lang="scss">
+.quiz-intro-wrapper {
+    background-color: white;
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+}
+</style>

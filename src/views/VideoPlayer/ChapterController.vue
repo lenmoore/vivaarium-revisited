@@ -42,6 +42,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import '../../vars';
 .chapters-list-wrapper {
     overflow-y: scroll;
     list-style: none;
@@ -53,7 +54,7 @@ export default {
         margin: 0.4rem;
         text-align: left;
         padding: 0.25rem;
-        color: white;
+        color: $text-color;
         .title {
             font-size: 1.25rem;
             font-weight: bold;

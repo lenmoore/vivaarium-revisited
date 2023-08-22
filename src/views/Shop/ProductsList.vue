@@ -75,11 +75,11 @@ const addToCart = (product) => {
 <style lang="scss">
 @import '../../vars';
 .shop-background {
-    background-image: url('/public/videoblocks-seamless-futuristic-surface-neon-blue-light-hexagon-pattern-abstract-motion-background_r-mkls1ols_thumbnail-1080_01.png');
     background-color: black;
-    color: white;
+    color: $text-color;
     header {
         h1 {
+            color: $heading1;
             padding-top: 3rem;
             padding-bottom: 2rem;
             margin-top: 0;
@@ -102,7 +102,7 @@ const addToCart = (product) => {
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        border-radius: 25%;
+        //border-radius: 25%;
         border: 2px solid transparent;
         padding: 2rem;
 
@@ -115,7 +115,7 @@ const addToCart = (product) => {
         }
 
         img {
-            border-radius: 25%;
+            border-radius: 5%;
         }
         .title {
             width: 100%;
@@ -123,6 +123,9 @@ const addToCart = (product) => {
             flex-direction: column;
             font-size: 1.25rem;
             justify-content: flex-end;
+            span {
+                margin: 0.5rem;
+            }
         }
 
         .btn {
@@ -136,7 +139,6 @@ const addToCart = (product) => {
 }
 
 .infobox {
-    border: 1px dotted fuchsia;
     margin: 3rem;
     padding: 1rem;
     font-size: 1.5rem;

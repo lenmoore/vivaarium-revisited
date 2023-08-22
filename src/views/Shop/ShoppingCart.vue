@@ -13,7 +13,7 @@
                     {{ item.title }}
                 </div>
                 <button class="btn draw-border" @click="removeFromCart(item)">
-                    {{ $t('Remove') }}
+                    {{ $t('eemalda') }}
                 </button>
             </li>
         </ul>
@@ -49,23 +49,22 @@ const removeFromCart = (item) => {
 
 async function submit() {
     await store.submitCart();
-    await router.push({ name: 'quiz.intro' });
+    await router.push({ name: 'quizzes.intro' });
 }
 </script>
 <style lang="scss">
+@import '../../vars';
 .cart-page {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: black;
+    background-color: $background-color;
     height: 100%;
     overflow-y: clip;
-    color: white;
-    background-image: url('/public/videoblocks-seamless-futuristic-surface-neon-blue-light-hexagon-pattern-abstract-motion-background_r-mkls1ols_thumbnail-1080_01.png');
+    color: $text-color;
     header {
         padding: 2rem;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 .cart-wrapper {

@@ -36,7 +36,7 @@ body {
 }
 
 h1 {
-    color: $turquoise;
+    color: $heading1;
     font-size: 4rem;
 }
 
