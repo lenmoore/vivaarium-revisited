@@ -84,7 +84,7 @@ export default {
             margin-left: 1rem;
         }
     }
-    background-color: black;
+    background-color: $background-color;
     border: 1px solid black;
     color: $text-color;
     position: relative;
@@ -98,7 +98,7 @@ export default {
     }
     &#color-selector {
         z-index: 1;
-        background-color: black;
+        background-color: $background-color;
     }
     &#chapter-controller {
         z-index: 2;

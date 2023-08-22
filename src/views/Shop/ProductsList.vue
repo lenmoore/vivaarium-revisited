@@ -75,7 +75,7 @@ const addToCart = (product) => {
 <style lang="scss">
 @import '../../vars';
 .shop-background {
-    background-color: black;
+    background-color: $background-color;
     color: $text-color;
     header {
         h1 {
@@ -83,12 +83,11 @@ const addToCart = (product) => {
             padding-top: 3rem;
             padding-bottom: 2rem;
             margin-top: 0;
-            background-color: rgba(0, 0, 0, 0.75);
         }
     }
 }
 .product-list {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $background-color;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -143,10 +142,6 @@ const addToCart = (product) => {
     padding: 1rem;
     font-size: 1.5rem;
     background-color: rgba(0, 0, 0, 0.75);
-}
-
-.hover-grey:hover {
-    background-color: gray;
 }
 
 .cart-button {

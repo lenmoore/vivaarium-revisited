@@ -9,7 +9,11 @@
             <span
                 class="violet"
                 :class="{
-                    active: $route.query.code.startsWith('v'),
+                    active:
+                        $route &&
+                        $route.query &&
+                        $route.query.code &&
+                        $route.query.code.startsWith('v'),
                 }"
                 @click="select('violet')"
             >
@@ -19,7 +23,11 @@
                 class="lime"
                 @click="select('lime')"
                 :class="{
-                    active: $route.query.code.startsWith('l'),
+                    active:
+                        $route &&
+                        $route.query &&
+                        $route.query.code &&
+                        $route.query.code.startsWith('l'),
                 }"
             >
                 Laim
@@ -28,7 +36,11 @@
                 class="turquoise"
                 @click="select('turq')"
                 :class="{
-                    active: $route.query.code.startsWith('t'),
+                    active:
+                        $route &&
+                        $route.query &&
+                        $route.query.code &&
+                        $route.query.code.startsWith('t'),
                 }"
             >
                 Turkiis
@@ -37,7 +49,11 @@
                 class="silver"
                 @click="select('hobevalge')"
                 :class="{
-                    active: $route.query.code.startsWith('h'),
+                    active:
+                        $route &&
+                        $route.query &&
+                        $route.query.code &&
+                        $route.query.code.startsWith('h'),
                 }"
             >
                 Hobevalge
@@ -58,9 +74,14 @@ import FloatingWindow from '@/views/VideoPlayer/FloatingWindow';
 import { ref } from 'vue';
 export default {
     components: { FloatingWindow },
+
     computed: {
         activeCapsule() {
             const code = this.$route.query.code;
+            if (!code) {
+                this.select('violet');
+                return 'violett';
+            }
             switch (code) {
                 default:
                 case code.startsWith('v'):
@@ -116,7 +137,7 @@ export default {
 .active-capsule-data {
     color: $text-color;
     text-align: left;
-    background-color: black;
+    background-color: $background-color;
     width: 90%;
     margin: 0.5rem;
 }

@@ -47,7 +47,7 @@ export default {
     overflow-y: scroll;
     list-style: none;
     padding: 0;
-    background-color: black;
+    background-color: $background-color;
     margin: 0;
     height: 500px;
     .chapter-link {
