@@ -2,6 +2,13 @@
     <div class="shop-background">
         <header>
             <h1>{{ $t('Humanity shop') }}</h1>
+            <RouterLink
+                class="cart-button"
+                v-if="cart && cart.length"
+                :to="{ name: 'cart' }"
+            >
+                Korvi
+            </RouterLink>
         </header>
         <div class="infobox">
             {{
@@ -10,15 +17,10 @@
                 )
             }}
         </div>
-        <RouterLink
-            class="cart-button"
-            v-if="cart && cart.length"
-            :to="{ name: 'cart' }"
-            >Cart</RouterLink
-        >
+
         <ul class="product-list">
             <li class="product" v-for="product in products" :key="product.id">
-                <img width="200" :src="product.image" alt="" />
+                <img width="85" :src="product.image" alt="" />
                 <div class="title">
                     <span> {{ product.title }} </span>
                     <div v-if="isInCart(product)">
@@ -73,57 +75,83 @@ const addToCart = (product) => {
 <style lang="scss">
 @import '../../vars';
 .shop-background {
+    background-image: url('/public/videoblocks-seamless-futuristic-surface-neon-blue-light-hexagon-pattern-abstract-motion-background_r-mkls1ols_thumbnail-1080_01.png');
     background-color: black;
     color: white;
     header {
         h1 {
-            padding-top: 5rem;
+            padding-top: 3rem;
+            padding-bottom: 2rem;
             margin-top: 0;
+            background-color: rgba(0, 0, 0, 0.75);
         }
     }
 }
 .product-list {
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: space-around;
+    padding: 0;
 
     .product {
-        width: 10rem;
-        margin: 1.5rem;
-        border: 8px solid transparent;
+        width: 6rem;
+        height: 10rem;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: 25%;
+        border: 2px solid transparent;
+        padding: 2rem;
+
+        &:hover {
+            //background-image: radial-gradient(#00fff0, black, transparent);
+            //box-shadow: 0 0 50px #3f6969;
+            .btn {
+                cursor: pointer;
+            }
+        }
+
+        img {
+            border-radius: 25%;
+        }
         .title {
-            padding: 1rem;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            font-size: 1.5rem;
-        }
-        &:hover {
-            //border: 8px solid $turquoise;
-            //background-color: white;
+            font-size: 1.25rem;
+            justify-content: flex-end;
         }
 
         .btn {
-            margin-top: 1rem;
-            font-size: 1.5rem;
+            font-size: 1rem;
+            text-wrap: none;
+            width: 100%;
+            background-color: #00fff0;
+            color: black;
         }
     }
 }
+
 .infobox {
     border: 1px dotted fuchsia;
     margin: 3rem;
     padding: 1rem;
     font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.75);
 }
+
 .hover-grey:hover {
     background-color: gray;
 }
+
 .cart-button {
     background-color: white;
     color: black;
     padding: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
 }
 </style>

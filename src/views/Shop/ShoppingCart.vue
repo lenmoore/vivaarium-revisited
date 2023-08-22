@@ -1,8 +1,11 @@
 <template>
     <div class="cart-page">
-        <h2>Ostukorv</h2>
-        <RouterLink :to="{ name: 'products' }">POOD</RouterLink>
-
+        <header>
+            <h1>Ostukorv</h1>
+            <RouterLink class="cart-button" :to="{ name: 'products' }">
+                Poodi
+            </RouterLink>
+        </header>
         <ul class="cart-wrapper">
             <li class="item-in-cart" v-for="item in cart" :key="item.id">
                 <div class="title">
@@ -18,7 +21,9 @@
             {{ $t('Su korv on tühi.') }}
         </div>
         <div v-else>
-            {{ $t('Asju') }}: {{ cart.length }}
+            <div style="font-size: 1.5rem; margin: 1rem">
+                {{ $t('Asju') }}: {{ cart.length }}
+            </div>
             <button class="btn draw-border" @click="submit">
                 Kinnita ostukorv
             </button>
@@ -56,14 +61,22 @@ async function submit() {
     height: 100%;
     overflow-y: clip;
     color: white;
+    background-image: url('/public/videoblocks-seamless-futuristic-surface-neon-blue-light-hexagon-pattern-abstract-motion-background_r-mkls1ols_thumbnail-1080_01.png');
+    header {
+        padding: 2rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 .cart-wrapper {
     width: 40rem;
-    background-color: #343835;
+    background-color: rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
     text-align: left;
     list-style: none;
     padding: 1rem;
+
+    height: 50rem;
     .item-in-cart {
         display: flex;
         justify-content: space-between;

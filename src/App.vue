@@ -109,11 +109,13 @@ h1 {
 }
 
 button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: $dark-turquoise;
     border: none;
     text-align: center;
     cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
     line-height: 1.5;
 }
 </style>
