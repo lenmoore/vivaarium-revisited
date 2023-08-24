@@ -2,14 +2,31 @@
     <div class="cart-page">
         <header>
             <h1>Ostukorv</h1>
-            <RouterLink class="cart-button" :to="{ name: 'products' }">
+            <button
+                class="btn cart-button"
+                @click="$router.push({ name: 'products' })"
+            >
                 Poodi
-            </RouterLink>
+            </button>
         </header>
+        <div
+            style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            "
+        >
+            <div style="font-size: 1.5rem; margin: 1rem">
+                {{ $t('Asju') }}: {{ cart.length }}
+            </div>
+            <button class="btn draw-border" @click="submit">
+                Kinnita ostukorv
+            </button>
+        </div>
         <ul class="cart-wrapper">
             <li class="item-in-cart" v-for="item in cart" :key="item.id">
                 <div class="title">
-                    <img class="image" width="100" :src="item.image" alt="" />
+                    <img class="image" width="80" :src="item.image" alt="" />
                     {{ item.title }}
                 </div>
                 <button class="btn draw-border" @click="removeFromCart(item)">
@@ -19,14 +36,6 @@
         </ul>
         <div v-if="cart && cart.length === 0">
             {{ $t('Su korv on tühi.') }}
-        </div>
-        <div v-else>
-            <div style="font-size: 1.5rem; margin: 1rem">
-                {{ $t('Asju') }}: {{ cart.length }}
-            </div>
-            <button class="btn draw-border" @click="submit">
-                Kinnita ostukorv
-            </button>
         </div>
     </div>
 </template>
@@ -59,41 +68,37 @@ async function submit() {
     align-items: center;
     flex-direction: column;
     background-color: $background-color;
-    height: 100%;
-    overflow-y: clip;
     color: $text-color;
-    header {
-        padding: 2rem;
-        width: 100%;
-    }
+    height: 100%;
 }
 .cart-wrapper {
-    width: 40rem;
     background-color: rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
     text-align: left;
     list-style: none;
-    padding: 1rem;
+    padding-left: 0;
 
-    height: 50rem;
     .item-in-cart {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0.5rem;
         font-size: 2rem;
-        width: 95%;
+        padding-left: 0;
+
+        width: 100%;
         text-align: left;
         .title {
             display: flex;
+            margin: 0.5rem;
             align-items: center;
         }
         .image {
-            margin: 1rem;
+            padding: 1rem;
         }
 
         button {
-            margin-left: 1rem;
+            padding: 1rem;
+            margin-right: 1rem;
         }
     }
 }

@@ -647,7 +647,7 @@ export const videos = {
         1: {
             title: 'KAPSLI INTRO',
             subtitle: 'Inimesed saavad teada, kuhu on sattunud',
-            videoUrl: 'http://167.71.52.104/silver/silver_v01.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v01.mp4',
             subs: '',
             showLootBox: false,
             showQuiz: null,
@@ -658,7 +658,7 @@ export const videos = {
         2: {
             title: 'HIIE SÜDAMES',
             subtitle: 'Meie teeme vahet rästikul, nastikul ja vaskussil',
-            videoUrl: 'http://167.71.52.104/silver/silver_v02.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v02.mp4',
             subs: '',
             showLootBox: false,
             showQuiz: null,
@@ -669,7 +669,7 @@ export const videos = {
         3: {
             title: 'MIDA KAASA VÕETI?',
             subtitle: 'Ülevaade sellest, mida kapslisse on varutud',
-            videoUrl: 'http://167.71.52.104/silver/silver_v03.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v03.mp4',
             showLootBox: true,
             showQuiz: null,
             quizTimestampInSeconds: null,
@@ -680,7 +680,7 @@ export const videos = {
             title: 'MEIE VAIM',
             subtitle:
                 'Hoolitseme selle ees, et peagi ei tuleks viimast eestlast klaasi tagant uudistada',
-            videoUrl: 'http://167.71.52.104/silver/silver_v04.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v04.mp4',
             showLootBox: false,
             showQuiz: '3.3 Elu kapslis - Hõbevalge',
             quizTimestampInSeconds: 60 + 42,
@@ -700,7 +700,7 @@ export const videos = {
         6: {
             title: 'KEEL JA MAA',
             subtitle: 'Need liidavad meid kokku ja teevad meid erilisteks',
-            videoUrl: 'http://167.71.52.104/silver/silver_v05.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v05.mp4',
             showLootBox: false,
             showQuiz: '1. Audiitor',
             quizTimestampInSeconds: 3 * 60 + 34,
@@ -730,7 +730,7 @@ export const videos = {
         9: {
             title: 'LOTOVÕIT',
             subtitle: 'Kultuuriküllus, liivlased ja sajanditesügavused juured',
-            videoUrl: 'http://167.71.52.104/silver/silver_v06.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v06.mp4',
             showLootBox: false,
             autoplay: true,
             number: 9,
@@ -740,7 +740,7 @@ export const videos = {
         10: {
             title: 'MAAILMAVAATELINE HÄÄLETUS',
             subtitle: 'Lõpuks ometi saab midagi tähtsat ära otsustada',
-            videoUrl: 'http://167.71.52.104/silver/silver_v07.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v07.mp4',
             showLootBox: false,
             autoplay: true,
             number: 10,
@@ -770,7 +770,7 @@ export const videos = {
         13: {
             title: 'EI MINGIT MINKI',
             subtitle: 'Säilitame oma väärikuse ka jultunud provokatsioonidega',
-            videoUrl: 'http://167.71.52.104/silver/silver_v08.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v08.mp4',
             showLootBox: false,
             autoplay: true,
             number: 13,
@@ -780,7 +780,7 @@ export const videos = {
         14: {
             title: 'MAAILMAVAATELINE HÄÄLETUS',
             subtitle: 'Lõpuks ometi hakkab meie maailmavaade tööle',
-            videoUrl: 'http://167.71.52.104/silver/silver_v09.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v09.mp4',
             showLootBox: false,
             autoplay: true,
             number: 14,
@@ -790,7 +790,7 @@ export const videos = {
         15: {
             title: 'VASTUTÖÖTAJA',
             subtitle: 'Teisitimõtlejad tuleb vastutusele võtta',
-            videoUrl: 'http://167.71.52.104/silver/silver_v10.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v10.mp4',
             showLootBox: false,
             autoplay: true,
             number: 15,
@@ -800,7 +800,7 @@ export const videos = {
         16: {
             title: 'RESERVAAT',
             subtitle: 'Pole Kalevipoega ega Põhja Konna, kes meid kaitseks',
-            videoUrl: 'http://167.71.52.104/silver/silver_v11.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v11.mp4',
             showLootBox: false,
             autoplay: true,
             number: 16,
@@ -830,7 +830,7 @@ export const videos = {
         19: {
             title: 'KUNINGRIIK',
             subtitle: 'Kes assimileerub, see kaotab!',
-            videoUrl: 'http://167.71.52.104/silver/silver_v12.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v12.mp4',
             showLootBox: false,
             autoplay: true,
             number: 19,
@@ -840,7 +840,7 @@ export const videos = {
         20: {
             title: 'OTSUSTAV HÄÄLETUS',
             subtitle: 'Kapten saab teada oma saatuse',
-            videoUrl: 'http://167.71.52.104/silver/silver_v13.mp4',
+            videoUrl: 'http://167.71.52.104/hobevalge/hobevalge_v13.mp4',
             showLootBox: false,
             autoplay: true,
             number: 20,

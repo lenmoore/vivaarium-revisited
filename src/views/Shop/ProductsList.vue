@@ -1,6 +1,6 @@
 <template>
     <div class="shop-background">
-        <header>
+        <div class="header">
             <h1>{{ $t('Humanity shop') }}</h1>
             <RouterLink
                 class="cart-button"
@@ -9,14 +9,25 @@
             >
                 Korvi
             </RouterLink>
-        </header>
-        <div class="infobox">
-            {{
-                $t(
-                    'humanity shopi mingi intro tekst mis võiks öelda et noh 9 toodet saab kaasa võtta ja üldse olge kõvad. btw selle lehe taustal on inimeste skännimisvideo.'
-                )
-            }}
         </div>
+        <div v-if="!hide" class="infobox">
+            Oled minemas pikale reisile, kus kõik eluks vajalik on olemas.
+            <br />
+            Mis asju võtaksid sa aga reisile kaasa selleks, et tunda end
+            mõnusalt ja turvaliselt? <br />
+            Mis asju võtaksid sa kaasa, et peletada igavust ja arendada oskusi?
+            <br />
+            Millised Vivaariumi poe objektid kõnetavad sind kõige enam? <br />
+            Tutvu meie poega ja vali välja 9 objekti, mida endaga reisile kaasa
+            võtta. <br />
+            Ära kiirusta. Mõtle läbi. <br />
+            Ja lõpuks kinnita ostukorv.
+            <button class="btn draw-border" @click="hide = true">Peida</button>
+        </div>
+
+        <button class="btn draw-border" v-else @click="hide = false">
+            Abi
+        </button>
 
         <ul class="product-list">
             <li class="product" v-for="product in products" :key="product.id">
@@ -43,7 +54,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useStore } from './store';
 
 const store = useStore();
@@ -52,6 +63,7 @@ const products = computed(() => store.state.products);
 
 const localCart = localStorage.getItem('cart_items');
 
+const hide = ref(false);
 if (!localCart) {
     localStorage.setItem('cart_items', '[]');
 }
@@ -77,11 +89,14 @@ const addToCart = (product) => {
 .shop-background {
     background-color: $background-color;
     color: $text-color;
-    header {
+    display: flex;
+    flex-direction: column;
+    .header {
+        height: 16rem;
         h1 {
             color: $heading1;
             padding-top: 3rem;
-            padding-bottom: 2rem;
+            margin-bottom: 3rem;
             margin-top: 0;
         }
     }
@@ -138,10 +153,9 @@ const addToCart = (product) => {
 }
 
 .infobox {
-    margin: 3rem;
-    padding: 1rem;
     font-size: 1.5rem;
     background-color: rgba(0, 0, 0, 0.75);
+    padding: 0.5rem;
 }
 
 .cart-button {

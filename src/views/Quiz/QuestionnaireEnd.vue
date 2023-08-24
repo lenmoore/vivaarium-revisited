@@ -62,32 +62,54 @@ onMounted(async () => {
 });
 </script>
 <template>
-    <div class="">
-        <h2>
-            {{
-                nextContent && nextContent.goingToCapsuleVideo
-                    ? $t('Sinu tulemused')
-                    : $t('Valmis')
-            }}
-        </h2>
-        <div v-if="nextContent && nextContent.goingToCapsuleVideo === true">
-            <ResultsScreen />
-        </div>
+    <div class="h-100">
+        <ResultsScreen
+            v-if="nextContent && nextContent.goingToCapsuleVideo === true"
+        />
         <div
+            class="wrapper"
             v-if="nextContent && nextContent.nextLink.name === 'question-step'"
         >
-            Järgmine küsimustik ootab sind.
-            <RouterLink :to="nextContent.nextLink">Alusta</RouterLink>
+            <h1>NÕUSTUN/EI NÕUSTU</h1>
+            <p>
+                Kolmandas ja viimases testis esitame sulle väiteid ja soovime
+                teada saada, kas oled nendega nõus või mitte.
+            </p>
+
+            <p>
+                Sa saad vastuseid muuta, kuni aeg otsa saab või kuni sa oma
+                valikud kinnitad.
+            </p>
+            <button
+                class="btn draw-border"
+                @click="$router.push(nextContent.nextLink)"
+            >
+                Alusta
+            </button>
         </div>
     </div>
 </template>
 
 <style lang="scss">
-.quiz-intro-wrapper {
-    background-color: white;
+@import '../../vars';
+.wrapper {
+    background-color: $background-color;
+    color: white;
+    height: 100%;
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     h1 {
         padding: 0;
+        color: orange;
         margin: 0;
     }
+}
+
+.h-100 {
+    height: 100%;
 }
 </style>

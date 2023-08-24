@@ -49,12 +49,18 @@ export default {
         };
     },
     computed: {
+        routeCode() {
+            if (this.routeCode) {
+                return this.routeCode;
+            }
+            return 'v1';
+        },
         activeVideo() {
-            const videoNumber = this.$route.query.code.substring(
+            const videoNumber = this.routeCode.substring(
                 1,
-                this.$route.query.code.length + 1
+                this.routeCode.length + 1
             );
-            return videos[this.$route.query.code[0]][videoNumber];
+            return videos[this.routeCode[0]][videoNumber];
         },
         videoStartWidth() {
             return 800;
@@ -93,16 +99,16 @@ export default {
         },
         finishQuiz() {
             this.quizDone = true;
-            const videoNumber = this.$route.query.code.substring(
+            const videoNumber = this.routeCode.substring(
                 1,
-                this.$route.query.code.length + 1
+                this.routeCode.length + 1
             );
 
             if (['6', '4', '16'].includes(videoNumber)) {
                 this.$router.push({
                     name: this.$route.name,
                     query: {
-                        code: `${this.$route.query.code[0]}${
+                        code: `${this.routeCode[0]}${
                             this.activeVideo.number + 1
                         }`,
                     },

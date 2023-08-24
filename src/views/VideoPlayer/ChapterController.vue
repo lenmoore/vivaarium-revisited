@@ -9,10 +9,8 @@
                 v-for="(chapter, index) in chapters"
                 :class="{
                     active:
-                        $route.query.code.substring(
-                            1,
-                            this.$route.query.code.length + 1
-                        ) === chapter.number.toString(),
+                        routeCode.substring(1, routeCode.length + 1) ===
+                        chapter.number.toString(),
                 }"
                 :key="`${index}_${chapter.title}`"
                 class="chapter-link"
@@ -36,7 +34,18 @@ export default {
             return videos;
         },
         chapters() {
-            return this.videos[this.$route.query.code[0]];
+            const code =
+                this.$route?.query && this.$route?.query?.code
+                    ? this.$route?.query?.code[0]
+                    : 'v';
+            console.log(code);
+            return this.videos[code];
+        },
+        routeCode() {
+            if (this.$route.query.code) {
+                return this.$route.query.code;
+            }
+            return 'v1';
         },
     },
 };

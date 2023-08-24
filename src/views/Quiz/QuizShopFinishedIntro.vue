@@ -2,7 +2,6 @@
     <div class="quiz-intro-wrapper">
         <div class="margin"></div>
         <h1>Kinnitasid oma ostukorvi</h1>
-        <p>jargmisena vastad sa kahele kysitlusele, mis .....</p>
         <RouterLink :to="{ name: 'quiz.intro' }" class="btn draw-border">
             Küsitluste juurde
         </RouterLink>

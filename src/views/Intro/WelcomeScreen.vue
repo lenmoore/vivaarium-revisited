@@ -49,7 +49,6 @@ watch(
     height: 100%;
     width: 100%;
     h1 {
-        margin-top: -3rem;
         padding-top: 0;
     }
 

@@ -4,11 +4,10 @@
             <div class="overlay">
                 <div class="content">
                     <div v-html="htmlContent" v-if="htmlContent"></div>
-
-                    <button class="btn draw-border" @click="nextSlide">
-                        {{ $t('Jätka') }}
-                    </button>
                 </div>
+                <button class="btn draw-border" @click="nextSlide">
+                    {{ $t('Jätka') }}
+                </button>
             </div>
             <video class="bg-overlay" autoplay muted loop>
                 <source
@@ -48,6 +47,9 @@ watch(
 );
 onMounted(async () => {
     slideId = parseInt(route.params.id);
+    if (slideId === 1) {
+        localStorage.clear();
+    }
 
     localStore.setItem(`${slideId}_viewed`, 1);
     const slide = slides.find((slide) => slide.id === slideId);
@@ -78,39 +80,40 @@ function nextSlide() {
 
     .inner-container {
         border: 1px solid black;
-        display: inline-block;
+        display: flex;
+        align-items: center;
         width: 100%;
+        justify-content: center;
+        flex-direction: column;
         bottom: -100px;
-        height: 102vh;
-
+        height: 100%;
         object-fit: cover;
-        //position: fixed;
+        overflow-y: clip;
 
         .overlay {
             z-index: 1;
-            //position: absolute;
             font-size: 20px;
-            width: auto;
-            min-width: 100%;
-            height: 100vh;
             object-fit: cover;
             position: fixed;
-            //height: 100%;
             display: flex;
             align-items: center;
+            width: 100%;
             justify-content: center;
             flex-direction: column;
             color: $text-color;
             background-color: rgba(0, 0, 0, 0.6);
+            padding-bottom: 4rem;
+            height: fit-content;
+            max-height: 75%;
 
             .content {
-                display: flex;
-                padding: 10rem 3rem;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                width: 50%;
-                background-color: rgba(0, 0, 0, 0.4);
+                height: 100%;
+                overflow-y: scroll;
+                padding: 1rem;
+
+                div {
+                    height: 100%;
+                }
             }
         }
 
@@ -121,5 +124,27 @@ function nextSlide() {
             position: relative;
         }
     }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: orange;
 }
 </style>

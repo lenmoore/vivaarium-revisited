@@ -81,6 +81,7 @@ function selectAnswer(val, allOptions) {
     allOptions.forEach((option) => (option.selected = false));
     console.log(quizSteps[stepNumber].questionOptions);
     val.selected = true;
+    val.question = quizSteps[stepNumber].questionText;
     store.localStore.setItem(`${quizNumber}_${stepNumber}`, val);
 }
 

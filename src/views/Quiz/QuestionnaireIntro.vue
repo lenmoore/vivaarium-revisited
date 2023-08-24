@@ -1,7 +1,11 @@
 <template>
     <div class="quiz-intro-wrapper">
-        <h1>Esimene küsimustik</h1>
-        <p>Mina olen tekst</p>
+        <h1>VALIKVASTUSED</h1>
+        <p>
+            Selles testis leiad hulga väiteid. Vali nelikust välja väide, mis
+            sind kõige enam kõnetab. Sa saad vastuseid muuta, kuni aeg otsa saab
+            või kuni sa oma valikud kinnitad.
+        </p>
         <button class="btn draw-border" @click="startQuiz1">
             {{ $t('Alusta') }}
         </button>
