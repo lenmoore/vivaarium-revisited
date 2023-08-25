@@ -51,6 +51,7 @@ export default {
             console.log(chapterCode);
             this.activeChapter = chapterCode.number.toString();
             this.$refs.playback.quizDone = false;
+            this.$refs.playback.video.play();
         },
         selectColor(colorCode) {
             console.log(colorCode);

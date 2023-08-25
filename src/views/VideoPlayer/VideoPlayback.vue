@@ -19,14 +19,7 @@
             @timeupdate="checkTimestamp"
             controls
             :src="activeVideo && activeVideo.videoUrl"
-        >
-            <track
-                default
-                src="/subs/tyrkiis_v02_sub.vtt"
-                kind="subtitles"
-                srclang="en"
-            />
-        </video>
+        ></video>
         <div class="no-video-error" v-else><span>Videot pole</span></div>
     </FloatingWindow>
 </template>
@@ -50,8 +43,8 @@ export default {
     },
     computed: {
         routeCode() {
-            if (this.routeCode) {
-                return this.routeCode;
+            if (this.$route.query.code) {
+                return this.$route.query.code;
             }
             return 'v1';
         },
@@ -60,6 +53,7 @@ export default {
                 1,
                 this.routeCode.length + 1
             );
+            console.log(videoNumber);
             return videos[this.routeCode[0]][videoNumber];
         },
         videoStartWidth() {
