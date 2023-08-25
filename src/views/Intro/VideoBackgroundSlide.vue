@@ -116,7 +116,9 @@ function nextSlide() {
                 }
             }
         }
-
+        h1 {
+            color: orange;
+        }
         video {
             height: 100%;
             width: 100%;
