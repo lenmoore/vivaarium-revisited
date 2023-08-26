@@ -31,7 +31,9 @@
                 >
                     {{ $t('>>') }}
                 </button>
-                <button v-else @click="submitQuiz">Valmis</button>
+                <button class="btn draw-border" v-else @click="submitQuiz">
+                    Valmis
+                </button>
             </div>
         </div>
     </div>
