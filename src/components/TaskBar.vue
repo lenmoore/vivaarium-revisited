@@ -1,7 +1,7 @@
 <template>
     <div class="taskbar-wrapper">
         <div
-            @click="openColor"
+            @click="toggleColor"
             :class="{ open: isColorOpen }"
             class="color-selector icon"
         >
@@ -15,6 +15,7 @@
             peatükk
         </div>
         <div
+            v-if="showLoot"
             @click="toggleLoot"
             :class="{ open: isLootOpen }"
             class="loot-box icon"
@@ -35,9 +36,31 @@ export default {
         };
     },
     emits: ['toggle', 'close'],
-
+    computed: {
+        showLoot() {
+            return (
+                parseInt(
+                    this.$route.query.code.substring(
+                        1,
+                        this.$route.query.code.length + 1
+                    )
+                ) >= 3
+            );
+        },
+    },
     methods: {
-        openColor() {
+        closeAll() {
+            if (this.isColorOpen) {
+                this.toggleColor();
+            }
+            if (this.isLootOpen) {
+                this.toggleLoot();
+            }
+            if (this.isChapterOpen) {
+                this.toggleChapter();
+            }
+        },
+        toggleColor() {
             this.$emit('toggle', 'color');
             this.isColorOpen = !this.isColorOpen;
         },
@@ -68,13 +91,14 @@ export default {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
     box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
 
     .icon {
+        margin-left: 0.5rem;
         background-color: white;
         padding: 0.5rem;
         border: 1px solid black;

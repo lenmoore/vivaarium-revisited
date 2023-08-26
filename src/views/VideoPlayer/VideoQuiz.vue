@@ -1,5 +1,5 @@
 <template>
-    <div v-if="quiz.gameSteps" class="quiz-wrapper">
+    <div v-if="quiz.gameSteps" class="quiz-wrapper video-quiz">
         <div>
             <div class="title">{{ activeStep.questionText }}</div>
             <div
@@ -112,5 +112,17 @@ export default {
 
 .disabled {
     background-color: silver;
+}
+
+.video-quiz {
+    @media screen and (max-width: 450px) {
+        z-index: 230 !important;
+        * {
+            z-index: 230 !important;
+        }
+        background-color: rgba(0, 0, 0, 0.75) !important;
+        height: 100vh !important;
+        width: 100vw !important;
+    }
 }
 </style>

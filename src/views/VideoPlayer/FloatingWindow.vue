@@ -7,6 +7,8 @@
         v-model:y="y"
         v-model:w="w"
         v-model:h="h"
+        :minW="300"
+        :minH="100"
         v-model:active="active"
         :draggable="!disableDrag"
         :resizable="!disableDrag"

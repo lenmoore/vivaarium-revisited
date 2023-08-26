@@ -1,7 +1,10 @@
 <template>
     <div class="page">
         <div class="windows-container">
-            <VideoPlayback ref="playback" />
+            <VideoPlayback
+                @quiz-started="$refs.taskbar.closeAll()"
+                ref="playback"
+            />
             <div class="video-controls">
                 <ColorSelector
                     v-if="isColorOpen"
@@ -9,12 +12,13 @@
                 />
                 <ChapterController
                     v-if="isChapterOpen"
+                    :disabled="!ready"
                     @select-chapter="(val) => selectChapter(val)"
                 />
             </div>
             <CapsuleData v-if="isLootOpen && parseInt(activeChapter) <= 3" />
         </div>
-        <TaskBar @toggle="(val) => toggleWindow(val)" />
+        <TaskBar ref="taskbar" @toggle="(val) => toggleWindow(val)" />
     </div>
 </template>
 <script>
@@ -42,6 +46,8 @@ export default {
             isChapterOpen: true,
             isLootOpen: false,
             isDataOpen: false,
+
+            ready: true,
         };
     },
     computed: {
@@ -64,10 +70,15 @@ export default {
 
     methods: {
         selectChapter(chapterCode) {
-            console.log(chapterCode);
-            this.activeChapter = chapterCode.number.toString();
-            this.$refs.playback.quizDone = false;
-            this.$refs.playback.video.play();
+            if (this.ready) {
+                this.ready = false;
+                console.log('ready: ', this.ready);
+                console.log(chapterCode);
+                this.activeChapter = chapterCode.number.toString();
+                this.$refs.playback.quizDone = false;
+                this.ready = this.$refs.playback.video.play() !== undefined;
+                console.log('ready: ', this.ready);
+            }
         },
         selectColor(colorCode) {
             console.log(colorCode);

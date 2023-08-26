@@ -58,12 +58,12 @@ export default {
             return videos[this.routeCode[0]][videoNumber];
         },
         videoStartWidth() {
-            return this.isMobile ? window.innerWidth : window.innerWidth * 0.6;
+            return this.isMobile ? window.innerWidth : window.innerWidth * 0.5;
         },
         videoStartHeight() {
             return this.isMobile
-                ? this.videoStartHeight * 0.5
-                : this.videoStartWidth * 0.65;
+                ? this.videoStartWidth * 0.5
+                : this.videoStartWidth * 0.7;
         },
         hasQuiz() {
             return this.activeVideo.showQuiz != null;
@@ -97,6 +97,7 @@ export default {
                     console.log(`Reached timestamp ${targetTimestamp} seconds`);
                     video.pause();
                     this.showQuiz = true;
+                    this.$emit('quiz-started');
                 }
             }
         },

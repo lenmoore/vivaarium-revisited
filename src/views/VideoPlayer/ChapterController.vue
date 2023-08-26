@@ -30,6 +30,13 @@ import { videos } from '@/views/VideoPlayer/video-data';
 export default {
     components: { FloatingWindow },
 
+    props: {
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
+    },
+
     computed: {
         videos() {
             return videos;
