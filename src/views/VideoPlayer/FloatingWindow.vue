@@ -106,9 +106,11 @@ export default {
     &#capsule-data-window {
         height: 400px;
         width: 200px;
+        z-index: 4;
+        padding-bottom: 20rem;
     }
     &#color-selector {
-        z-index: 1;
+        z-index: 4;
         background-color: $background-color;
     }
     &#chapter-controller {

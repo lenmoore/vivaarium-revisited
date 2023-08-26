@@ -3,13 +3,20 @@
         <div>
             <div class="title">{{ activeStep.questionText }}</div>
             <div
-                v-for="option in activeStep.questionOptions"
-                :key="option.option_text"
-                class="option btn draw-border"
-                :class="{ selected: option.selected }"
-                @click="selectAnswer(option, activeStep.questionOptions)"
+                :class="{
+                    'd-flex':
+                        quiz && quiz.name && quiz.name.includes('Audiitor'),
+                }"
             >
-                {{ option.option_text }}
+                <div
+                    v-for="option in activeStep.questionOptions"
+                    :key="option.option_text"
+                    class="option btn draw-border"
+                    :class="{ selected: option.selected }"
+                    @click="selectAnswer(option, activeStep.questionOptions)"
+                >
+                    {{ option.option_text }}
+                </div>
             </div>
 
             <div class="buttons">
@@ -114,6 +121,11 @@ export default {
     background-color: silver;
 }
 
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .video-quiz {
     @media screen and (max-width: 450px) {
         z-index: 230 !important;

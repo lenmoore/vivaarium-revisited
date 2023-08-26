@@ -2,6 +2,7 @@
     <FloatingWindow
         :title="'Vali peatykk'"
         :start-width="300"
+        :start-height="startHeight"
         id="chapter-controller"
         :disable-drag="isMobile"
     >
@@ -21,6 +22,7 @@
                 <div class="subtitle">{{ chapter.subtitle }}</div>
             </li>
         </ul>
+        <div>...</div>
     </FloatingWindow>
 </template>
 <script>
@@ -55,6 +57,12 @@ export default {
             }
             return 'v1';
         },
+        startHeight() {
+            if (this.isMobile) {
+                return window.innerHeight * 0.4;
+            }
+            return 500;
+        },
         isMobile() {
             return window.innerWidth < 450;
             // return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -66,13 +74,18 @@ export default {
 </script>
 <style lang="scss">
 @import '../../vars';
+#chapter-controller {
+    height: 100%;
+    overflow-y: clip;
+}
 .chapters-list-wrapper {
     overflow-y: scroll;
     list-style: none;
-    padding: 0;
     background-color: $background-color;
-    margin: 0;
-    height: 500px;
+    padding: 0 0 40rem;
+    height: 70%;
+    margin: 0 0 40rem;
+
     .chapter-link {
         margin: 0.4rem;
         text-align: left;

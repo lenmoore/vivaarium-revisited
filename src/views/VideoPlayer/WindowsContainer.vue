@@ -3,6 +3,7 @@
         <div class="windows-container">
             <VideoPlayback
                 @quiz-started="$refs.taskbar.closeAll()"
+                @finish-quiz="$refs.taskbar.toggleChapter()"
                 ref="playback"
             />
             <div class="video-controls">
@@ -16,7 +17,7 @@
                     @select-chapter="(val) => selectChapter(val)"
                 />
             </div>
-            <CapsuleData v-if="isLootOpen && parseInt(activeChapter) <= 3" />
+            <CapsuleData v-if="isLootOpen" />
         </div>
         <TaskBar ref="taskbar" @toggle="(val) => toggleWindow(val)" />
     </div>
@@ -79,6 +80,14 @@ export default {
                 this.ready = this.$refs.playback.video.play() !== undefined;
                 console.log('ready: ', this.ready);
             }
+
+            this.$refs.taskbar.closeAll();
+            if (this.activeChapter === 3) {
+                this.$refs.taskbar.toggleLoot();
+            } else {
+                this.$refs.taskbar.toggleColor();
+                this.$refs.taskbar.toggleChapter();
+            }
         },
         selectColor(colorCode) {
             console.log(colorCode);
@@ -86,11 +95,6 @@ export default {
         },
         toggleWindow(val) {
             console.log('toggleWindow -> ', val);
-            // this.isColorOpen: true,
-            //     isChapterOpen: true,
-            //     isLootOpen: false,
-            //     isDataOpen: false,
-
             switch (val) {
                 case 'color':
                 default:
@@ -112,9 +116,20 @@ export default {
 .windows-container {
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 450px) {
+        .window,
+        .video-controls {
+            width: 100% !important;
+        }
+    }
 }
 .video-controls {
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 450px) {
+        padding-top: 0.5rem;
+    }
 }
 </style>

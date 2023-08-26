@@ -3,6 +3,7 @@
         :title="'Vaheta kapslit'"
         :start-width="300"
         :start-height="50"
+        :disable-drag="isMobile"
         id="color-selector"
     >
         <div class="colors">
@@ -85,6 +86,9 @@ export default {
                 case code.startsWith('h'):
                     return 'hobevalge';
             }
+        },
+        isMobile() {
+            return window.innerWidth < 450;
         },
     },
     methods: {

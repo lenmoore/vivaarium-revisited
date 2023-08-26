@@ -3,6 +3,7 @@
         :title="'Peatükk ' + activeVideo.title"
         :start-width="videoStartWidth"
         :start-height="videoStartHeight"
+        :disable-drag="isMobile"
         id="video-playback"
     >
         <VideoQuiz
@@ -62,7 +63,7 @@ export default {
         },
         videoStartHeight() {
             return this.isMobile
-                ? this.videoStartWidth * 0.5
+                ? this.videoStartWidth * 0.65
                 : this.videoStartWidth * 0.7;
         },
         hasQuiz() {
@@ -80,9 +81,6 @@ export default {
         },
         isMobile() {
             return window.innerWidth < 450;
-            // return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            //     navigator.userAgent
-            // );
         },
     },
 
@@ -133,6 +131,7 @@ export default {
             } else {
                 document.getElementById('ssvid').play();
             }
+            this.$emit('finish-quiz');
         },
     },
 };
