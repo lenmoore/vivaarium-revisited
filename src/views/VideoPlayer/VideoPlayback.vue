@@ -18,6 +18,7 @@
             autoplay
             @timeupdate="checkTimestamp"
             controls
+            @ended="nextVideo"
             :src="activeVideo && activeVideo.videoUrl"
         ></video>
         <div class="no-video-error" v-else><span>Videot pole</span></div>
@@ -90,6 +91,19 @@ export default {
                     this.showQuiz = true;
                 }
             }
+        },
+        nextVideo() {
+            const nextChapter =
+                parseInt(
+                    this.routeCode.substring(1, this.routeCode.length + 1)
+                ) + 1;
+            console.log(nextChapter);
+            this.$router.push({
+                name: this.$route.name,
+                query: {
+                    code: `${this.routeCode[0]}${nextChapter}`,
+                },
+            });
         },
         finishQuiz() {
             this.quizDone = true;
