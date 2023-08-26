@@ -1,6 +1,6 @@
 <template>
     <FloatingWindow
-        :title="activeVideo.title"
+        :title="'Peatükk ' + activeVideo.title"
         :start-width="videoStartWidth"
         :start-height="videoStartHeight"
         id="video-playback"
@@ -58,10 +58,12 @@ export default {
             return videos[this.routeCode[0]][videoNumber];
         },
         videoStartWidth() {
-            return 800;
+            return this.isMobile ? window.innerWidth : window.innerWidth * 0.6;
         },
         videoStartHeight() {
-            return this.videoStartWidth * 0.6;
+            return this.isMobile
+                ? this.videoStartHeight * 0.5
+                : this.videoStartWidth * 0.65;
         },
         hasQuiz() {
             return this.activeVideo.showQuiz != null;
@@ -75,6 +77,12 @@ export default {
         },
         video() {
             return document.getElementById('ssvid');
+        },
+        isMobile() {
+            return window.innerWidth < 450;
+            // return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            //     navigator.userAgent
+            // );
         },
     },
 
@@ -162,6 +170,7 @@ video::cue {
 .active-video-description {
     width: 100%;
     text-align: left;
-    padding: 0.5rem;
+    padding: 1rem;
+    font-size: 1.25rem;
 }
 </style>

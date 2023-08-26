@@ -8,8 +8,8 @@
         v-model:w="w"
         v-model:h="h"
         v-model:active="active"
-        :draggable="true"
-        :resizable="true"
+        :draggable="!disableDrag"
+        :resizable="!disableDrag"
         @activated="print('activated')"
         @deactivated="print('deactivated')"
         @drag-start="print('drag-start')"
@@ -46,6 +46,10 @@ export default {
             type: String,
             default: 'Video',
         },
+        disableDrag: {
+            type: Boolean,
+            default: false,
+        },
     },
     data() {
         return {
@@ -70,18 +74,23 @@ export default {
     -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
     box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
-    margin: 1rem;
     user-select: none;
+
+    @media screen and (min-width: 450px) {
+        margin: 1rem;
+    }
+
     .window-row {
         background-color: #2d493c;
         width: 100%;
-        height: 24px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         color: $text-color;
         .title {
             margin-left: 1rem;
+            font-size: 1.5rem;
         }
     }
     background-color: $background-color;

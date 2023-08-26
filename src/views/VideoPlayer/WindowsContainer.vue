@@ -1,11 +1,20 @@
 <template>
-    <div class="windows-container">
-        <div class="video-controls">
-            <ColorSelector @select-color="(val) => selectColor(val)" />
-            <ChapterController @select-chapter="(val) => selectChapter(val)" />
+    <div class="page">
+        <div class="windows-container">
+            <VideoPlayback ref="playback" />
+            <div class="video-controls">
+                <ColorSelector
+                    v-if="isColorOpen"
+                    @select-color="(val) => selectColor(val)"
+                />
+                <ChapterController
+                    v-if="isChapterOpen"
+                    @select-chapter="(val) => selectChapter(val)"
+                />
+            </div>
+            <CapsuleData v-if="isLootOpen && parseInt(activeChapter) <= 3" />
         </div>
-        <VideoPlayback ref="playback" />
-        <CapsuleData v-if="parseInt(activeChapter) === 3" />
+        <TaskBar @toggle="(val) => toggleWindow(val)" />
     </div>
 </template>
 <script>
@@ -13,9 +22,11 @@ import ColorSelector from '@/views/VideoPlayer/ColorSelector';
 import ChapterController from '@/views/VideoPlayer/ChapterController';
 import VideoPlayback from '@/views/VideoPlayer/VideoPlayback';
 import CapsuleData from '@/views/VideoPlayer/CapsuleData';
+import TaskBar from '@/components/TaskBar';
 
 export default {
     components: {
+        TaskBar,
         CapsuleData,
         VideoPlayback,
         ChapterController,
@@ -26,6 +37,11 @@ export default {
         return {
             activeChapter: '1',
             activeColor: 'v',
+
+            isColorOpen: true,
+            isChapterOpen: true,
+            isLootOpen: false,
+            isDataOpen: false,
         };
     },
     computed: {
@@ -56,6 +72,26 @@ export default {
         selectColor(colorCode) {
             console.log(colorCode);
             this.activeColor = colorCode[0];
+        },
+        toggleWindow(val) {
+            console.log('toggleWindow -> ', val);
+            // this.isColorOpen: true,
+            //     isChapterOpen: true,
+            //     isLootOpen: false,
+            //     isDataOpen: false,
+
+            switch (val) {
+                case 'color':
+                default:
+                    this.isColorOpen = !this.isColorOpen;
+                    break;
+                case 'chapter':
+                    this.isChapterOpen = !this.isChapterOpen;
+                    break;
+                case 'loot':
+                    this.isLootOpen = !this.isLootOpen;
+                    break;
+            }
         },
     },
 };

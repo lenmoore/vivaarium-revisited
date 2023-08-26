@@ -2,7 +2,7 @@
     <FloatingWindow
         :title="'Vaheta kapslit'"
         :start-width="300"
-        :start-height="150"
+        :start-height="50"
         id="color-selector"
     >
         <div class="colors">
@@ -58,14 +58,6 @@
             >
                 Hobevalge
             </span>
-        </div>
-        <div class="active-capsule-data">
-            <div>Aktiivne kapsel: {{ activeCapsule }}</div>
-            <div>Populatsioon: 26</div>
-            <div>
-                Kapslis veedetud aeg: peab chapteri numbri ja ajahypete jargi
-                paika panema
-            </div>
         </div>
     </FloatingWindow>
 </template>

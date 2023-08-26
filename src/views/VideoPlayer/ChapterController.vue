@@ -3,6 +3,7 @@
         :title="'Vali peatykk'"
         :start-width="300"
         id="chapter-controller"
+        :disable-drag="isMobile"
     >
         <ul class="chapters-list-wrapper">
             <li
@@ -46,6 +47,12 @@ export default {
                 return this.$route.query.code;
             }
             return 'v1';
+        },
+        isMobile() {
+            return window.innerWidth < 450;
+            // return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            //     navigator.userAgent
+            // );
         },
     },
 };

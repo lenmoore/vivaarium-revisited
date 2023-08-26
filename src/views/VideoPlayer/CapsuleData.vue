@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FloatingWindow id="capsule-data-window">
+        <FloatingWindow title="Kapslis kaasas" id="capsule-data-window">
             Voeti kaasa 1100 L viskit.
         </FloatingWindow>
     </div>
