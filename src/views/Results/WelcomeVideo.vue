@@ -5,7 +5,7 @@
             autoplay
             controls
             @ended="$router.push({ name: 'video-player' })"
-            src="/videos/taskuviva_intro.mp4"
+            src="http://167.71.52.104/viva_intro.mp4"
         ></video>
         <button
             style="display: none"
