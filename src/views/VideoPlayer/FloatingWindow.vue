@@ -22,7 +22,7 @@
         @resize-end="print('resize-end')"
     >
         <div class="window-row">
-            <span class="title">
+            <span class="window-title">
                 {{ title }}
             </span>
         </div>
@@ -90,7 +90,7 @@ export default {
         border-radius: 16px;
         margin: 0.25rem;
         color: $text-color;
-        .title {
+        .window-title {
             margin-left: 1rem;
             font-size: 1.5rem;
         }
