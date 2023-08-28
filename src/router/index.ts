@@ -36,6 +36,35 @@ const routes: Array<RouteRecordRaw> = [
             import(
                 /* webpackChunkName: "about" */ '../views/Finale/FinaleView.vue'
             ),
+        children: [
+            {
+                name: 'overview.about',
+                path: 'about',
+
+                component: () =>
+                    import(
+                        /* webpackChunkName: "about" */ '../views/Finale/AboutVivarium.vue'
+                    ),
+            },
+            {
+                name: 'overview.dramaturg',
+                path: 'dramaturg',
+
+                component: () =>
+                    import(
+                        /* webpackChunkName: "about" */ '../views/Finale/DramaturgVideo.vue'
+                    ),
+            },
+            {
+                name: 'overview.stats',
+                path: 'stats',
+
+                component: () =>
+                    import(
+                        /* webpackChunkName: "about" */ '../views/Finale/VivaStats.vue'
+                    ),
+            },
+        ],
     },
     {
         path: '/about',

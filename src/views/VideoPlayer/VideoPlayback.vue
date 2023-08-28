@@ -13,6 +13,8 @@
             :quiz="quiz"
         />
         <div class="active-video-description">{{ activeVideo.subtitle }}</div>
+        {{ subtitleUrl }}
+
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
@@ -21,7 +23,15 @@
             controls
             @ended="nextVideo"
             :src="activeVideo && activeVideo.videoUrl"
-        ></video>
+        >
+            <track
+                label="Eesti"
+                kind="subtitles"
+                srclang="et"
+                :src="subtitleUrl"
+                default
+            />
+        </video>
         <div class="no-video-error" v-else><span>Videot pole</span></div>
     </FloatingWindow>
 </template>
@@ -57,6 +67,30 @@ export default {
             );
             console.log(videoNumber);
             return videos[this.routeCode[0]][videoNumber];
+        },
+        subtitleUrl() {
+            const routeColor = this.routeCode[0];
+            const routeNr = this.routeCode.substring(
+                1,
+                this.routeCode.length + 1
+            );
+            const routeNumber = routeNr.length === 2 ? routeNr : `0${routeNr}`;
+            const subcolor = {
+                h: 'hobevalge',
+                t: 'tyrkiis',
+                v: 'violett',
+                l: 'laim',
+            }[routeColor];
+            // return '/subs/tyrkiis_v02_sub.vtt';
+            if (this.activeVideo.videoUrl.includes(subcolor)) {
+                return `/subs/${subcolor}_sub_v${routeNumber}.vtt`;
+            } else if (this.activeVideo.videoUrl.includes('ajahype')) {
+                return 'ajahype subs';
+            } else if (this.activeVideo.videoUrl.includes('finaal')) {
+                return '/subs/finaal_sub.vtt';
+            } else {
+                return 'zoom subs';
+            }
         },
         videoStartWidth() {
             return this.isMobile ? window.innerWidth : window.innerWidth * 0.5;
