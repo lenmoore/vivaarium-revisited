@@ -4,9 +4,9 @@
         <div>
             <p>Kokku käis kümnel etendusel 880 inimest.</p>
             <p>Lisaks sellele toimus veel kümme test- ja kontrolletendust.</p>
-            <h3>Kapslite jaotus:</h3>
-            <h4>Kapslitesse jaotati, et saali mahuks:</h4>
-            <table class="colors-table">
+            <h3 class="title">Kapslite jaotus:</h3>
+            <p>Kapslitesse jaotati, et saali mahuks:</p>
+            <table class="colors-table shadow">
                 <thead>
                     <tr>
                         <td class="bg-violet">Violett</td>
@@ -25,8 +25,8 @@
                 </tbody>
             </table>
 
-            <h4>Publiku tegelikud tulemused:</h4>
-            <table class="colors-table">
+            <p>Publiku tegelikud tulemused:</p>
+            <table class="colors-table shadow">
                 <thead>
                     <tr>
                         <td class="bg-violet">Violett</td>
@@ -44,18 +44,70 @@
                     </tr>
                 </tbody>
             </table>
-            <h3>Tooted</h3>
-            <div
-                class="product"
-                v-for="product in products"
-                :key="product.title"
+
+            <h3 class="title">Kaptenite kukutamine</h3>
+            <small
+                >Selline infoke. Ma arvasin, et palju rohkem kukutati, nii
+                imelik...</small
             >
-                <img
-                    width="60"
-                    :src="`/humanity-icons/${product.imageUrl}`"
-                    alt=""
-                />
-                {{ product.title }} x {{ product.count }}
+            <div>
+                Eesmark oli kapteneid kukutada. Aga noh. Elu ei lahe alati nii.
+            </div>
+            <p>Kapteneid kukutati kokku 12 korda.</p>
+            <table class="colors-table shadow">
+                <thead>
+                    <tr>
+                        <td>KP</td>
+                        <td class="bg-violet">Violett</td>
+                        <td class="bg-lime">Laim</td>
+                        <td class="bg-turq">Turkiis</td>
+                        <td class="bg-silver">Hobevalge</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="i in 28" :key="'killed' + captainWasKilled[i]">
+                        <td v-if="captainWasKilled[i]">{{ i }}. jaanuar</td>
+                        <td v-if="captainWasKilled[i]">
+                            {{ captainWasKilled[i].violet ? 'kukutati' : '-' }}
+                        </td>
+                        <td v-if="captainWasKilled[i]">
+                            {{ captainWasKilled[i].lime ? 'kukutati' : '-' }}
+                        </td>
+                        <td v-if="captainWasKilled[i]">
+                            {{ captainWasKilled[i].turq ? 'kukutati' : '-' }}
+                        </td>
+                        <td
+                            v-if="captainWasKilled[i]"
+                            :class="captainWasKilled[i].silver"
+                        >
+                            {{ captainWasKilled[i].silver ? 'kukutati' : '-' }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="title">Tooted</h3>
+            <small
+                >Mihkel, vali siit, milliseid tahad jätta vms. Tegin näidiseid
+                ka, et saaks mingeid kommentaare panna jms. Aga neid voiks palju
+                vahem olla.</small
+            >
+            <div class="products-wrap">
+                <div
+                    class="product shadow"
+                    v-for="product in products"
+                    :key="product.title"
+                >
+                    <img
+                        width="60"
+                        :src="`/humanity-icons/${product.imageUrl}`"
+                        alt=""
+                    />
+                    <div class="product-name">
+                        {{ product.title }} x {{ product.count }}
+                        <div class="product-note">{{ product.note }}</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -63,6 +115,7 @@
 
 <script>
 import { products } from '@/views/Finale/stats/prods';
+import { captainWasKilled } from '@/views/Finale/stats/captains';
 
 export default {
     computed: {
@@ -112,6 +165,9 @@ export default {
             console.log(sortedProducts);
             return sortedProducts;
         },
+        captainWasKilled() {
+            return captainWasKilled;
+        },
     },
 };
 </script>
@@ -119,10 +175,6 @@ export default {
 <style lang="scss">
 .colors-table {
     width: 100%;
-    td {
-        border: 1px solid gray;
-        font-size: 1.25rem;
-    }
 }
 
 .bg-violet {
@@ -137,13 +189,43 @@ export default {
 .bg-silver {
     background-color: #b9b9b9;
 }
+
+.title {
+    margin-top: 4rem;
+}
+.products-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .product {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: 0.5rem;
+    width: 20rem;
+
     img {
         padding: 0.25rem 1rem 0.25rem 0.25rem;
     }
+
+    .product-name {
+        font-weight: bold;
+        width: 100%;
+        text-align: left;
+        .product-note {
+            font-size: 0.75rem;
+            width: 100%;
+        }
+    }
+}
+
+.shadow {
+    background-color: white;
+
+    -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 </style>
