@@ -65,7 +65,7 @@ export const videos = {
         7: {
             title: 'ESIMENE AJAHÜPE',
             subtitle: 'Kapslis on möödunud 3 kuud',
-            videoUrl: 'http://167.71.52.104/ajahype_01.mp4',
+            videoUrl: 'http://167.71.52.104/01_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 7,
@@ -105,7 +105,7 @@ export const videos = {
         11: {
             title: 'TEINE AJAHÜPE',
             subtitle: 'Kapslis on möödunud juba terve aasta',
-            videoUrl: 'http://167.71.52.104/ajahype_02.mp4',
+            videoUrl: 'http://167.71.52.104/02_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 11,
@@ -166,7 +166,7 @@ export const videos = {
         17: {
             title: 'KOLMAS AJAHÜPE',
             subtitle: 'Kapslis on möödunud 7 pikka aastat',
-            videoUrl: 'http://167.71.52.104/ajahype_03.mp4',
+            videoUrl: 'http://167.71.52.104/03_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 17,
@@ -281,7 +281,7 @@ export const videos = {
         7: {
             title: 'ESIMENE AJAHÜPE',
             subtitle: 'Kapslis on möödunud 3 kuud',
-            videoUrl: 'http://167.71.52.104/ajahype_01.mp4',
+            videoUrl: 'http://167.71.52.104/01_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 7,
@@ -321,7 +321,7 @@ export const videos = {
         11: {
             title: 'TEINE AJAHÜPE',
             subtitle: 'Kapslis on möödunud juba terve aasta',
-            videoUrl: 'http://167.71.52.104/ajahype_02.mp4',
+            videoUrl: 'http://167.71.52.104/02_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 11,
@@ -381,7 +381,7 @@ export const videos = {
         17: {
             title: 'KOLMAS AJAHÜPE',
             subtitle: 'Kapslis on möödunud 7 pikka aastat',
-            videoUrl: 'http://167.71.52.104/ajahype_03.mp4',
+            videoUrl: 'http://167.71.52.104/03_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 17,
@@ -494,7 +494,7 @@ export const videos = {
         7: {
             title: 'ESIMENE AJAHÜPE',
             subtitle: 'Kapslis on möödunud 3 kuud',
-            videoUrl: 'http://167.71.52.104/ajahype_01.mp4',
+            videoUrl: 'http://167.71.52.104/01_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 7,
@@ -534,7 +534,7 @@ export const videos = {
         11: {
             title: 'TEINE AJAHÜPE',
             subtitle: 'Kapslis on möödunud juba terve aasta',
-            videoUrl: 'http://167.71.52.104/ajahype_02.mp4',
+            videoUrl: 'http://167.71.52.104/02_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 11,
@@ -595,7 +595,7 @@ export const videos = {
         17: {
             title: 'KOLMAS AJAHÜPE',
             subtitle: 'Kapslis on möödunud 7 pikka aastat',
-            videoUrl: 'http://167.71.52.104/ajahype_03.mp4',
+            videoUrl: 'http://167.71.52.104/03_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 17,
@@ -710,7 +710,7 @@ export const videos = {
         7: {
             title: 'ESIMENE AJAHÜPE',
             subtitle: 'Kapslis on möödunud 3 kuud',
-            videoUrl: 'http://167.71.52.104/ajahype_01.mp4',
+            videoUrl: 'http://167.71.52.104/01_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 7,
@@ -750,7 +750,7 @@ export const videos = {
         11: {
             title: 'TEINE AJAHÜPE',
             subtitle: 'Kapslis on möödunud juba terve aasta',
-            videoUrl: 'http://167.71.52.104/ajahype_02.mp4',
+            videoUrl: 'http://167.71.52.104/02_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 11,
@@ -810,7 +810,7 @@ export const videos = {
         17: {
             title: 'KOLMAS AJAHÜPE',
             subtitle: 'Kapslis on möödunud 7 pikka aastat',
-            videoUrl: 'http://167.71.52.104/ajahype_03.mp4',
+            videoUrl: 'http://167.71.52.104/03_ajahype.mp4',
             showLootBox: false,
             autoplay: true,
             number: 17,
