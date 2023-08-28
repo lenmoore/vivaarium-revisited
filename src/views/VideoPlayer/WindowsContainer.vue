@@ -4,6 +4,7 @@
             <VideoPlayback
                 @quiz-started="$refs.taskbar.closeAll()"
                 @finish-quiz="$refs.taskbar.toggleChapter()"
+                @reopen-windows="reopenWindows"
                 ref="playback"
             />
             <div class="video-controls">
@@ -82,6 +83,8 @@ export default {
             }
 
             this.$refs.taskbar.closeAll();
+            this.$refs.taskbar.closeAll();
+
             if (this.activeChapter === '3') {
                 this.$refs.taskbar.toggleLoot();
             } else {
@@ -92,6 +95,11 @@ export default {
         selectColor(colorCode) {
             console.log(colorCode);
             this.activeColor = colorCode[0];
+        },
+        reopenWindows() {
+            this.$refs.taskbar.closeAll();
+            this.$refs.taskbar.toggleColor();
+            this.$refs.taskbar.toggleChapter();
         },
         toggleWindow(val) {
             console.log('toggleWindow -> ', val);
