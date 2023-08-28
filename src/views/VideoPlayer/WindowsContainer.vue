@@ -6,8 +6,9 @@
             </div>
             <VideoPlayback
                 @quiz-started="$refs.taskbar.closeAll()"
-                @finish-quiz="$refs.taskbar.toggleChapter()"
+                @finish-quiz="reopenWindows"
                 @reopen-windows="reopenWindows"
+                @next-chapter="nextChapter"
                 ref="playback"
             />
             <div class="video-controls">
@@ -86,6 +87,21 @@ export default {
                 this.reopenWindows();
             }
         },
+        nextChapter() {
+            const nextChapter =
+                parseInt(
+                    this.activeCode.substring(1, this.activeCode.length + 1)
+                ) + 1;
+            console.log(nextChapter);
+            this.activeChapter = nextChapter.toString();
+            // this.$router.push({
+            //     name: this.$route.name,
+            //     query: {
+            //         code: `${this.activeCode[0]}${nextChapter}`,
+            //     },
+            // });
+            // this.selectChapter(this.activeCode);
+        },
         selectColor(colorCode) {
             console.log(colorCode);
             this.activeColor = colorCode[0];
@@ -95,6 +111,7 @@ export default {
             console.log('activechapter:', this.activeChapter);
 
             if (this.activeChapter === '3') {
+                console.log('dude toggle loot');
                 this.$refs.taskbar.toggleLoot();
             } else {
                 this.$refs.taskbar.toggleColor();

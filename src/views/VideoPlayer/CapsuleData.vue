@@ -72,6 +72,7 @@ export default {
         font-size: 1.25rem;
         justify-content: flex-start;
         padding: 0.25rem;
+        color: black;
         img {
             margin-right: 0.5rem;
         }

@@ -134,17 +134,7 @@ export default {
             }
         },
         nextVideo() {
-            const nextChapter =
-                parseInt(
-                    this.routeCode.substring(1, this.routeCode.length + 1)
-                ) + 1;
-            console.log(nextChapter);
-            this.$router.push({
-                name: this.$route.name,
-                query: {
-                    code: `${this.routeCode[0]}${nextChapter}`,
-                },
-            });
+            this.$emit('next-chapter');
             this.$emit('reopen-windows');
         },
         finishQuiz() {

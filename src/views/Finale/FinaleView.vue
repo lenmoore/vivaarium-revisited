@@ -3,7 +3,7 @@
         <div class="menu">
             <RouterLink :to="{ name: 'overview.about' }">Etendusest</RouterLink>
             <RouterLink :to="{ name: 'overview.dramaturg' }"
-                >Dramaturgi pöördumine</RouterLink
+                >moned kysimused akki vms</RouterLink
             >
             <RouterLink :to="{ name: 'overview.stats' }"
                 >Etenduste statistika</RouterLink

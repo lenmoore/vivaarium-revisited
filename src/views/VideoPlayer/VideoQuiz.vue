@@ -1,5 +1,5 @@
 <template>
-    <div v-if="quiz.gameSteps" class="quiz-wrapper video-quiz">
+    <div v-if="quiz.gameSteps" class="quiz-wrapper video-quiz black-milk">
         <div>
             <div class="title">{{ activeStep.questionText }}</div>
             <div

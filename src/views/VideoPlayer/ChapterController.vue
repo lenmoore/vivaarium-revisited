@@ -90,7 +90,7 @@ export default {
         cursor: pointer;
         margin: 0.4rem;
         text-align: left;
-        //padding: 0.25rem;
+        padding: 0.25rem;
         color: black;
         .title {
             font-size: 1.5rem;
