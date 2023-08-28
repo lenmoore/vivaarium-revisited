@@ -80,16 +80,7 @@ export default {
                 this.$refs.playback.quizDone = false;
                 this.ready = this.$refs.playback.video.play() !== undefined;
                 console.log('ready: ', this.ready);
-            }
-
-            this.$refs.taskbar.closeAll();
-            this.$refs.taskbar.closeAll();
-
-            if (this.activeChapter === '3') {
-                this.$refs.taskbar.toggleLoot();
-            } else {
-                this.$refs.taskbar.toggleColor();
-                this.$refs.taskbar.toggleChapter();
+                this.reopenWindows();
             }
         },
         selectColor(colorCode) {
@@ -98,8 +89,14 @@ export default {
         },
         reopenWindows() {
             this.$refs.taskbar.closeAll();
-            this.$refs.taskbar.toggleColor();
-            this.$refs.taskbar.toggleChapter();
+            console.log('activechapter:', this.activeChapter);
+
+            if (this.activeChapter === '3') {
+                this.$refs.taskbar.toggleLoot();
+            } else {
+                this.$refs.taskbar.toggleColor();
+                this.$refs.taskbar.toggleChapter();
+            }
         },
         toggleWindow(val) {
             console.log('toggleWindow -> ', val);

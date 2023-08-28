@@ -22,6 +22,7 @@
         >
             kohver
         </div>
+        <div class="exit-player" @click="exit">finaal</div>
     </div>
 </template>
 
@@ -76,6 +77,9 @@ export default {
             console.log('toggle loot');
             this.$emit('toggle', 'loot');
             this.isLootOpen = !this.isLootOpen;
+        },
+        exit() {
+            this.$router.push({ name: 'overview' });
         },
     },
 };

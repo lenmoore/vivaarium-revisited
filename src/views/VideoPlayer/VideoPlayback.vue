@@ -111,9 +111,7 @@ export default {
                     code: `${this.routeCode[0]}${nextChapter}`,
                 },
             });
-            if (nextChapter === 4) {
-                this.$emit('reopen-windows');
-            }
+            this.$emit('reopen-windows');
         },
         finishQuiz() {
             this.quizDone = true;
