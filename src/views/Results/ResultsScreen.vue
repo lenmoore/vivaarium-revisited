@@ -1,40 +1,64 @@
 <template>
-    <div v-if="colorResult">
-        <h1 :class="`${colorResult}`">Sa oled {{ colorResultString }}.</h1>
-        <div class="capsule-desc">
-            <img width="300" src="/android-chrome-512x512.png" />
-            <img width="200" :src="`/captains/${colorResult}.jpg`" alt="" />
-            <div class="description">
-                <div v-html="description"></div>
-            </div>
-        </div>
-        <div class="centered">
-            <button
-                @click="$router.push({ name: 'welcome-video' })"
-                class="btn draw-border"
-            >
-                {{ $t('Sisene oma kapslisse') }}
-            </button>
-        </div>
-        <section class="centered">
-            <h2>Detailne raport</h2>
-            <div class="percents">
-                <span class="violet">
-                    {{ Math.floor((allResults.violet / sum) * 10000) / 100 }}%
-                </span>
-                <span class="lime">
-                    {{ Math.floor((allResults.lime / sum) * 10000) / 100 }}%
-                </span>
-                <span class="turquoise">
-                    {{ Math.floor((allResults.turq / sum) * 10000) / 100 }}%
-                </span>
-                <span class="silver">
-                    {{ Math.floor((allResults.silver / sum) * 10000) / 100 }}%
-                </span>
+    <div class="results-wrapper" v-if="colorResult">
+        <section>
+            <h1 :class="`milk ${colorResult}`">
+                Sa oled {{ colorResultString }}.
+            </h1>
+        </section>
+        <section>
+            <div class="capsule-desc milk">
+                <div class="imgs">
+                    <img width="300" src="/android-chrome-512x512.png" />
+                    <img
+                        width="200"
+                        :src="`/captains/${colorResult}.jpg`"
+                        alt=""
+                    />
+                </div>
+                <div class="description">
+                    <div v-html="description"></div>
+                    <div class="percents">
+                        <span class="violet">
+                            {{
+                                Math.floor((allResults.violet / sum) * 10000) /
+                                100
+                            }}%
+                        </span>
+                        <span class="lime">
+                            {{
+                                Math.floor((allResults.lime / sum) * 10000) /
+                                100
+                            }}%
+                        </span>
+                        <span class="turquoise">
+                            {{
+                                Math.floor((allResults.turq / sum) * 10000) /
+                                100
+                            }}%
+                        </span>
+                        <span class="silver">
+                            {{
+                                Math.floor((allResults.silver / sum) * 10000) /
+                                100
+                            }}%
+                        </span>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
-            <div class="container">
+            <div class="centered">
+                <button
+                    @click="$router.push({ name: 'welcome-video' })"
+                    class="btn draw-border"
+                >
+                    {{ $t('Sisene oma kapslisse') }}
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div class="container milk">
                 <div class="cart-wrapper">
                     <h2>Tooted</h2>
                     <img
@@ -48,32 +72,34 @@
                 </div>
             </div>
         </section>
-
-        <h2>Küsimustikud</h2>
-        <div class="quiz-answers">
-            <div :key="ans" v-for="ans in quiz1Answers">
-                <p>
-                    <strong>
-                        {{ ans && ans.option_text && ans.option_text }}
-                    </strong>
-                </p>
+        <section class="milk">
+            <h2>Küsimustikud</h2>
+            <div class="quiz-answers">
+                <div :key="ans" v-for="ans in quiz1Answers">
+                    <p>
+                        <strong>
+                            {{ ans && ans.option_text && ans.option_text }}
+                        </strong>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="quiz-answers">
-            <div :key="ans" v-for="ans in quiz2Answers">
-                <p>
-                    <strong>{{ ans.question }} </strong>
-                    <br /><span>{{ ans.option_text }}</span>
-                </p>
+            <div class="quiz-answers">
+                <div :key="ans" v-for="ans in quiz2Answers">
+                    <p>
+                        <strong>{{ ans.question }} </strong>
+                        <br /><span>{{ ans.option_text }}</span>
+                    </p>
+                </div>
             </div>
-        </div>
-
-        <button
-            @click="$router.push({ name: 'welcome-video' })"
-            class="btn draw-border"
-        >
-            {{ $t('Sisene oma kapslisse') }}
-        </button>
+        </section>
+        <section>
+            <button
+                @click="$router.push({ name: 'welcome-video' })"
+                class="btn draw-border"
+            >
+                {{ $t('Sisene oma kapslisse') }}
+            </button>
+        </section>
     </div>
 </template>
 <script setup>
@@ -161,18 +187,14 @@ const description = descriptions[colorResult];
 @import '../../vars';
 
 .results-wrapper {
-    header {
-        h2 {
-        }
-
-        .left {
-            .flex {
-            }
-
-            .data-text {
-            }
-        }
+    padding: 1rem;
+    h1 {
+        padding: 0;
+        margin: 0;
     }
+
+    background-image: url('/public/pexels-rohi-bernard-codillo-17908342.jpg');
+    background-size: cover;
 }
 .centered {
     display: flex;
@@ -234,6 +256,11 @@ h1 {
 .capsule-desc {
     display: flex;
     padding: 1rem;
+    .imgs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .description {
         text-align: left;
         padding: 1rem;
@@ -272,5 +299,8 @@ h1 {
 }
 .quiz-answers {
     padding: 0.5rem;
+}
+section {
+    padding-bottom: 4rem;
 }
 </style>

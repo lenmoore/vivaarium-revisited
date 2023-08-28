@@ -1,23 +1,17 @@
 <template>
     <div class="quiz-intro-wrapper">
-        <div class="margin"></div>
-        <h1>Kinnitasid oma ostukorvi</h1>
-        <RouterLink :to="{ name: 'quiz.intro' }" class="btn draw-border">
-            Küsitluste juurde
-        </RouterLink>
+        <div class="black-milk">
+            <h1>Kinnitasid oma ostukorvi</h1>
+            <RouterLink :to="{ name: 'quiz.intro' }" class="btn draw-border">
+                Küsitluste juurde
+            </RouterLink>
+        </div>
     </div>
 </template>
 
 <style lang="scss">
 @import '../../vars';
 .quiz-intro-wrapper {
-    .margin {
-        margin-bottom: 4rem;
-    }
-    h1 {
-        padding: 0;
-        margin: 0;
-    }
     background-color: #0e1926;
     flex-direction: column;
     display: flex;

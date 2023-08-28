@@ -1,7 +1,7 @@
 <template>
     <Vue3DraggableResizable
         :initW="startWidth + 60"
-        class="window"
+        class="window milk"
         :initH="startHeight + 60"
         v-model:x="x"
         v-model:y="y"
@@ -72,34 +72,37 @@ export default {
 
 <style lang="scss">
 @import '../../vars';
-.window {
-    -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
-    box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
-    user-select: none;
 
+.window {
+    font-family: 'VT323', monospace;
+    user-select: none;
     @media screen and (min-width: 450px) {
         margin: 1rem;
     }
 
     .window-row {
-        background-color: #2d493c;
-        width: 100%;
+        background-color: #21d57e;
+        width: 97%;
         height: 36px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        border-radius: 16px;
+        margin: 0.25rem;
         color: $text-color;
         .title {
             margin-left: 1rem;
             font-size: 1.5rem;
         }
     }
-    background-color: $background-color;
-    border: 1px solid black;
+
     color: $text-color;
     position: relative;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     #video-playback {
         z-index: 3;
     }
@@ -108,10 +111,10 @@ export default {
         width: 200px;
         z-index: 4;
         padding-bottom: 20rem;
+        padding-top: 1rem;
     }
     &#color-selector {
         z-index: 4;
-        background-color: $background-color;
     }
     &#chapter-controller {
         z-index: 2;

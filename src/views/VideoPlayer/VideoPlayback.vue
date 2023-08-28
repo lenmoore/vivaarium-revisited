@@ -204,8 +204,8 @@ video::cue {
 }
 .active-video-description {
     width: 100%;
-    text-align: left;
     padding: 1rem;
     font-size: 1.25rem;
+    color: black;
 }
 </style>

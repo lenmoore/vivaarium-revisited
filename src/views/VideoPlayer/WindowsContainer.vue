@@ -1,6 +1,9 @@
 <template>
     <div class="page">
         <div class="windows-container">
+            <div class="tip milk">
+                Tipp: proovi aknaid ringi lohistada ja nende suurust muuta!
+            </div>
             <VideoPlayback
                 @quiz-started="$refs.taskbar.closeAll()"
                 @finish-quiz="$refs.taskbar.toggleChapter()"
@@ -118,6 +121,11 @@ export default {
 </script>
 
 <style lang="scss">
+.tip {
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+}
 .windows-container {
     display: flex;
     flex-wrap: wrap;

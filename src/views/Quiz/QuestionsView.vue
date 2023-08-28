@@ -4,7 +4,7 @@
             <source src="/videos/quiz_video 2.mp4" type="video/mp4" />
         </video>
         <QuizTimer :start-time="timerStartTime" />
-        <div class="slider" v-if="quizSteps">
+        <div class="slider black-milk" v-if="quizSteps">
             <h2 class="question-text">
                 {{ quizSteps[stepNumber - 1].questionText }}
             </h2>
@@ -133,11 +133,13 @@ async function forward() {
     justify-content: center;
 }
 .slider {
-    height: 100%;
+    height: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
     .question-text {
         color: $text-color;
     }
@@ -154,10 +156,10 @@ async function forward() {
 
     background-color: rgba(0, 0, 0, 0.5);
 
-    width: 100%;
     cursor: pointer;
     height: 100%;
-    font-size: 1.5rem;
+    width: 95%;
+    font-size: 1.25rem;
     &.selected {
         background-color: #42b983;
     }

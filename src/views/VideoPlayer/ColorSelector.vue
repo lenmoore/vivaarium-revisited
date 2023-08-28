@@ -110,6 +110,7 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0.5rem;
+    color: black;
     span {
         padding: 1rem;
         border: 4px solid transparent;

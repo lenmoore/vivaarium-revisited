@@ -10,7 +10,7 @@
                 Korvi
             </RouterLink>
         </div>
-        <div v-if="!hide" class="infobox">
+        <div v-if="!hide" class="infobox black-milk">
             Oled minemas pikale reisile, kus kõik eluks vajalik on olemas.
             <br />
             Mis asju võtaksid sa aga reisile kaasa selleks, et tunda end
@@ -153,7 +153,7 @@ const addToCart = (product) => {
 }
 
 .infobox {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     background-color: rgba(0, 0, 0, 0.75);
     padding: 0.5rem;
 }

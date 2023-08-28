@@ -2,12 +2,14 @@
     <div class="video-background-slide-wrapper">
         <div class="inner-container">
             <div class="overlay">
-                <div class="content">
-                    <div v-html="htmlContent" v-if="htmlContent"></div>
+                <div class="black-milk">
+                    <div class="content">
+                        <div v-html="htmlContent" v-if="htmlContent"></div>
+                    </div>
+                    <button class="btn draw-border" @click="nextSlide">
+                        {{ $t('Jätka') }}
+                    </button>
                 </div>
-                <button class="btn draw-border" @click="nextSlide">
-                    {{ $t('Jätka') }}
-                </button>
             </div>
             <video class="bg-overlay" autoplay muted loop>
                 <source
@@ -78,6 +80,9 @@ function nextSlide() {
     height: 100%;
     text-align: center;
 
+    * {
+        overflow: clip;
+    }
     .inner-container {
         border: 1px solid black;
         display: flex;
@@ -85,7 +90,6 @@ function nextSlide() {
         width: 100%;
         justify-content: center;
         flex-direction: column;
-        bottom: -100px;
         height: 100%;
         object-fit: cover;
         overflow-y: clip;
@@ -101,20 +105,25 @@ function nextSlide() {
             justify-content: center;
             flex-direction: column;
             color: $text-color;
-            background-color: rgba(0, 0, 0, 0.6);
+            //background-color: rgba(0, 0, 0, 0.6);
             padding-bottom: 4rem;
-            height: fit-content;
-            max-height: 75%;
 
-            .content {
-                height: 100%;
-                overflow-y: scroll;
-                padding: 1rem;
-
-                div {
-                    height: 100%;
+            .black-milk {
+                margin: 2rem 1rem 1rem;
+                @media screen and (min-width: 450px) {
+                    padding: 1rem;
+                    max-width: 80%;
                 }
             }
+            .content {
+                height: 80vh;
+                overflow-y: scroll;
+                padding: 1rem;
+            }
+        }
+
+        .btn {
+            margin-bottom: 3rem;
         }
         h1 {
             color: orange;

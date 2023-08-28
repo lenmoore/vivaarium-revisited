@@ -76,27 +76,34 @@ export default {
 @import '../../vars';
 #chapter-controller {
     height: 100%;
+    padding-top: 1rem;
     overflow-y: clip;
 }
 .chapters-list-wrapper {
     overflow-y: scroll;
     list-style: none;
-    background-color: $background-color;
     padding: 0 0 40rem;
     height: 70%;
     margin: 0 0 40rem;
 
     .chapter-link {
+        cursor: pointer;
         margin: 0.4rem;
         text-align: left;
-        padding: 0.25rem;
-        color: $text-color;
+        //padding: 0.25rem;
+        color: black;
         .title {
+            font-size: 1.5rem;
+        }
+        .subtitle {
             font-size: 1.25rem;
-            font-weight: bold;
         }
         &.active {
             background-color: #42b983;
+        }
+
+        &:hover {
+            background-color: rgba(80, 176, 73, 0.5);
         }
     }
 }

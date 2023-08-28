@@ -14,6 +14,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-top: 1rem;
             "
         >
             <div style="font-size: 1.5rem; margin: 1rem">
@@ -23,7 +24,7 @@
                 Kinnita ostukorv
             </button>
         </div>
-        <ul class="cart-wrapper">
+        <ul class="cart-wrapper black-milk">
             <li class="item-in-cart" v-for="item in cart" :key="item.id">
                 <div class="title">
                     <img class="image" width="80" :src="item.image" alt="" />
@@ -82,14 +83,14 @@ async function submit() {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 2rem;
+        font-size: 1.25rem;
         padding-left: 0;
 
         width: 100%;
         text-align: left;
         .title {
             display: flex;
-            margin: 0.5rem;
+            margin: 1rem;
             align-items: center;
         }
         .image {
