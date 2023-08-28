@@ -17,7 +17,7 @@
                     @select-chapter="(val) => selectChapter(val)"
                 />
             </div>
-            <CapsuleData v-if="isLootOpen" />
+            <CapsuleData :color="activeColor" v-if="isLootOpen" />
         </div>
         <TaskBar ref="taskbar" @toggle="(val) => toggleWindow(val)" />
     </div>
@@ -82,7 +82,7 @@ export default {
             }
 
             this.$refs.taskbar.closeAll();
-            if (this.activeChapter === 3) {
+            if (this.activeChapter === '3') {
                 this.$refs.taskbar.toggleLoot();
             } else {
                 this.$refs.taskbar.toggleColor();

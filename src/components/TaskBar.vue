@@ -38,14 +38,17 @@ export default {
     emits: ['toggle', 'close'],
     computed: {
         showLoot() {
-            return (
-                parseInt(
-                    this.$route.query.code.substring(
-                        1,
-                        this.$route.query.code.length + 1
-                    )
-                ) >= 3
-            );
+            if (this.$route.query.code) {
+                return (
+                    parseInt(
+                        this.$route.query.code.substring(
+                            1,
+                            this.$route.query.code.length + 1
+                        )
+                    ) >= 3
+                );
+            }
+            return false;
         },
     },
     methods: {
@@ -102,6 +105,9 @@ export default {
         background-color: white;
         padding: 0.5rem;
         border: 1px solid black;
+
+        width: 4rem;
+        text-align: left;
 
         &.open {
             background-color: $heading1;
