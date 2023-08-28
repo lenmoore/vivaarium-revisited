@@ -6,10 +6,16 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=VT323&display=swap');
 @import './vars';
 #app {
-    font-family: 'VT323', monospace;
-    * {
+    font-family: 'Raleway', sans-serif;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    button {
         font-family: 'VT323', monospace;
     }
     -webkit-font-smoothing: antialiased;

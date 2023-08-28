@@ -45,6 +45,9 @@ export default {};
     a {
         color: black;
         padding: 1rem;
+        @media screen and (max-width: 450px) {
+            width: 30%;
+        }
     }
 }
 .footer {

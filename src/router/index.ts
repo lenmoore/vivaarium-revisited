@@ -31,6 +31,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/overview',
         name: 'overview',
+        redirect: { name: 'overview.stats' },
 
         component: () =>
             import(
@@ -63,6 +64,16 @@ const routes: Array<RouteRecordRaw> = [
                     import(
                         /* webpackChunkName: "about" */ '../views/Finale/VivaStats.vue'
                     ),
+                children: [
+                    {
+                        name: 'overview.stats.all',
+                        path: 'all',
+                        component: () =>
+                            import(
+                                /* webpackChunkName: "about" */ '../views/Finale/stats/BigSummary.vue'
+                            ),
+                    },
+                ],
             },
         ],
     },
