@@ -206,7 +206,7 @@ export const videos = {
         21: {
             title: 'EKSPERIMENT KATKESTATAKSE',
             subtitle: 'Väljutakse kapslist ja vaadatakse tõtt',
-            videoUrl: '',
+            videoUrl: 'http://167.71.52.104/finaal.mp4',
             showLootBox: false,
             autoplay: true,
             number: 21,
@@ -421,7 +421,7 @@ export const videos = {
         21: {
             title: 'EKSPERIMENT KATKESTATAKSE',
             subtitle: 'Väljutakse kapslist ja vaadatakse tõtt',
-            videoUrl: '',
+            videoUrl: 'http://167.71.52.104/finaal.mp4',
             showLootBox: false,
             autoplay: true,
             number: 21,
@@ -635,7 +635,7 @@ export const videos = {
         21: {
             title: 'türkiis - video 14',
             subtitle: 'finaal. inimesed valjuvad',
-            videoUrl: '',
+            videoUrl: 'http://167.71.52.104/finaal.mp4',
             showLootBox: false,
             autoplay: true,
             number: 21,
@@ -850,7 +850,7 @@ export const videos = {
         21: {
             title: 'EKSPERIMENT KATKESTATAKSE',
             subtitle: 'Väljutakse kapslist ja vaadatakse tõtt',
-            videoUrl: '',
+            videoUrl: 'http://167.71.52.104/finaal.mp4',
             showLootBox: false,
             autoplay: true,
             number: 21,
