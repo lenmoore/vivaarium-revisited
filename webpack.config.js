@@ -17,6 +17,9 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
+                options: {
+                    esModule: false,
+                },
             },
             {
                 test: /\.tsx?$/,
@@ -47,6 +50,9 @@ module.exports = {
                     'css-loader', // Translates CSS into CommonJS
                     'sass-loader', // Compiles Sass to CSS
                 ],
+                options: {
+                    esModule: false,
+                },
             },
         ],
     },
