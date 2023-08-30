@@ -35,6 +35,12 @@ module.exports = {
                 },
             },
             {
+                loader: 'css-loader',
+                options: {
+                    esModule: false,
+                },
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     'style-loader', // Creates style nodes from JS strings
