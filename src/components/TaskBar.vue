@@ -22,7 +22,7 @@
         >
             kohver
         </div>
-        <div class="exit-player" @click="exit">finaal</div>
+        <div class="exit-player" @click="exit">Loe kokkuvõtet</div>
     </div>
 </template>
 
@@ -116,7 +116,9 @@ export default {
         text-align: left;
 
         &.open {
-            background-color: $heading1;
+            background-color: #21d57e;
+            color: white;
+            font-weight: bold;
         }
 
         &.color-selector {

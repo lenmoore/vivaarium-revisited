@@ -123,7 +123,6 @@ export default {
                 console.log('dude toggle loot');
                 this.$refs.taskbar.toggleLoot();
             } else {
-                this.$refs.taskbar.toggleColor();
                 this.$refs.taskbar.toggleChapter();
             }
         },

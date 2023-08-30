@@ -18,7 +18,9 @@
                 class="chapter-link"
                 @click="$emit('select-chapter', chapter)"
             >
-                <div class="title">{{ chapter.title }}</div>
+                <div class="title">
+                    {{ chapter.number }}. {{ chapter.title }}
+                </div>
                 <div class="subtitle">{{ chapter.subtitle }}</div>
             </li>
         </ul>
