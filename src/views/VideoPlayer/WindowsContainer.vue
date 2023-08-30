@@ -90,7 +90,7 @@ export default {
                 console.log('ready: ', this.ready);
                 console.log(chapterCode);
                 this.activeChapter = chapterCode.number.toString();
-                this.$refs.playback.quizDone = false;
+                this.$refs.playback.quizDone[chapterCode] = false;
                 this.ready = this.$refs.playback.video.play() !== undefined;
                 console.log('ready: ', this.ready);
                 this.reopenWindows();

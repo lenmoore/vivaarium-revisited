@@ -9,7 +9,7 @@
         <VideoQuiz
             @submit="finishQuiz"
             class="overlay-quiz"
-            v-if="showQuiz && !quizDone"
+            v-if="showQuiz && !quizDone[activeVideo.showQuiz]"
             :quiz="quiz"
         />
         <div class="active-video-description">{{ activeVideo.subtitle }}</div>
@@ -47,7 +47,7 @@ export default {
     data() {
         return {
             currentTime: null,
-            quizDone: false,
+            quizDone: { v1: false },
             showQuiz: false,
         };
     },
@@ -118,7 +118,7 @@ export default {
 
     methods: {
         checkTimestamp(event) {
-            if (this.hasQuiz && !this.quizDone) {
+            if (this.hasQuiz && !this.quizDone[this.activeVideo.showQuiz]) {
                 const video = event.target;
                 const targetTimestamp = this.activeVideo.quizTimestampInSeconds; // Set your desired timestamp here
 
@@ -136,7 +136,8 @@ export default {
             this.$emit('reopen-windows');
         },
         finishQuiz() {
-            this.quizDone = true;
+            this.showQuiz = false;
+            this.quizDone[this.activeVideo.showQuiz] = true;
             const videoNumber = this.routeCode.substring(
                 1,
                 this.routeCode.length + 1
