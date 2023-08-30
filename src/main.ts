@@ -3,7 +3,7 @@ import App from './App.vue';
 // import store from './views/Shop/store';
 import { createI18n } from 'vue-i18n';
 import et from './locales/et.json';
-import router from './router';
+import router from './router/index.js';
 
 const i18n = createI18n({
     locale: 'et',
@@ -12,7 +12,6 @@ const i18n = createI18n({
 });
 
 const app = createApp(App);
-
 // app.use(store);
 app.use(router);
 app.use(i18n);

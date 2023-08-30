@@ -38,24 +38,20 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router/dist/vue-router';
 import { computed, reactive, watch } from 'vue';
 import { useStore } from '@/views/Quiz/store';
 import QuizTimer from '@/views/Quiz/QuizTimer';
 
-const router = useRouter();
-const route = useRoute();
-
-let stepNumber = parseInt(route.params.step);
-let quizNumber = parseInt(route.params.quiz);
+let stepNumber = parseInt(this.$route.params.step);
+let quizNumber = parseInt(this.$route.params.quiz);
 let timerStartTime = reactive(null);
 console.log(quizNumber);
 // setup
 const store = useStore();
 watch(
-    () => route.params.step,
+    () => this.$route.params.step,
     () => {
-        stepNumber = route.params.step;
+        stepNumber = this.$route.params.step;
     }
 );
 
@@ -86,8 +82,8 @@ function selectAnswer(val, allOptions) {
 }
 
 function back() {
-    router.push({
-        name: route.name,
+    this.$router.push({
+        name: this.$route.name,
         params: { quiz: quizNumber, step: parseInt(stepNumber) - 1 },
     });
 }
@@ -97,13 +93,13 @@ async function forward() {
     console.log(stepNumber, quizSteps.length);
     if (parseInt(stepNumber) < quizSteps.length - 1) {
         console.log('if');
-        await router.push({
-            name: route.name,
+        await this.$router.push({
+            name: this.$route.name,
             params: { quiz: quizNumber, step: parseInt(stepNumber) + 1 },
         });
     } else {
         console.log('else');
-        await router.push({
+        await this.$router.push({
             name: 'quiz-done',
             query: {
                 quiz: quizNumber,

@@ -49,7 +49,7 @@ const addToCart = (product: Product) => {
 };
 
 const removeFromCart = (product: Product) => {
-    const index = state.cart.findIndex((item) => item.id === product.id);
+    const index = state.cart.findIndex((item) => item?.id === product?.id);
     if (index !== -1) {
         state.cart.splice(index, 1);
     }

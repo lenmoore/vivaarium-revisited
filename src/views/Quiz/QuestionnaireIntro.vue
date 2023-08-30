@@ -14,14 +14,12 @@
 
 <script setup>
 import { useStore } from '@/views/Quiz/store';
-import { useRouter } from 'vue-router/dist/vue-router';
 
-const router = useRouter();
 const store = useStore();
 
 async function startQuiz1() {
     await store.startGame(1);
-    await router.push({
+    await this.$router.push({
         name: 'question-step',
         params: { quiz: 1, step: 1 },
     });
