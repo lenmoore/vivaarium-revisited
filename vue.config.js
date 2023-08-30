@@ -1,6 +1,4 @@
 module.exports = {
-    publicPath: '/', // Change this if your app will be served from a subdirectory
-
     outputDir: 'dist', // The output directory for the production build
 
     // Configure Nginx to handle the history mode of Vue Router
