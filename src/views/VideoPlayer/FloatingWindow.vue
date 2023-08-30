@@ -1,16 +1,40 @@
 <template>
-    <div class="window milk">
+    <Vue3DraggableResizable
+        :initW="startWidth + 60"
+        class="window milk"
+        :initH="startHeight + 60"
+        v-model:x="x"
+        v-model:y="y"
+        v-model:w="w"
+        v-model:h="h"
+        :minW="300"
+        :minH="100"
+        v-model:active="active"
+        :draggable="!disableDrag"
+        :resizable="!disableDrag"
+        @activated="print('activated')"
+        @deactivated="print('deactivated')"
+        @drag-start="print('drag-start')"
+        @resize-start="print('resize-start')"
+        @dragging="print('dragging')"
+        @resizing="print('resizing')"
+        @drag-end="print('drag-end')"
+        @resize-end="print('resize-end')"
+    >
         <div class="window-row">
             <span class="window-title">
                 {{ title }}
             </span>
         </div>
         <div class="drag-cancel"><slot></slot></div>
-    </div>
+    </Vue3DraggableResizable>
 </template>
 
 <script>
+import Vue3DraggableResizable from 'vue3-draggable-resizable';
+
 export default {
+    components: { Vue3DraggableResizable },
     props: {
         startWidth: {
             type: Number,
