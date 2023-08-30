@@ -20,11 +20,14 @@
     height: 100%;
     width: 100%;
 
-    color: $text-color;
-    p {
-        background-color: rgba(0, 0, 0, 0.75);
-        padding: 5rem;
+    .black-milk {
+        padding: 3rem;
+        height: 80%;
+        h1 {
+            margin-bottom: 2rem !important;
+        }
     }
+
     .btn {
         padding: 1rem;
         font-size: 1.5rem;

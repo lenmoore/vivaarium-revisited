@@ -111,6 +111,7 @@ const addToCart = (product) => {
 
     .product {
         width: 6rem;
+        text-align: center;
         height: 10rem;
         display: flex;
         align-items: center;
@@ -118,11 +119,9 @@ const addToCart = (product) => {
         justify-content: space-between;
         //border-radius: 25%;
         border: 2px solid transparent;
-        padding: 2rem;
+        padding: 3rem;
 
         &:hover {
-            //background-image: radial-gradient(#00fff0, black, transparent);
-            //box-shadow: 0 0 50px #3f6969;
             .btn {
                 cursor: pointer;
             }
@@ -135,7 +134,7 @@ const addToCart = (product) => {
             width: 100%;
             display: flex;
             flex-direction: column;
-            font-size: 1.25rem;
+            font-size: 1rem;
             justify-content: flex-end;
             span {
                 margin: 0.5rem;
@@ -161,7 +160,7 @@ const addToCart = (product) => {
 .cart-button {
     background-color: white;
     color: black;
-    padding: 2rem;
+    padding: 1rem 2rem;
     font-size: 2rem;
     text-decoration: none;
 }

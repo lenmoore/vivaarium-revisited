@@ -33,13 +33,8 @@ export default {
 <style lang="scss">
 @import '../../vars';
 .timer-wrapper {
-    margin-top: 6rem;
-    font-size: 4rem;
+    font-size: 3rem;
+    padding-bottom: 2rem;
     color: $text-color;
-
-    @media screen and (max-width: 450px) {
-        margin-top: 1rem;
-        padding-bottom: 2rem;
-    }
 }
 </style>

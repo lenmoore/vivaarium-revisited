@@ -140,6 +140,7 @@ async function forward() {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    margin-top: 1rem;
     .question-text {
         color: $text-color;
     }
@@ -159,7 +160,7 @@ async function forward() {
     cursor: pointer;
     height: 100%;
     width: 95%;
-    font-size: 1.25rem;
+    font-size: 1rem;
     &.selected {
         background-color: #42b983;
     }

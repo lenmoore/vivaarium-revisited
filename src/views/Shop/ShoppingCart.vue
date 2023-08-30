@@ -18,7 +18,7 @@
             "
         >
             <div style="font-size: 1.5rem; margin: 1rem">
-                {{ $t('Asju') }}: {{ cart.length }}
+                {{ $t('Asju') }}: {{ cart.length }}/9
             </div>
             <button class="btn draw-border" @click="submit">
                 Kinnita ostukorv

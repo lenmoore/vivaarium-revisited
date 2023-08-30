@@ -4,7 +4,7 @@
         :disable-drag="isMobile"
         id="capsule-data-window"
     >
-        <div class="wrapper">
+        <div class="prods-wrapper">
             <div
                 class="product"
                 :key="product.title"
@@ -63,8 +63,8 @@ export default {
 </script>
 
 <style lang="scss">
-.wrapper {
-    height: 35vh;
+.prods-wrapper {
+    height: 40vh;
     overflow-y: scroll;
     .product {
         display: flex;
