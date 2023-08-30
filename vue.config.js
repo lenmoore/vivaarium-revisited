@@ -8,7 +8,7 @@ module.exports = {
     },
 
     // Production build settings
-    productionSourceMap: true, // Disable source maps in production
+    productionSourceMap: false, // Disable source maps in production
     assetsDir: 'static', // Directory for static assets (images, fonts, etc.)
 
     // Additional configuration options here
