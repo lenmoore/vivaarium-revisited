@@ -22,6 +22,17 @@ module.exports = {
                 },
             },
             {
+                test: /\.scss$/,
+                use: [
+                    'style-loader', // Creates style nodes from JS strings
+                    'css-loader', // Translates CSS into CommonJS
+                    'sass-loader', // Compiles Sass to CSS
+                ],
+                options: {
+                    esModule: false,
+                },
+            },
+            {
                 test: /\.tsx?$/,
                 loader: 'ts-loader',
                 exclude: /node_modules/,
@@ -35,23 +46,6 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     appendTsSuffixTo: [/\.vue$/],
-                },
-            },
-            {
-                loader: 'css-loader',
-                options: {
-                    esModule: false,
-                },
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader', // Creates style nodes from JS strings
-                    'css-loader', // Translates CSS into CommonJS
-                    'sass-loader', // Compiles Sass to CSS
-                ],
-                options: {
-                    esModule: false,
                 },
             },
         ],
