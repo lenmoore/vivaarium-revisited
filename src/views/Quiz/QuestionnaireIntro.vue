@@ -12,18 +12,21 @@
     </div>
 </template>
 
-<script setup>
+<script>
 import { useStore } from '@/views/Quiz/store';
-
 const store = useStore();
 
-async function startQuiz1() {
-    await store.startGame(1);
-    await this.$router.push({
-        name: 'question-step',
-        params: { quiz: 1, step: 1 },
-    });
-}
+export default {
+    methods: {
+        async startQuiz1() {
+            await store.startGame(1);
+            await this.$router.push({
+                name: 'question-step',
+                params: { quiz: 1, step: 1 },
+            });
+        },
+    },
+};
 </script>
 
 <style lang="scss">

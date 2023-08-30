@@ -1,8 +1,19 @@
 <template>
     <div class="page">
         <div class="windows-container">
-            <div class="tip milk">
+            <div v-if="!isMobile" class="tip milk">
                 Tipp: proovi aknaid ringi lohistada ja nende suurust muuta!
+            </div>
+            <div class="video-controls">
+                <ColorSelector
+                    v-if="isColorOpen"
+                    @select-color="(val) => selectColor(val)"
+                />
+                <ChapterController
+                    v-if="isChapterOpen && !isMobile"
+                    :disabled="!ready"
+                    @select-chapter="(val) => selectChapter(val)"
+                />
             </div>
             <VideoPlayback
                 @quiz-started="$refs.taskbar.closeAll()"
@@ -11,17 +22,12 @@
                 @next-chapter="nextChapter"
                 ref="playback"
             />
-            <div class="video-controls">
-                <ColorSelector
-                    v-if="isColorOpen"
-                    @select-color="(val) => selectColor(val)"
-                />
-                <ChapterController
-                    v-if="isChapterOpen"
-                    :disabled="!ready"
-                    @select-chapter="(val) => selectChapter(val)"
-                />
-            </div>
+            <ChapterController
+                v-if="isChapterOpen && isMobile"
+                :disabled="!ready"
+                @select-chapter="(val) => selectChapter(val)"
+            />
+
             <CapsuleData :color="activeColor" v-if="isLootOpen" />
         </div>
         <TaskBar ref="taskbar" @toggle="(val) => toggleWindow(val)" />
@@ -59,6 +65,9 @@ export default {
     computed: {
         activeCode() {
             return this.activeColor + this.activeChapter;
+        },
+        isMobile() {
+            return window.innerWidth < 450;
         },
     },
 

@@ -1,7 +1,7 @@
 <template>
     <div class="results-wrapper" v-if="colorResult">
         <section>
-            <h1 :class="`milk ${colorResult}`">
+            <h1 :class="`milk result-${colorResult}`">
                 Sa oled {{ colorResultString }}.
             </h1>
         </section>
@@ -11,7 +11,7 @@
                     <img width="300" src="/android-chrome-512x512.png" />
                     <img
                         width="200"
-                        :src="`/captains/${colorResult}.jpg`"
+                        :src="`/captains/${colorResult}.png`"
                         alt=""
                     />
                 </div>
@@ -232,20 +232,19 @@ const description = descriptions[colorResult];
 
 h1 {
     color: black;
-
-    &.violet {
+    &.result-violet {
         background-color: $violet;
     }
 
-    &.lime {
+    &.result-lime {
         background-color: $lime;
     }
 
-    &.turquoise {
+    &.result-turquoise {
         background-color: $turquoise;
     }
 
-    &.silver {
+    &.result-silver {
         background-color: $silver;
     }
 }

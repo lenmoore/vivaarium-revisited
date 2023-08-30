@@ -13,8 +13,6 @@
             :quiz="quiz"
         />
         <div class="active-video-description">{{ activeVideo.subtitle }}</div>
-        {{ subtitleUrl }}
-
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
@@ -193,7 +191,6 @@ video::cue {
     z-index: 2;
 }
 .active-video-description {
-    width: 100%;
     padding: 1rem;
     font-size: 1.25rem;
     color: black;

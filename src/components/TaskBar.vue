@@ -88,10 +88,10 @@ export default {
 <style lang="scss">
 @import '../vars';
 .taskbar-wrapper {
-    background-color: white;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    width: 100%;
+    width: 99%;
+    margin-left: 0.25rem;
     z-index: 100;
     position: absolute;
     bottom: 0;
@@ -100,9 +100,11 @@ export default {
     align-items: center;
     justify-content: flex-start;
 
-    -webkit-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
-    box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.51);
+    background: rgba(255, 255, 255, 0.47);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.94);
 
     .icon {
         margin-left: 0.5rem;
@@ -132,5 +134,8 @@ export default {
             }
         }
     }
+}
+.exit-player {
+    padding-left: 0.5rem;
 }
 </style>

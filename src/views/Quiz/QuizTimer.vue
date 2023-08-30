@@ -36,5 +36,10 @@ export default {
     margin-top: 6rem;
     font-size: 4rem;
     color: $text-color;
+
+    @media screen and (max-width: 450px) {
+        margin-top: 1rem;
+        padding-bottom: 2rem;
+    }
 }
 </style>

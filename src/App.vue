@@ -6,7 +6,7 @@
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=VT323&display=swap');
 @import './vars';
 #app {
     font-family: 'Raleway', sans-serif;
