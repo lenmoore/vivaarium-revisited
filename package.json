@@ -2,7 +2,6 @@
   "name": "vivaarium-auditor",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "start": "serve -s build",
     "serve": "vue-cli-service serve",
