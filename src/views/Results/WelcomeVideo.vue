@@ -23,7 +23,6 @@
             {{ $t('Alusta auditit') }}
         </button>
 
-        <h1>hallo</h1>
         <div class="padding">
             <RouterLink :to="{ name: 'video-player' }">
                 {{ $t('Jäta video vahele') }}

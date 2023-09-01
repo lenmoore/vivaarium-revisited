@@ -13,7 +13,6 @@
             :quiz="quiz"
         />
         <div class="active-video-description">{{ activeVideo.subtitle }}</div>
-        <h1>{{ subtitleUrl }}</h1>
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
