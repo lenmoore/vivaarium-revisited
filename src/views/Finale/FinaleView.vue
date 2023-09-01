@@ -42,7 +42,7 @@
             </RouterLink>
             <RouterLink
                 class="menu-btn"
-                :to="{ name: 'video-player' }"
+                :to="{ name: 'video-player', query: { code: 'v1' } }"
                 @click="showMenuMobile = false"
             >
                 Tagasi kapslisse
@@ -87,6 +87,20 @@ export default {
 <style lang="scss">
 .finale-container {
     height: 100%;
+    p,
+    h2,
+    h3,
+    h4 {
+        max-width: 800px !important;
+        width: 100%;
+        margin: auto;
+    }
+
+    padding: 1rem 1rem 5rem;
+
+    .container {
+        padding-bottom: 10rem;
+    }
 }
 #menu-mobile {
     display: none;
@@ -103,6 +117,7 @@ export default {
     height: 80px;
     display: flex;
     align-items: center;
+    padding-top: 1rem;
     justify-content: flex-start;
 
     @media screen and (max-width: 450px) {

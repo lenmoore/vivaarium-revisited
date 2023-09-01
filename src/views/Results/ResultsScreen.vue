@@ -211,6 +211,7 @@ localStorage.setItem('AUDITOR_RESULT_string', colorResultString);
     justify-content: center;
     align-items: center;
 }
+
 .percents {
     display: flex;
     align-items: center;
