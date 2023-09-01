@@ -2,7 +2,7 @@
     <div class="results-wrapper" v-if="colorResult">
         <section>
             <h1 :class="`milk result-${colorResult}`">
-                Sa oled {{ colorResultString }}.
+                Sina oled {{ colorResultString }}.
             </h1>
         </section>
         <section>
@@ -49,7 +49,12 @@
         <section>
             <div class="centered">
                 <button
-                    @click="$router.push({ name: 'welcome-video' })"
+                    @click="
+                        $router.push({
+                            name: 'welcome-video',
+                            query: { code: colorResult[0] },
+                        })
+                    "
                     class="btn draw-border"
                 >
                     {{ $t('Sisene oma kapslisse') }}
@@ -182,6 +187,8 @@ const colorResultString = {
 }[colorResult];
 
 const description = descriptions[colorResult];
+localStorage.setItem('AUDITOR_RESULT', colorResult);
+localStorage.setItem('AUDITOR_RESULT_string', colorResultString);
 </script>
 <style lang="scss">
 @import '../../vars';

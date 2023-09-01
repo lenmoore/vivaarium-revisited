@@ -4,20 +4,21 @@
             <source src="/videos/quiz_video 2.mp4" type="video/mp4" />
         </video>
         <QuizTimer :start-time="timerStartTime" />
+
         <div class="slider black-milk" v-if="quizSteps">
             <h2 class="question-text">
                 {{ quizSteps[stepNumber - 1].questionText }}
             </h2>
             <div class="slide">
                 <div
-                    v-for="option in quizSteps[stepNumber].questionOptions"
+                    v-for="option in quizSteps[stepNumber - 1].questionOptions"
                     :key="option.option_text"
                     class="option btn draw-border"
                     :class="{ selected: option.selected }"
                     @click="
                         selectAnswer(
                             option,
-                            quizSteps[stepNumber].questionOptions
+                            quizSteps[stepNumber - 1].questionOptions
                         )
                     "
                 >
@@ -29,7 +30,26 @@
                 <button class="btn draw-border" @click="back">
                     {{ $t('<<') }}
                 </button>
-                <button class="btn draw-border" @click="forward">
+
+                <button
+                    v-if="
+                        (typeof stepNumber === 'number'
+                            ? stepNumber
+                            : parseInt(stepNumber)) === quizSteps.length
+                    "
+                    class="btn draw-border confirm-results"
+                    @click="
+                        $router.push({
+                            name: 'quiz-done',
+                            query: {
+                                quiz: quizNumber,
+                            },
+                        })
+                    "
+                >
+                    Kinnita
+                </button>
+                <button v-else class="btn draw-border" @click="forward">
                     {{ $t('>>') }}
                 </button>
             </div>
@@ -39,7 +59,7 @@
 
 <script setup>
 import { useRoute, useRouter } from 'vue-router/dist/vue-router';
-import { computed, reactive, watch } from 'vue';
+import { computed, reactive, ref, watch } from 'vue';
 import { useStore } from '@/views/Quiz/store';
 import QuizTimer from '@/views/Quiz/QuizTimer';
 
@@ -49,7 +69,6 @@ const route = useRoute();
 let stepNumber = parseInt(route.params.step);
 let quizNumber = parseInt(route.params.quiz);
 let timerStartTime = reactive(null);
-console.log(quizNumber);
 // setup
 const store = useStore();
 watch(
@@ -69,7 +88,7 @@ const activeQuiz = quizzes.value.find((quiz) => {
         return quiz;
     }
 });
-
+let showConfirm = ref(false);
 const quizSteps = activeQuiz?.gameSteps;
 
 // answer questions, save in localstorage
@@ -79,9 +98,9 @@ function selectAnswer(val, allOptions) {
     }
     console.log(val);
     allOptions.forEach((option) => (option.selected = false));
-    console.log(quizSteps[stepNumber].questionOptions);
+    console.log(quizSteps[stepNumber - 1].questionOptions);
     val.selected = true;
-    val.question = quizSteps[stepNumber].questionText;
+    val.question = quizSteps[stepNumber - 1]?.questionText;
     store.localStore.setItem(`${quizNumber}_${stepNumber}`, val);
 }
 
@@ -95,19 +114,15 @@ function back() {
 async function forward() {
     console.log(parseInt(stepNumber) < quizSteps.length - 1);
     console.log(stepNumber, quizSteps.length);
-    if (parseInt(stepNumber) < quizSteps.length - 1) {
+    if (parseInt(stepNumber) === quizSteps.length) {
+        console.log('else');
+        showConfirm.value = true;
+        // await router.push();
+    } else {
         console.log('if');
         await router.push({
             name: route.name,
             params: { quiz: quizNumber, step: parseInt(stepNumber) + 1 },
-        });
-    } else {
-        console.log('else');
-        await router.push({
-            name: 'quiz-done',
-            query: {
-                quiz: quizNumber,
-            },
         });
     }
 }

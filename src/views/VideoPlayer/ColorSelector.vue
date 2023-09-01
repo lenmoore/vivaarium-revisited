@@ -6,6 +6,7 @@
         :disable-drag="isMobile"
         id="color-selector"
     >
+        <span class="result"> Sina oled {{ colorResultString }}. </span>
         <div class="colors">
             <span
                 class="violet"
@@ -90,6 +91,10 @@ export default {
         isMobile() {
             return window.innerWidth < 450;
         },
+        colorResultString() {
+            console.log(localStorage.getItem('AUDITOR_RESULT_string'));
+            return localStorage.getItem('AUDITOR_RESULT_string') || 'default';
+        },
     },
     methods: {
         select(color) {
@@ -103,6 +108,13 @@ export default {
 
 <style lang="scss">
 @import '../../vars';
+#color-selector {
+    color: black;
+    text-align: left;
+    .result {
+        padding-left: 1rem;
+    }
+}
 .colors {
     display: flex;
     flex-direction: row;

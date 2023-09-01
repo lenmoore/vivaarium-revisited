@@ -66,6 +66,7 @@ onMounted(async () => {
         <ResultsScreen
             v-if="nextContent && nextContent.goingToCapsuleVideo === true"
         />
+
         <div
             class="wrapper"
             v-if="nextContent && nextContent.nextLink.name === 'question-step'"

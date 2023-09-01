@@ -21,7 +21,7 @@
         @drag-end="print('drag-end')"
         @resize-end="print('resize-end')"
     >
-        <div class="window-row">
+        <div class="window-row" :class="windowColor">
             <span class="window-title">
                 {{ title }}
             </span>
@@ -51,6 +51,11 @@ export default {
         disableDrag: {
             type: Boolean,
             default: false,
+        },
+    },
+    computed: {
+        windowColor() {
+            return localStorage.getItem('AUDITOR_RESULT') || 'default';
         },
     },
     data() {
@@ -89,10 +94,23 @@ export default {
         justify-content: flex-start;
         border-radius: 16px;
         margin: 0.25rem;
-        color: $text-color;
+        color: black;
+
         .window-title {
             margin-left: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
+        }
+        &.turq {
+            background-color: $turquoise;
+        }
+        &.lime {
+            background-color: $lime;
+        }
+        &.violet {
+            background-color: $violet;
+        }
+        &.silver {
+            background-color: $silver;
         }
     }
 

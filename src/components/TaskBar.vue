@@ -1,5 +1,5 @@
 <template>
-    <div class="taskbar-wrapper">
+    <div class="taskbar-wrapper" :class="windowColor">
         <div
             @click="toggleColor"
             :class="{ open: isColorOpen }"
@@ -38,6 +38,9 @@ export default {
     },
     emits: ['toggle', 'close'],
     computed: {
+        windowColor() {
+            return localStorage.getItem('AUDITOR_RESULT') || 'default';
+        },
         showLoot() {
             if (this.$route.query.code) {
                 return (
@@ -105,6 +108,8 @@ export default {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.94);
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
 
     .icon {
         margin-left: 0.5rem;
@@ -112,12 +117,12 @@ export default {
         padding: 0.5rem;
         border: 1px solid black;
 
+        cursor: pointer;
         width: 4rem;
         text-align: left;
 
         &.open {
             background-color: #21d57e;
-            color: white;
             font-weight: bold;
         }
 
@@ -134,6 +139,31 @@ export default {
             &.silver {
                 background-color: $silver;
             }
+        }
+    }
+
+    &.violet {
+        border: 1px solid $violet;
+        .icon.open {
+            background-color: $violet;
+        }
+    }
+    &.lime {
+        border: 1px solid $lime;
+        .icon.open {
+            background-color: $lime;
+        }
+    }
+    &.turq {
+        border: 1px solid $turquoise;
+        .icon.open {
+            background-color: $turquoise;
+        }
+    }
+    &.silver {
+        border: 1px solid $silver;
+        .icon.open {
+            background-color: $silver;
         }
     }
 }

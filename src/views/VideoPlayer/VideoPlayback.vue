@@ -195,5 +195,10 @@ video::cue {
     padding: 1rem;
     font-size: 1.25rem;
     color: black;
+    text-align: left;
+
+    @media screen and (max-width: 450px) {
+        padding: 0.5rem;
+    }
 }
 </style>
