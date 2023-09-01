@@ -1,6 +1,9 @@
 <template>
     <div class="container milk">
-        <h2>Kõigi etenduste koondstatistika</h2>
+        <h2 style="margin-top: 4rem" class="title">
+            Kõigi etenduste koondstatistika
+        </h2>
+
         <div>
             <p>
                 Kümne ametliku etenduse jooksul (18.-28.01.2023) külastas

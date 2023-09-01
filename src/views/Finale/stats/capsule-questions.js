@@ -5,11 +5,11 @@ export const capsuleQuestions = [
         options: [
             {
                 text: 'Poolt',
-                count: [8, 4, 0],
+                count: [8, 4, 9, 9, 9, 12, 8, 15, 10, 10],
             },
             {
                 text: 'Vastu',
-                count: [11, 21, 0],
+                count: [11, 21, 13, 13, 13, 15, 17, 12, 15, 12],
             },
         ],
     },
@@ -19,11 +19,11 @@ export const capsuleQuestions = [
         options: [
             {
                 text: 'Poolt',
-                count: [2, 1, 0],
+                count: [2, 1, 1, 1, 4, 7, 1, 1, 2, 1],
             },
             {
                 text: 'Vastu',
-                count: [13, 15, 0],
+                count: [13, 15, 21, 21, 18, 10, 15, 14, 15, 16],
             },
         ],
     },
@@ -33,11 +33,11 @@ export const capsuleQuestions = [
         options: [
             {
                 text: 'Poolt',
-                count: [6, 11, 0],
+                count: [6, 11, 8, 8, 8, 6, 11, 13, 11, 8],
             },
             {
                 text: 'Vastu',
-                count: [9, 12, 0],
+                count: [9, 12, 14, 14, 11, 16, 12, 14, 35],
             },
         ],
     },
@@ -47,11 +47,11 @@ export const capsuleQuestions = [
         options: [
             {
                 text: 'Poolt',
-                count: [4, 9, 0],
+                count: [4, 9, 1, 4, 5, 9, 6, 10],
             },
             {
                 text: 'Vastu',
-                count: [15, 18, 0],
+                count: [15, 18, 21, 14, 17, 18, 19, 40],
             },
         ],
     },
