@@ -45,8 +45,15 @@ const routes = [
                 component: () => import('@/views/Finale/DramaturgVideo.vue'),
             },
             {
+                name: 'overview.viva',
+                path: 'tasku-viva',
+
+                component: () => import('@/views/Finale/PocketViva.vue'),
+            },
+            {
                 name: 'overview.stats',
                 path: 'stats',
+                redirect: { name: 'overview.stats.all' },
 
                 component: () => import('@/views/Finale/VivaStats.vue'),
                 children: [

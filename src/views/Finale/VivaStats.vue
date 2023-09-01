@@ -1,28 +1,7 @@
 <template>
     <div>
         <div><h1>Viva statistika</h1></div>
-        <div v-if="showDateSelect" class="select-performance">
-            <button class="performance-button" @click="showSummary">
-                Kõigi kokkuvõte
-            </button>
-            <br />
-            <button
-                :class="{ active: performance.selected }"
-                class="performance-button"
-                :key="performance.date"
-                v-for="performance in performances"
-                @click="selectPerformance"
-            >
-                {{ performance.date }}. jaanuar
-            </button>
-        </div>
-        <button
-            v-else
-            @click="showDateSelect = true"
-            class="btn draw-border m-0"
-        >
-            Vali kuupaev
-        </button>
+
         <RouterView v-if="!showDateSelect" />
     </div>
 </template>

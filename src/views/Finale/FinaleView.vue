@@ -1,13 +1,48 @@
 <template>
     <div class="finale-container">
-        <div class="menu">
-            <RouterLink :to="{ name: 'overview.about' }">Etendusest</RouterLink>
-            <RouterLink :to="{ name: 'overview.dramaturg' }"
-                >moned kysimused akki vms</RouterLink
+        <button
+            class="menu-btn"
+            id="menu-mobile"
+            v-if="!showMenuMobile"
+            @click="showMenuMobile = true"
+        >
+            menüü
+        </button>
+        <div class="menu" :class="{ open: showMenuMobile }">
+            <img
+                v-if="showMenuMobile"
+                src="/android-chrome-512x512.png"
+                alt=""
+                height="200"
+                width="200"
+            />
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.about' }"
+                @click="showMenuMobile = false"
+                >Vivaariumist</RouterLink
             >
-            <RouterLink :to="{ name: 'overview.stats' }"
-                >Etenduste statistika</RouterLink
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.dramaturg' }"
+                @click="showMenuMobile = false"
+                >Tagasiside</RouterLink
             >
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.stats' }"
+                @click="showMenuMobile = false"
+                >Statistika</RouterLink
+            >
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.viva' }"
+                @click="showMenuMobile = false"
+                >Tasku-Vivaariumist
+            </RouterLink>
+            <button v-if="showMenuMobile" @click="showMenuMobile = false">
+                Sulge
+            </button>
         </div>
         <RouterView />
 
@@ -30,11 +65,27 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            showMenuMobile: false,
+        };
+    },
+};
 </script>
 <style lang="scss">
 .finale-container {
     height: 100%;
+}
+#menu-mobile {
+    display: none;
+}
+@media screen and (max-width: 450px) {
+    #menu-mobile {
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+    }
 }
 .menu {
     width: 100%;
@@ -42,9 +93,28 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @media screen and (max-width: 450px) {
+        display: none;
+
+        &.open {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            z-index: 2;
+            width: 100%;
+            button {
+                color: white;
+            }
+        }
+    }
     a {
         color: black;
         padding: 1rem;
+        background-color: lightgoldenrodyellow;
+        margin: 0.5rem;
         @media screen and (max-width: 450px) {
             width: 30%;
         }

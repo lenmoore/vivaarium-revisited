@@ -1,75 +1,9 @@
 <template>
     <div class="flex-column-page">
-        <small
-            >Mihkel, panin siia originaalteksti vanast veebirakendusest.</small
-        >
         <h1>Vivaariumist</h1>
 
         <div class="page-content">
             <h2>Kellena homsesse?</h2>
-            <div class="sponsors">
-                <img
-                    alt=""
-                    height="60"
-                    src="/sponsors/Play_on_website_logo_01.png"
-                />
-                <img alt="" height="20" src="/sponsors/logo_obando.gif" />
-            </div>
-
-            <div class="py-2 d-flex justify-content-center">
-                <img alt="" src="/public/sponsors/EUfundingLogo-320x50.png" />
-            </div>
-            <p class="font-size-xs text-center">
-                Lavastus on sündinud rahvusvahelise teatriprojekti „PlayOn!”
-                raames ja koostöös O Bando teatriga (Portugal)
-            </p>
-            <br /><br />
-
-            <div class="py-2">
-                <p>
-                    <strong>Algkontseptsiooni autorid</strong>: Helen Rekkor,
-                    Villem Rootalu, Sander Põldsaar, Mihkel Seeder
-                </p>
-                <br />
-                <p>
-                    <strong>Lavastaja</strong>: Helen Rekkor (teatriühendus
-                    Misanzen)
-                </p>
-                <p><strong>Dramaturg</strong>: Mihkel Seeder</p>
-                <p><strong>Arendaja</strong>: Helena Väinmaa</p>
-                <p><strong>Videokunstnik</strong>: Sander Põldsaar</p>
-                <p><strong>Helilooja</strong>: Villem Rootalu</p>
-                <p><strong>Valguskunstnik</strong>: Rommi Ruttas</p>
-                <br />
-                <p><strong>Tehnik</strong>: Martin Koldits</p>
-                <p><strong>Tehnilised lahendused</strong>: Raul Õitspuu</p>
-                <p>
-                    <strong>Praktikant</strong>: Rebecca Tamm (TÜVKA
-                    kultuurikorralduse eriala)
-                </p>
-                <br />
-                <p>
-                    <strong
-                        >Esietendus 18. jaanuaril 2023 Sakala 3
-                        Teatrimajas</strong
-                    >
-                </p>
-                <p>
-                    <strong>Täname</strong>: Andero Uusberg, Elisabeth Rebane,
-                    Tartu Uus Teater
-                </p>
-            </div>
-
-            <h3 class="pt-4">Osades:</h3>
-            <div class="py-2">
-                <span class="bg-fuchsia px-2">VIOLETT</span> – Merilin Kirbits
-                <small> (Improteater IMPEERIUM)</small> <br />
-                <span class="bg-orange px-2">TÜRKIIS</span> – Maarja Tammemägi
-                <br />
-                <span class="bg-green px-2">LAIM</span> – Meelis Põdersoo <br />
-                <span class="bg-blue px-2">HÕBEVALGE</span> – Tanel Saar <br />
-                ADMINISTRAATOR – Helen Rekkor <br />
-            </div>
 
             <br /><br /><br />
             <h2>Kas teater kolibki tulevikus taskutelefoni?</h2>
@@ -185,6 +119,27 @@
                 </p>
 
                 <p>Helen Rekkor</p>
+                <br /><br /><br />
+                <div class="sponsors">
+                    <img
+                        alt=""
+                        height="60"
+                        src="/sponsors/Play_on_website_logo_01.png"
+                    />
+                    <img alt="" height="20" src="/sponsors/logo_obando.gif" />
+                </div>
+
+                <div class="py-2 d-flex justify-content-center">
+                    <img
+                        alt=""
+                        src="/public/sponsors/EUfundingLogo-320x50.png"
+                    />
+                </div>
+                <p class="font-size-xs text-center">
+                    Lavastus sündis rahvusvahelise teatriprojekti „PlayOn!”
+                    raames ja koostöös O Bando teatriga (Portugal)
+                </p>
+                <br /><br />
             </div>
         </div>
     </div>

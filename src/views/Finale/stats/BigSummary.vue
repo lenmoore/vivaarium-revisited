@@ -1,11 +1,17 @@
 <template>
-    <div>
+    <div class="container">
         <h2>Kõigi etenduste koondstatistika</h2>
         <div>
-            <p>Kokku käis kümnel etendusel 880 inimest.</p>
-            <p>Lisaks sellele toimus veel kümme test- ja kontrolletendust.</p>
-            <h3 class="title">Kapslite jaotus:</h3>
-            <p>Kapslitesse jaotati, et saali mahuks:</p>
+            <p>
+                Kümne ametliku etenduse jooksul (18.-28.01.2023) külastas
+                Vivaariumit 880 inimest ja nende valikutest moodustus kõnekas
+                statistika.
+            </p>
+            <h3 class="title">Kapslite jaotus</h3>
+            <p>
+                Kuna kapslites oli piiratud ruum, siis jaotas Vivaariumi
+                algoritm inimesi kapslitesse järgmiselt:
+            </p>
             <table class="colors-table shadow">
                 <thead>
                     <tr>
@@ -25,7 +31,9 @@
                 </tbody>
             </table>
 
-            <p>Publiku tegelikud tulemused:</p>
+            <p>
+                Tegelikkuses aga jaotus külastajaskond oma vaadetelt hoopis nii:
+            </p>
             <table class="colors-table shadow">
                 <thead>
                     <tr>
@@ -44,6 +52,7 @@
                     </tr>
                 </tbody>
             </table>
+            <p>Ütleb see midagi eestlaste või VATi publiku kohta? Kes teab.</p>
 
             <h3 class="title">Kaptenite kukutamine</h3>
             <small
@@ -87,28 +96,48 @@
             </table>
 
             <h3 class="title">Tooted</h3>
-            <small
-                >Mihkel, vali siit, milliseid tahad jätta vms. Tegin näidiseid
-                ka, et saaks mingeid kommentaare panna jms. Aga neid voiks palju
-                vahem olla.</small
-            >
+            <h4>Kõige populaarsemad poest valitud esemed olid:</h4>
             <div class="products-wrap">
-                <div
-                    class="product shadow"
-                    v-for="product in products"
-                    :key="product.title"
-                >
+                <div class="product shadow" v-for="i in 9" :key="i + 'popular'">
                     <img
                         width="60"
-                        :src="`/humanity-icons/${product.imageUrl}`"
+                        :src="`/humanity-icons/${products[i].imageUrl}`"
                         alt=""
                     />
                     <div class="product-name">
-                        {{ product.title }} x {{ product.count }}
-                        <div class="product-note">{{ product.note }}</div>
+                        {{ products[i].title }} x {{ products[i].count }}
+                        <div class="product-note">{{ products[i].note }}</div>
                     </div>
                 </div>
             </div>
+
+            <h4>Kõige ebapopulaarsemad poest valitud esemed olid:</h4>
+            <div class="products-wrap">
+                <div v-for="i in [53, 54, 55, 56, 57, 58]" :key="i + 'popular'">
+                    <div v-if="i >= products.length - 6" class="product shadow">
+                        <img
+                            width="60"
+                            :src="`/humanity-icons/${products[i].imageUrl}`"
+                            alt=""
+                        />
+                        <div
+                            v-if="i >= products.length - 6"
+                            class="product-name"
+                        >
+                            {{ products[i].title }} x {{ products[i].count }}
+                            <div class="product-note">
+                                {{ products[i].note }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                Vahel oldi valikutes vägagi resoluutsed. Üks vanapaar valis
+                poest kahe peale vaid teadusartiklite kogu ja 100 liitrit
+                viskit. Nad selgitasid tiimile hiljem, et kõik muud valikud olid
+                mõttetud.
+            </p>
         </div>
     </div>
 </template>
@@ -196,7 +225,7 @@ export default {
 .products-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .product {
     display: flex;
@@ -227,5 +256,13 @@ export default {
     -moz-box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.2);
     box-shadow: -2px -1px 60px -12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 </style>
