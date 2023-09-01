@@ -53,10 +53,13 @@ export default {
     },
     computed: {
         routeCode() {
+            console.log(this.$route.query);
             if (this.$route.query.code) {
                 return this.$route.query.code;
             }
-            return 'v1';
+            let localInfo = localStorage.getItem('AUDITOR_RESULT');
+            console.log(localInfo);
+            return localInfo[0] + '1';
         },
         activeVideo() {
             const videoNumber = this.routeCode.substring(

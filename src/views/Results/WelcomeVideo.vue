@@ -4,7 +4,12 @@
             id="intro-vid"
             autoplay
             controls
-            @ended="$router.push({ name: 'video-player' })"
+            @ended="
+                $router.push({
+                    name: 'video-player',
+                    query: { ...$route.query },
+                })
+            "
             src="http://167.71.52.104/viva_intro.mp4"
         >
             <track
@@ -24,7 +29,9 @@
         </button>
 
         <div class="padding">
-            <RouterLink :to="{ name: 'video-player' }">
+            <RouterLink
+                :to="{ name: 'video-player', query: { ...$route.query } }"
+            >
                 {{ $t('Jäta video vahele') }}
             </RouterLink>
         </div>

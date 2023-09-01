@@ -52,7 +52,7 @@
                     @click="
                         $router.push({
                             name: 'welcome-video',
-                            query: { code: colorResult[0] },
+                            query: { code: colorResult[0] + '1' },
                         })
                     "
                     class="btn draw-border"

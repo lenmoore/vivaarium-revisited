@@ -26,15 +26,12 @@ export default {
     props: {
         color: {
             type: String,
-            default: 'v',
+            default: localStorage.getItem('active_player_color')[0],
         },
     },
     computed: {
         isMobile() {
             return window.innerWidth < 450;
-            // return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            //     navigator.userAgent
-            // );
         },
         products() {
             console.log('prods', productsJSON);
