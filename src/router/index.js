@@ -28,8 +28,7 @@ const routes = [
     {
         path: '/overview',
         name: 'overview',
-        redirect: { name: 'overview.stats' },
-
+        redirect: { name: 'overview.dramaturg' },
         component: () => import('@/views/Finale/FinaleView.vue'),
         children: [
             {

@@ -167,6 +167,9 @@ export default {
         }
     }
 }
+.os {
+    padding-left: 0.5rem;
+}
 .exit-player {
     padding-left: 0.5rem;
 }

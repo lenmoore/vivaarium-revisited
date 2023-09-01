@@ -6,7 +6,9 @@
             controls
             @ended="$router.push({ name: 'video-player' })"
             src="http://167.71.52.104/viva_intro.mp4"
-        ></video>
+        >
+            <track src="/subs/viva_intro_sub.vtt" />
+        </video>
         <button
             style="display: none"
             id="begin-audit-link"

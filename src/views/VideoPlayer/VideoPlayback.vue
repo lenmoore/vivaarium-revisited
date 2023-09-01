@@ -13,7 +13,7 @@
             :quiz="quiz"
         />
         <div class="active-video-description">{{ activeVideo.subtitle }}</div>
-        {{ subtitleUrl }}
+        <h1>{{ subtitleUrl }}</h1>
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
@@ -69,11 +69,7 @@ export default {
         },
         subtitleUrl() {
             const routeColor = this.routeCode[0];
-            const routeNr = this.routeCode.substring(
-                1,
-                this.routeCode.length + 1
-            );
-            const routeNumber = routeNr.length === 2 ? routeNr : `0${routeNr}`;
+            let url = '';
             const subcolor = {
                 h: 'hobevalge',
                 t: 'tyrkiis',
@@ -81,21 +77,29 @@ export default {
                 l: 'laim',
             }[routeColor];
             // return '/subs/tyrkiis_v02_sub.vtt';
-            if (this.activeVideo.videoUrl.includes(subcolor)) {
+            if (this.activeVideo.videoUrl.includes('01_ajahype')) {
+                url = '/subs/01_ajahype_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes('finaal')) {
+                url = '/subs/finaal_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes('videokone1')) {
+                url = '/subs/videokone1_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes('videokone2')) {
+                url = '/subs/videokone2_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes('videokone3')) {
+                url = '/subs/videokone3_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes('videokone4')) {
+                url = '/subs/videokone4_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes(subcolor)) {
                 console.log(this.activeVideo.videoUrl);
 
                 const capsuleVideoNr = this.activeVideo.videoUrl
                     .split('_')[1]
                     .split('.')[0];
                 console.log(capsuleVideoNr);
-                return `/subs/${subcolor}_sub_${capsuleVideoNr}.vtt`;
-            } else if (this.activeVideo.videoUrl.includes('ajahype')) {
-                return 'ajahype subs';
-            } else if (this.activeVideo.videoUrl.includes('finaal')) {
-                return '/subs/finaal_sub.vtt';
-            } else {
-                return 'zoom subs';
+                url = `/subs/${subcolor}_sub_${capsuleVideoNr}.vtt`;
             }
+            console.log(url);
+            return url;
         },
         videoStartWidth() {
             return this.isMobile ? window.innerWidth : window.innerWidth * 0.5;

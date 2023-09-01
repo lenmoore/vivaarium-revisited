@@ -40,7 +40,18 @@
                 @click="showMenuMobile = false"
                 >Tasku-Vivaariumist
             </RouterLink>
-            <button v-if="showMenuMobile" @click="showMenuMobile = false">
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'video-player' }"
+                @click="showMenuMobile = false"
+            >
+                Tagasi kapslisse
+            </RouterLink>
+            <button
+                class="dnone"
+                v-if="showMenuMobile"
+                @click="showMenuMobile = false"
+            >
                 Sulge
             </button>
         </div>
@@ -68,7 +79,7 @@
 export default {
     data() {
         return {
-            showMenuMobile: false,
+            showMenuMobile: true,
         };
     },
 };
@@ -118,6 +129,13 @@ export default {
         @media screen and (max-width: 450px) {
             width: 30%;
         }
+    }
+}
+
+.dnone {
+    display: none;
+    @media screen and (max-width: 450px) {
+        display: block;
     }
 }
 .footer {
