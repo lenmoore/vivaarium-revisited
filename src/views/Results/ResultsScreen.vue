@@ -188,6 +188,7 @@ const colorResultString = {
 
 const description = descriptions[colorResult];
 localStorage.setItem('AUDITOR_RESULT', colorResult);
+localStorage.setItem('active_player_color', colorResult);
 localStorage.setItem('AUDITOR_RESULT_string', colorResultString);
 </script>
 <style lang="scss">

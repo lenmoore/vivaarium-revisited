@@ -13,6 +13,7 @@
             :quiz="quiz"
         />
         <div class="active-video-description">{{ activeVideo.subtitle }}</div>
+        {{ subtitleUrl }}
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
@@ -81,7 +82,13 @@ export default {
             }[routeColor];
             // return '/subs/tyrkiis_v02_sub.vtt';
             if (this.activeVideo.videoUrl.includes(subcolor)) {
-                return `/subs/${subcolor}_sub_v${routeNumber}.vtt`;
+                console.log(this.activeVideo.videoUrl);
+
+                const capsuleVideoNr = this.activeVideo.videoUrl
+                    .split('_')[1]
+                    .split('.')[0];
+                console.log(capsuleVideoNr);
+                return `/subs/${subcolor}_sub_${capsuleVideoNr}.vtt`;
             } else if (this.activeVideo.videoUrl.includes('ajahype')) {
                 return 'ajahype subs';
             } else if (this.activeVideo.videoUrl.includes('finaal')) {

@@ -39,7 +39,7 @@ export default {
     emits: ['toggle', 'close'],
     computed: {
         windowColor() {
-            return localStorage.getItem('AUDITOR_RESULT') || 'default';
+            return localStorage.getItem('active_player_color') || 'default';
         },
         showLoot() {
             if (this.$route.query.code) {

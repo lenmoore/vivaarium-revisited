@@ -55,7 +55,7 @@ export default {
     },
     computed: {
         windowColor() {
-            return localStorage.getItem('AUDITOR_RESULT') || 'default';
+            return localStorage.getItem('active_player_color') || 'default';
         },
     },
     data() {
