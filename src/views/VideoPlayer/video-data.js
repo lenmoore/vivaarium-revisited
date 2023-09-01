@@ -3,8 +3,8 @@ export const videos = {
         1: {
             title: 'KAPSLI INTRO',
             subtitle: 'Inimesed saavad teada, kuhu on sattunud',
-            videoUrl: 'http://167.71.52.104/violett/violett_v01.mp4',
-            subs: 'http://167.71.52.104/tyrkiis_sub_v01.vtt',
+            videoUrl: '/violett_v01.mp4',
+            subs: 'http://167.71.52.104/violett_sub_v01.vtt',
             showLootBox: false,
             showQuiz: null,
             number: 1,
