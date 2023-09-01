@@ -78,6 +78,8 @@ export default {
             // return '/subs/tyrkiis_v02_sub.vtt';
             if (this.activeVideo.videoUrl.includes('01_ajahype')) {
                 url = '/subs/01_ajahype_sub.vtt';
+            } else if (this.activeVideo.videoUrl.includes('02_ajahype')) {
+                url = '/subs/02_ajahype_sub.vtt';
             } else if (this.activeVideo.videoUrl.includes('finaal')) {
                 url = '/subs/finaal_sub.vtt';
             } else if (this.activeVideo.videoUrl.includes('videokone1')) {
