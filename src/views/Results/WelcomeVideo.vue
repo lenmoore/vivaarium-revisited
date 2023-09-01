@@ -7,7 +7,13 @@
             @ended="$router.push({ name: 'video-player' })"
             src="http://167.71.52.104/viva_intro.mp4"
         >
-            <track src="/subs/viva_intro_sub.vtt" />
+            <track
+                src="/subs/viva_intro_sub.vtt"
+                label="Eesti"
+                kind="subtitles"
+                default
+                srclang="et"
+            />
         </video>
         <button
             style="display: none"
@@ -17,6 +23,7 @@
             {{ $t('Alusta auditit') }}
         </button>
 
+        <h1>hallo</h1>
         <div class="padding">
             <RouterLink :to="{ name: 'video-player' }">
                 {{ $t('Jäta video vahele') }}
