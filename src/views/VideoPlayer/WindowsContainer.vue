@@ -4,6 +4,14 @@
             <div v-if="!isMobile" class="tip milk">
                 Tipp: proovi aknaid ringi lohistada ja nende suurust muuta!
             </div>
+
+            <VideoPlayback
+                @quiz-started="$refs.taskbar.closeAll()"
+                @finish-quiz="reopenWindows"
+                @reopen-windows="reopenWindows"
+                @next-chapter="nextChapter"
+                ref="playback"
+            />
             <div class="video-controls">
                 <ColorSelector
                     v-if="isColorOpen"
@@ -15,13 +23,6 @@
                     @select-chapter="(val) => selectChapter(val)"
                 />
             </div>
-            <VideoPlayback
-                @quiz-started="$refs.taskbar.closeAll()"
-                @finish-quiz="reopenWindows"
-                @reopen-windows="reopenWindows"
-                @next-chapter="nextChapter"
-                ref="playback"
-            />
             <ChapterController
                 v-if="isChapterOpen && isMobile"
                 :disabled="!ready"
