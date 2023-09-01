@@ -1,6 +1,6 @@
 <template>
     <FloatingWindow
-        :title="'Peatükk ' + activeVideo.title"
+        :title="'Peatükk ' + activeVideo && activeVideo.title"
         :start-width="videoStartWidth"
         :start-height="videoStartHeight"
         :disable-drag="isMobile"
@@ -59,15 +59,17 @@ export default {
             }
             let localInfo = localStorage.getItem('AUDITOR_RESULT');
             console.log(localInfo);
-            return localInfo[0] + '1';
+            return localInfo[0] || 'v' + '1';
         },
         activeVideo() {
             const videoNumber = this.routeCode.substring(
                 1,
                 this.routeCode.length + 1
             );
-            console.log(videoNumber);
-            return videos[this.routeCode[0]][videoNumber];
+            if (videoNumber) {
+                return videos[this.routeCode[0]][videoNumber || 1];
+            }
+            return 'v1';
         },
         subtitleUrl() {
             const routeColor = this.routeCode[0];
