@@ -55,6 +55,12 @@ export default {
     },
     computed: {
         windowColor() {
+            if (this.$route.query.code.includes('v')) {
+                return 'violet';
+            }
+            if (this.$route.query.code.includes('h')) {
+                return 'silver';
+            }
             return localStorage.getItem('active_player_color') || 'default';
         },
     },

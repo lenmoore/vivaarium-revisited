@@ -114,6 +114,7 @@ export default {
         selectColor(colorCode) {
             console.log(colorCode);
             this.activeColor = colorCode[0];
+            localStorage.setItem('active_player_color', colorCode);
         },
         reopenWindows() {
             this.$refs.taskbar.closeAll();

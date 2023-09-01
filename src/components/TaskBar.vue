@@ -39,6 +39,9 @@ export default {
     emits: ['toggle', 'close'],
     computed: {
         windowColor() {
+            if (this.$route.query.code.includes('v')) {
+                return 'violet';
+            }
             return localStorage.getItem('active_player_color') || 'default';
         },
         showLoot() {

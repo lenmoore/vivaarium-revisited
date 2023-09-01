@@ -99,7 +99,7 @@ export default {
     methods: {
         select(color) {
             console.log(color);
-
+            localStorage.setItem('active_player_color', color);
             this.$emit('select-color', color);
         },
     },
