@@ -31,7 +31,9 @@ export default {
     },
     computed: {
         isMobile() {
-            return window.innerWidth < 450;
+            return (
+                window.innerWidth < 450 || navigator.userAgent.includes('ios')
+            );
         },
         products() {
             console.log('prods', productsJSON);
