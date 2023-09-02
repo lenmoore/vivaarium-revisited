@@ -203,7 +203,7 @@ video::cue {
     font-family: monospace;
 }
 .overlay-quiz {
-    z-index: 3;
+    z-index: 101;
     height: 96%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);

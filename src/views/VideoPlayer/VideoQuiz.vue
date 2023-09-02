@@ -96,7 +96,7 @@ export default {
     align-items: center;
     color: $text-color;
     .title {
-        margin: 0.5rem 8rem;
+        margin: 0.5rem;
         font-size: 2rem;
     }
     .option {

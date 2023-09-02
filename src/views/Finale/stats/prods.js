@@ -3,7 +3,6 @@ export const products = [
         title: 'Ruubiku kuubik',
         count: 73,
         imageUrl: '03_ruubiku_kuubik.jpg',
-        note: 'Sellele panin naiteks markuse juurde.',
     },
     {
         title: 'Kitarr',
@@ -79,7 +78,6 @@ export const products = [
         title: 'MacGyveri teip',
         count: 168,
         imageUrl: '09_boombox.jpg',
-        note: 'praktiline meel.',
     },
     {
         title: 'Piibel',
@@ -260,7 +258,6 @@ export const products = [
         title: 'Päikeseprillid',
         count: 322,
         imageUrl: '29_paikeseprillid.jpg',
-        note: 'päikeseprille võeti vist nii palju seepärast, et jäi mulje, nagu mindaks puhkusereisile.',
     },
     {
         title: 'Perepiltide album',
@@ -296,6 +293,5 @@ export const products = [
         title: '100 liitrit viskit',
         count: 235,
         imageUrl: '61_viski_100l.jpg',
-        note: 'Eestlane ikka jota.',
     },
 ];
