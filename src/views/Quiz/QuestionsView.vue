@@ -7,7 +7,7 @@
 
         <div class="slider black-milk" v-if="quizSteps">
             <h2 class="question-text">
-                {{ quizSteps[stepNumber - 1].questionText }}
+                {{ $t(quizSteps[stepNumber - 1].questionText) }}
             </h2>
             <div class="slide">
                 <div
@@ -22,7 +22,7 @@
                         )
                     "
                 >
-                    {{ option.option_text }}
+                    {{ $t(option.option_text) }}
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                         })
                     "
                 >
-                    Kinnita
+                    {{ $t('Kinnita') }}
                 </button>
                 <button v-else class="btn draw-border" @click="forward">
                     {{ $t('>>') }}

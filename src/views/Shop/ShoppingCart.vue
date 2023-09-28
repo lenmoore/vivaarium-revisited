@@ -1,12 +1,12 @@
 <template>
     <div class="cart-page">
         <header>
-            <h1>Ostukorv</h1>
+            <h1>{{ $t('Ostukorv') }}</h1>
             <button
                 class="btn cart-button"
                 @click="$router.push({ name: 'products' })"
             >
-                Poodi
+                {{ $t('Poodi') }}
             </button>
         </header>
         <div
@@ -21,14 +21,14 @@
                 {{ $t('Asju') }}: {{ cart.length }}/9
             </div>
             <button class="btn draw-border" @click="submit">
-                Kinnita ostukorv
+                {{ $t('Kinnita ostukorv') }}
             </button>
         </div>
         <ul class="cart-wrapper black-milk">
             <li class="item-in-cart" v-for="item in cart" :key="item.id">
                 <div class="title">
                     <img class="image" width="80" :src="item.image" alt="" />
-                    {{ item.title }}
+                    {{ $t(item.title) }}
                 </div>
                 <button class="btn draw-border" @click="removeFromCart(item)">
                     {{ $t('eemalda') }}

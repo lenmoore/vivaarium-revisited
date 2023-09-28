@@ -3,12 +3,13 @@ import App from './App.vue';
 // import store from './views/Shop/store';
 import { createI18n } from 'vue-i18n';
 import et from './locales/et.json';
+import en from './locales/en.json';
 import router from './router/index.js';
 
 const i18n = createI18n({
-    locale: 'et',
+    locale: sessionStorage.getItem('lang') || 'et',
     fallbackLocale: 'et',
-    messages: { et },
+    messages: { et, en },
 });
 
 const app = createApp(App);

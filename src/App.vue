@@ -1,13 +1,57 @@
 <template>
     <div class="main">
+        <div class="flag-container">
+            <button @click="switchLang">
+                <img height="30" :src="flagImage" alt="" />
+            </button>
+        </div>
         <router-view />
     </div>
 </template>
+<script>
+console.log(sessionStorage.getItem('lang'));
+if (sessionStorage.getItem('lang') == null) {
+    sessionStorage.setItem('lang', 'et');
+}
+export default {
+    computed: {
+        flagImage() {
+            return sessionStorage.getItem('lang') === 'et'
+                ? '/united-kingdom.png'
+                : '/estonia.png';
+        },
+    },
 
+    methods: {
+        switchLang() {
+            if (sessionStorage.getItem('lang') === 'et') {
+                sessionStorage.setItem('lang', 'en');
+            } else {
+                sessionStorage.setItem('lang', 'et');
+            }
+            location.reload();
+        },
+    },
+};
+</script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=VT323&display=swap');
 @import './vars';
+
+.flag-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    z-index: 20000;
+    padding-top: 0.5rem;
+    left: 0;
+    top: 0;
+    button {
+        background-color: transparent;
+    }
+}
+
 #app {
     font-family: 'Raleway', sans-serif;
     h1,

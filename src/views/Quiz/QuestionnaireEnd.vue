@@ -71,15 +71,15 @@ onMounted(async () => {
             class="wrapper"
             v-if="nextContent && nextContent.nextLink.name === 'question-step'"
         >
-            <h1>NÕUSTUN/EI NÕUSTU</h1>
-            <p>
-                Kolmandas ja viimases testis esitame sulle väiteid ja soovime
-                teada saada, kas oled nendega nõus või mitte.
-            </p>
+            <h1>{{ $t('NÕUSTUN/EI NÕUSTU') }}</h1>
+            <p v-html="$t('third-quiz')"></p>
 
             <p>
-                Sa saad vastuseid muuta, kuni aeg otsa saab või kuni sa oma
-                valikud kinnitad.
+                {{
+                    $t(
+                        'Sa saad vastuseid muuta kuni aeg otsa saab või kuni sa oma valikud kinnitad.'
+                    )
+                }}
             </p>
             <button
                 class="btn draw-border"

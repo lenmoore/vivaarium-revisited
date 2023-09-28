@@ -7,7 +7,7 @@
                         <div v-html="htmlContent" v-if="htmlContent"></div>
                     </div>
                     <button class="btn draw-border" @click="nextSlide">
-                        {{ $t('Jätka') }}
+                        {{ $t('next') }}
                     </button>
                 </div>
             </div>
@@ -30,7 +30,7 @@ const router = useRouter();
 const route = useRoute();
 
 let slideId = parseInt(route.params.id);
-const lang = 'et';
+const lang = sessionStorage.getItem('lang');
 
 let htmlContent = reactive(slides[0].html[lang]);
 let isLast = reactive(slides[0].isLast);

@@ -1,9 +1,9 @@
 <template>
     <div class="quiz-intro-wrapper">
         <div class="black-milk">
-            <h1>Kinnitasid oma ostukorvi</h1>
+            <h1>{{ $t('Kinnitasid oma ostukorvi') }}</h1>
             <RouterLink :to="{ name: 'quiz.intro' }" class="btn draw-border">
-                Küsitluste juurde
+                {{ $t('Küsitluste juurde') }}
             </RouterLink>
         </div>
     </div>

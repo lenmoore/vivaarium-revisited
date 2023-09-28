@@ -7,33 +7,25 @@
                 v-if="cart && cart.length"
                 :to="{ name: 'cart' }"
             >
-                Korvi
+                {{ $t('view basket') }}
             </RouterLink>
         </div>
         <div v-if="!hide" class="infobox black-milk">
-            Oled minemas pikale reisile, kus kõik eluks vajalik on olemas.
-            <br />
-            Mis asju võtaksid sa aga reisile kaasa selleks, et tunda end
-            mõnusalt ja turvaliselt? <br />
-            Mis asju võtaksid sa kaasa, et peletada igavust ja arendada oskusi?
-            <br />
-            Millised Vivaariumi poe objektid kõnetavad sind kõige enam? <br />
-            Tutvu meie poega ja vali välja 9 objekti, mida endaga reisile kaasa
-            võtta. <br />
-            Ära kiirusta. Mõtle läbi. <br />
-            Ja lõpuks kinnita ostukorv.
-            <button class="btn draw-border" @click="hide = true">Peida</button>
+            <span v-html="$t('shop-intro-text')"></span>
+            <button class="btn draw-border" @click="hide = true">
+                {{ $t('hide') }}
+            </button>
         </div>
 
         <button class="btn draw-border" v-else @click="hide = false">
-            Abi
+            {{ $t('Abi') }}
         </button>
 
         <ul class="product-list">
             <li class="product" v-for="product in products" :key="product.id">
                 <img width="85" :src="product.image" alt="" />
                 <div class="title">
-                    <span> {{ product.title }} </span>
+                    <span> {{ $t(product.title) }} </span>
                     <div v-if="isInCart(product)">
                         {{ $t('Juba korvis') }}
                     </div>
