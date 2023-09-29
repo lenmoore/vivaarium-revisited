@@ -11,7 +11,7 @@
                 v-for="product in products"
             >
                 <img width="50" :src="product.image" alt="" />
-                {{ product.title }} x
+                {{ $t(product.title) }} x
                 {{ product.count }}
             </div>
         </div>

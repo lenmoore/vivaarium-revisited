@@ -1,5 +1,8 @@
 <template>
-    <div class="flex-column-page">
+    <div
+        v-if="sessionStorage.getItem('lang') === 'et'"
+        class="flex-column-page"
+    >
         <h1>Vivaariumist</h1>
 
         <div class="page-content">
@@ -138,6 +141,152 @@
                 <p class="font-size-xs text-center">
                     Lavastus sündis rahvusvahelise teatriprojekti „PlayOn!”
                     raames ja koostöös O Bando teatriga (Portugal)
+                </p>
+                <br /><br />
+            </div>
+        </div>
+    </div>
+    <div v-else class="flex-column-page">
+        <h1>About VIVAARIUM</h1>
+
+        <div class="page-content">
+            <h2>As Whom Tomorrow?</h2>
+
+            <br /><br /><br />
+            <h2>Will Theater Move to Smartphones in the Future?</h2>
+            <p>
+                Unlikely. However, that doesn't mean we can't use various
+                technological tools in the theater today. Especially when they
+                can offer the audience new roles and opportunities in the
+                performance. Within the framework of the international theater
+                project
+                <a href="http://www.play-on.eu/">"PlayOn!"</a>, the intersection
+                of theater and technology is being explored. Over the course of
+                four years, project partners will test various unusual
+                approaches and starting points.
+            </p>
+
+            <p>
+                VAT Theatre's initial plan for
+                <strong>"VIVAARIUM"</strong> was to experiment with
+                <strong>motion and movement tracking</strong>. Together with
+                project partner Teatro O Bando, we embarked on a joint
+                exploration. Motion and movement tracking help monitor the
+                positioning, movement, and reactions of both actors and the
+                audience in the theater space. It's an extremely intriguing
+                technology in the context of theater, and we hope to apply it in
+                the future.
+            </p>
+            <p>
+                However, with "VIVAARIUM," the more tests we conducted, the
+                clearer it became that for this production, we were more
+                interested in the audience's choices than their movements. So,
+                we turned to developer
+                <strong>Helena Väinmaa</strong>, who created a special and
+                versatile web application for the production, allowing
+                participants to navigate through the entire VIVAARIUM story.
+            </p>
+
+            <p>
+                The goal of the "PlayOn!" project is to give the audience an
+                active role in the theater and to explore various societal
+                future scenarios. Both elements are represented in "VIVAARIUM."
+                However, at the heart of our creative team lies the burning
+                theme of
+                <strong>echo chambers</strong>.
+            </p>
+            <p>
+                The years of the pandemic vividly demonstrated how people
+                isolated in their homes increasingly fell prey to the mechanisms
+                of the virtual world. Algorithms that govern the web have a
+                noble goal: to find the details within the vast sea of
+                information that might interest you. To achieve this, the
+                algorithm creates a
+                <strong>profile</strong> for each user. I must admit that a few
+                years ago, I was amazed at how <strong>YouTube</strong> knew
+                exactly what I wanted to watch there. I thought I had some
+                random thoughts in the morning, but when I went online, the
+                right videos were already waiting for me! It was like magic! I
+                had to acknowledge that YouTube's algorithm knew me better than
+                I knew myself.
+            </p>
+
+            <p>
+                On the other hand, the downside of algorithms is that they
+                become too adept at mapping my interests – the choice of topics
+                narrows day by day, the bubble shrinks, and the walls of the
+                echo chamber become increasingly impenetrable. And at some
+                point, I find myself unexpectedly in some extreme. It's good if
+                my YouTube is filled with cat videos; it's bad if the same
+                radicalization has occurred in my worldview. Unfortunately,
+                algorithms are capable of that. Not to mention media outlets,
+                politicians, and shapers of public opinion...
+            </p>
+
+            <p>
+                They say the theater could be the last refuge from screens and
+                tweets. They say the need to stare at your mobile has already
+                surpassed traditional addictions.
+                <br />
+                In "VIVAARIUM," you were not allowed to turn off your mobile
+                phone. If we set aside voting and virtual shopping, how many
+                times did you actually check your mobile during the performance?
+                Surprisingly few? Maybe it's true that if we assign a specific
+                role to a smartphone in the art experience, the problem suddenly
+                becomes part of the solution?
+            </p>
+
+            <p>Who knows. Who knows. Who knows.</p>
+
+            <p>Mihkel Seeder</p>
+
+            <br /><br /><br /><br />
+            <div>
+                <h2>One Hour to Radicalize</h2>
+                <p>
+                    The initial impulse behind the creation of VIVAARIUM was the
+                    question of how, using artistic and technological means, we
+                    can talk about society's inclination to encapsulate itself
+                    in echo chambers. Tests with a test audience have revealed
+                    that the structure created for the performance is effective
+                    in making sense of the information bubble. The audience
+                    travels through the theater building but also through their
+                    own inner psychological landscape. How can one maintain
+                    critical thinking when "we" are drawn as the only right ones
+                    and "they" - as enemies? How can one stay sane when the
+                    dramaturgy is built on manipulation? Does the information
+                    bubble burst due to overheating, or does the sad realization
+                    remain that "we" are not doing well, but "they" are doing
+                    worse?
+                </p>
+
+                <p>
+                    Opposition is the oldest means of gaining and maintaining
+                    power - divide and conquer works like clockwork here. One
+                    hour to introspect? No. One hour to radicalize.
+                </p>
+
+                <p>Helen Rekkor</p>
+                <br /><br /><br />
+                <div class="sponsors">
+                    <img
+                        alt=""
+                        height="60"
+                        src="/sponsors/Play_on_website_logo_01.png"
+                    />
+                    <img alt="" height="20" src="/sponsors/logo_obando.gif" />
+                </div>
+
+                <div class="py-2 d-flex justify-content-center">
+                    <img
+                        alt=""
+                        src="/public/sponsors/EUfundingLogo-320x50.png"
+                    />
+                </div>
+                <p class="font-size-xs text-center">
+                    This production was created within the framework of the
+                    international theater project "PlayOn!" in collaboration
+                    with O Bando Theater (Portugal).
                 </p>
                 <br /><br />
             </div>

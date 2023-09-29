@@ -2,7 +2,11 @@
     <div class="page">
         <div class="windows-container">
             <div v-if="!isMobile" class="tip milk">
-                Tipp: proovi aknaid ringi lohistada ja nende suurust muuta!
+                {{
+                    $t(
+                        'Tipp: proovi aknaid ringi lohistada ja nende suurust muuta!'
+                    )
+                }}
             </div>
 
             <VideoPlayback

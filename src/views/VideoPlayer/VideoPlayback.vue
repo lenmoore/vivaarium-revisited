@@ -12,7 +12,11 @@
             v-if="showQuiz && !quizDone[activeVideo.showQuiz]"
             :quiz="quiz"
         />
-        <div class="active-video-description">{{ activeVideo.subtitle }}</div>
+        <div class="active-video-description">
+            {{
+                activeVideo && activeVideo.subtitle && $t(activeVideo.subtitle)
+            }}
+        </div>
         <video
             v-if="activeVideo.videoUrl.length"
             id="ssvid"
@@ -62,14 +66,29 @@ export default {
             return localInfo[0] || 'v' + '1';
         },
         activeVideo() {
-            const videoNumber = this.routeCode.substring(
-                1,
-                this.routeCode.length + 1
+            const videoNumber = parseInt(
+                this.routeCode.substring(1, this.routeCode.length + 1)
             );
-            if (videoNumber) {
-                return videos[this.routeCode[0]][videoNumber || 1];
+            console.log(this.routeCode);
+            console.log(videoNumber, typeof videoNumber);
+            if (videoNumber && videos) {
+                console.log(videos);
+                console.log(this.routeCode[0]);
+                const colorVideos = videos[this.routeCode[0]];
+                console.log(colorVideos);
+                return colorVideos[videoNumber || 1];
             }
-            return 'v1';
+            return {
+                title: 'KAPSLI INTRO',
+                subtitle: 'Inimesed saavad teada, kuhu on sattunud',
+                videoUrl: 'http://167.71.52.104/violett/violett_v01.mp4',
+                subs: 'http://167.71.52.104/violett_sub_v01.vtt',
+                showLootBox: false,
+                showQuiz: null,
+                number: 1,
+                quizTimestampInSeconds: null,
+                autoplay: true,
+            };
         },
         subtitleUrl() {
             const routeColor = this.routeCode[0];

@@ -19,7 +19,7 @@
                 }"
                 @click="select('violet')"
             >
-                Violett
+                {{ $t('violett') }}
             </span>
             <span
                 class="lime"
@@ -32,7 +32,7 @@
                         $route.query.code.startsWith('l'),
                 }"
             >
-                Laim
+                {{ $t('laim') }}
             </span>
             <span
                 class="turquoise"
@@ -45,7 +45,7 @@
                         $route.query.code.startsWith('t'),
                 }"
             >
-                Turkiis
+                {{ $t('türkiis') }}
             </span>
             <span
                 class="silver"
@@ -58,7 +58,7 @@
                         $route.query.code.startsWith('h'),
                 }"
             >
-                Hobevalge
+                {{ $t('hõbevalge') }}
             </span>
         </div>
     </FloatingWindow>

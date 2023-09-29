@@ -1,7 +1,7 @@
 <template>
     <div v-if="quiz.gameSteps" class="quiz-wrapper video-quiz black-milk">
         <div>
-            <div class="title">{{ activeStep.questionText }}</div>
+            <div class="title">{{ $t(activeStep.questionText) }}</div>
             <div
                 :class="{
                     'd-flex':
@@ -15,7 +15,7 @@
                     :class="{ selected: option.selected }"
                     @click="selectAnswer(option, activeStep.questionOptions)"
                 >
-                    {{ option.option_text }}
+                    {{ $t(option.option_text) }}
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                     {{ $t('>>') }}
                 </button>
                 <button class="btn draw-border" v-else @click="submitQuiz">
-                    Valmis
+                    {{ $t('Valmis') }}
                 </button>
             </div>
         </div>

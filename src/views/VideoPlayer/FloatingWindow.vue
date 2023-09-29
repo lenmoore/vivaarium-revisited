@@ -23,7 +23,7 @@
     >
         <div class="window-row" :class="windowColor">
             <span class="window-title">
-                {{ title }}
+                {{ $t(title) }}
             </span>
         </div>
         <div class="drag-cancel"><slot></slot></div>

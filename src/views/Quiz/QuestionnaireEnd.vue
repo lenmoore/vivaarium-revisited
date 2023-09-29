@@ -85,7 +85,7 @@ onMounted(async () => {
                 class="btn draw-border"
                 @click="$router.push(nextContent.nextLink)"
             >
-                Alusta
+                {{ $t('Alusta') }}
             </button>
         </div>
     </div>

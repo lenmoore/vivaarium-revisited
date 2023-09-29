@@ -19,9 +19,9 @@
                 @click="$emit('select-chapter', chapter)"
             >
                 <div class="title">
-                    {{ chapter.number }}. {{ chapter.title }}
+                    {{ chapter.number }}. {{ $t(chapter.title) }}
                 </div>
-                <div class="subtitle">{{ chapter.subtitle }}</div>
+                <div class="subtitle">{{ $t(chapter.subtitle) }}</div>
             </li>
         </ul>
         <div>...</div>

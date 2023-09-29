@@ -2,7 +2,7 @@
     <div class="results-wrapper" v-if="colorResult">
         <section>
             <h1 :class="`milk result-${colorResult}`">
-                Sina oled {{ colorResultString }}.
+                {{ $t('Sina oled') }} {{ $t(colorResultString) }}.
             </h1>
         </section>
         <section>
@@ -52,7 +52,7 @@
                     @click="
                         $router.push({
                             name: 'welcome-video',
-                            query: { code: colorResult[0] + '1' },
+                            query: { code: colorResultString[0] + '1' },
                         })
                     "
                     class="btn draw-border"
@@ -83,7 +83,7 @@
                 <div :key="ans" v-for="ans in quiz1Answers">
                     <p>
                         <strong>
-                            {{ ans && ans.option_text && ans.option_text }}
+                            {{ ans && ans.option_text && $t(ans.option_text) }}
                         </strong>
                     </p>
                 </div>
@@ -91,15 +91,20 @@
             <div class="quiz-answers">
                 <div :key="ans" v-for="ans in quiz2Answers">
                     <p>
-                        <strong>{{ ans.question }} </strong>
-                        <br /><span>{{ ans.option_text }}</span>
+                        <strong>{{ $t(ans.question) }} </strong>
+                        <br /><span>{{ $t(ans.option_text) }}</span>
                     </p>
                 </div>
             </div>
         </section>
         <section>
             <button
-                @click="$router.push({ name: 'welcome-video' })"
+                @click="
+                    $router.push({
+                        name: 'welcome-video',
+                        query: { code: colorResultString[0] + '1' },
+                    })
+                "
                 class="btn draw-border"
             >
                 {{ $t('Sisene oma kapslisse') }}
@@ -114,6 +119,7 @@ const store = useStore();
 
 import { computed } from 'vue';
 import { descriptions } from '@/views/Results/descriptions';
+import { descriptionsEn } from '@/views/Results/descriptions-en';
 import ProductsList from '@/views/Shop/ProductsList';
 
 const localCart = JSON.parse(localStorage.getItem('cart_items'));
@@ -186,7 +192,10 @@ const colorResultString = {
     silver: 'hõbevalge',
 }[colorResult];
 
-const description = descriptions[colorResult];
+const description =
+    sessionStorage.getItem('lang') === 'en'
+        ? descriptionsEn[colorResult]
+        : descriptions[colorResult];
 localStorage.setItem('AUDITOR_RESULT', colorResult);
 localStorage.setItem('active_player_color', colorResult);
 localStorage.setItem('AUDITOR_RESULT_string', colorResultString);
