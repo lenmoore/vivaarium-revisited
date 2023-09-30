@@ -1,6 +1,6 @@
 <template>
     <FloatingWindow
-        :title="'Vaheta kapslit'"
+        :title="$t('Vaheta kapslit')"
         :start-width="300"
         :start-height="50"
         :disable-drag="isMobile"
@@ -49,7 +49,7 @@
             </span>
             <span
                 class="silver"
-                @click="select('hobevalge')"
+                @click="select('hõbevalge')"
                 :class="{
                     active:
                         $route &&
@@ -85,7 +85,7 @@ export default {
                 case code.startsWith('t'):
                     return 'turq';
                 case code.startsWith('h'):
-                    return 'hobevalge';
+                    return 'hõbevalge';
             }
         },
         isMobile() {

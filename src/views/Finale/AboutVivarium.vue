@@ -1,8 +1,5 @@
 <template>
-    <div
-        v-if="sessionStorage.getItem('lang') === 'et'"
-        class="flex-column-page"
-    >
+    <div v-if="lang === 'et'" class="flex-column-page">
         <h1>Vivaariumist</h1>
 
         <div class="page-content">
@@ -150,7 +147,7 @@
         <h1>About VIVAARIUM</h1>
 
         <div class="page-content">
-            <h2>As Whom Tomorrow?</h2>
+            <h2>Into Tomorrow, As Whom?</h2>
 
             <br /><br /><br />
             <h2>Will Theater Move to Smartphones in the Future?</h2>
@@ -293,7 +290,15 @@
         </div>
     </div>
 </template>
-
+<script>
+export default {
+    computed: {
+        lang() {
+            return sessionStorage.getItem('lang') || 'et';
+        },
+    },
+};
+</script>
 <style lang="scss">
 .flex-column-page {
     display: flex;
@@ -308,7 +313,11 @@
     align-items: center;
     justify-content: center;
     max-width: 900px;
+    line-height: 1.5;
     padding: 1rem;
+    p {
+        padding-bottom: 1rem;
+    }
 }
 .sponsors {
     display: flex;

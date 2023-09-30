@@ -92,30 +92,30 @@ export default {
         },
         subtitleUrl() {
             const routeColor = this.routeCode[0];
-            const lang = document.cookie;
+            const lang = sessionStorage.getItem('lang') || 'et';
             console.log(lang);
             let url = '';
             const subcolor = {
-                h: 'hobevalge',
-                t: 'tyrkiis',
+                h: 'hõbevalge',
+                t: 'türkiis',
                 v: 'violett',
                 l: 'laim',
             }[routeColor];
-            // return '/et/tyrkiis_v02_sub.vtt';
+            // return '/et/türkiis_v02_sub.vtt';
             if (this.activeVideo.videoUrl.includes('01_ajahype')) {
-                url = '/et/01_ajahype_sub.vtt';
+                url = `/${lang}/01_ajahype_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes('02_ajahype')) {
-                url = '/et/02_ajahype_sub.vtt';
+                url = `/${lang}/02_ajahype_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes('finaal')) {
-                url = '/et/finaal_sub.vtt';
+                url = `/${lang}/finaal_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes('videokone1')) {
-                url = '/et/videokone1_sub.vtt';
+                url = `/${lang}/videokone1_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes('videokone2')) {
-                url = '/et/videokone2_sub.vtt';
+                url = `/${lang}/videokone2_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes('videokone3')) {
-                url = '/et/videokone3_sub.vtt';
+                url = `/${lang}/videokone3_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes('videokone4')) {
-                url = '/et/videokone4_sub.vtt';
+                url = `/${lang}/videokone4_sub.vtt`;
             } else if (this.activeVideo.videoUrl.includes(subcolor)) {
                 console.log(this.activeVideo.videoUrl);
 
@@ -123,7 +123,7 @@ export default {
                     .split('_')[1]
                     .split('.')[0];
                 console.log(capsuleVideoNr);
-                url = `/et/${subcolor}_sub_${capsuleVideoNr}.vtt`;
+                url = `/${lang}/${subcolor}_sub_${capsuleVideoNr}.vtt`;
             }
             console.log(url);
             return url;

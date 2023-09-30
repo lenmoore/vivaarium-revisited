@@ -1,6 +1,6 @@
 <template>
     <FloatingWindow
-        :title="'Vali peatykk'"
+        :title="$t('Vali peatykk')"
         :start-width="300"
         :start-height="startHeight"
         id="chapter-controller"

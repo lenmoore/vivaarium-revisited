@@ -5,14 +5,14 @@
             :class="{ open: isColorOpen }"
             class="color-selector icon"
         >
-            värv
+            {{ $t('varv') }}
         </div>
         <div
             @click="toggleChapter"
             :class="{ open: isChapterOpen }"
             class="chapter-selector icon"
         >
-            peatükk
+            {{ $t('peatykk') }}
         </div>
         <div
             v-if="showLoot"
@@ -20,9 +20,9 @@
             :class="{ open: isLootOpen }"
             class="loot-box icon"
         >
-            kohver
+            {{ $t('kohver') }}
         </div>
-        <div class="exit-player" @click="exit">Loe kokkuvõtet</div>
+        <div class="exit-player" @click="exit">{{ $t('Loe kokkuvotet') }}</div>
     </div>
 </template>
 
@@ -175,5 +175,6 @@ export default {
 }
 .exit-player {
     padding-left: 0.5rem;
+    cursor: pointer;
 }
 </style>

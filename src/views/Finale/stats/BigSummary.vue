@@ -1,20 +1,34 @@
 <template>
     <div class="container milk">
         <h2 style="margin-top: 4rem" class="title">
-            Kõigi etenduste koondstatistika
+            {{ $t('Kõigi etenduste koondstatistika') }}
         </h2>
 
         <div>
-            <p>
-                Kümne ametliku etenduse jooksul (18.-28.01.2023) külastas
-                Vivaariumit 880 inimest ja nende valikutest moodustus kõnekas
-                statistika.
-            </p>
-            <h3 class="space-top title">Kapslite jaotus</h3>
-            <p>
-                Kuna kapslites oli piiratud ruum, siis jaotas Vivaariumi
-                algoritm inimesi kapslitesse järgmiselt:
-            </p>
+            <div v-if="lang === 'et'">
+                <p>
+                    Kümne ametliku etenduse jooksul (18.-28.01.2023) külastas
+                    Vivaariumit 880 inimest ja nende valikutest moodustus
+                    kõnekas statistika.
+                </p>
+                <h3 class="space-top title">Kapslite jaotus</h3>
+                <p>
+                    Kuna kapslites oli piiratud ruum, siis jaotas Vivaariumi
+                    algoritm inimesi kapslitesse järgmiselt:
+                </p>
+            </div>
+            <div v-else>
+                <p>
+                    During the ten official performances (January 18-28, 2023),
+                    Vivaarium was visited by 880 people, and their choices
+                    resulted in significant statistics.
+                </p>
+                <h3 class="space-top title">Distribution of Capsules</h3>
+                <p>
+                    Since there was limited space in the capsules, Vivaarium's
+                    algorithm distributed people into capsules as follows:
+                </p>
+            </div>
 
             <div class="single-doughnut">
                 <Doughnut :data="capsulesDivisionDoughnutInfo" />
@@ -23,10 +37,10 @@
             <table class="colors-table milk">
                 <thead>
                     <tr>
-                        <td class="bg-violet">Violett</td>
-                        <td class="bg-lime">Laim</td>
-                        <td class="bg-turq">Turkiis</td>
-                        <td class="bg-silver">Hobevalge</td>
+                        <td class="bg-violet">{{ $t('violett') }}</td>
+                        <td class="bg-lime">{{ $t('laim') }}</td>
+                        <td class="bg-turq">{{ $t('türkiis') }}</td>
+                        <td class="bg-silver">{{ $t('hõbevalge') }}</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +54,11 @@
             </table>
 
             <p class="space-top">
-                Tegelikkuses aga jaotus külastajaskond oma vaadetelt hoopis nii:
+                {{
+                    $t(
+                        'Tegelikkuses aga jaotus külastajaskond oma vaadetelt hoopis nii:'
+                    )
+                }}
             </p>
             <div class="single-doughnut">
                 <Doughnut :data="capsulesActualDoughnutInfo"></Doughnut>
@@ -48,10 +66,10 @@
             <table class="colors-table milk">
                 <thead>
                     <tr>
-                        <td class="bg-violet">Violett</td>
-                        <td class="bg-lime">Laim</td>
-                        <td class="bg-turq">Turkiis</td>
-                        <td class="bg-silver">Hobevalge</td>
+                        <td class="bg-violet">{{ $t('violett') }}</td>
+                        <td class="bg-lime">{{ $t('laim') }}</td>
+                        <td class="bg-turq">{{ $t('türkiis') }}</td>
+                        <td class="bg-silver">{{ $t('hõbevalge') }}</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,10 +81,18 @@
                     </tr>
                 </tbody>
             </table>
-            <p>Ütleb see midagi eestlaste või VATi publiku kohta? Kes teab.</p>
+            <p>
+                {{
+                    $t(
+                        'Ütleb see midagi eestlaste või VATi publiku kohta? Kes teab.'
+                    )
+                }}
+            </p>
 
-            <h3 class="title">Tooted</h3>
-            <h4>Kõige populaarsemad poest valitud esemed olid:</h4>
+            <h3 class="title">{{ $t('Tooted') }}</h3>
+            <h4>
+                {{ $t('Kõige populaarsemad poest valitud esemed olid:') }}
+            </h4>
             <div class="products-wrap">
                 <div class="product milk" v-for="i in 9" :key="i + 'popular'">
                     <img
@@ -75,13 +101,14 @@
                         alt=""
                     />
                     <div class="product-name">
-                        {{ products[i].title }} x {{ products[i].count }}
-                        <div class="product-note">{{ products[i].note }}</div>
+                        {{ $t(products[i].title) }} x {{ products[i].count }}
                     </div>
                 </div>
             </div>
 
-            <h4>Kõige ebapopulaarsemad poest valitud esemed olid:</h4>
+            <h4>
+                {{ $t('Kõige ebapopulaarsemad poest valitud esemed olid:') }}
+            </h4>
             <div class="products-wrap">
                 <div v-for="i in [53, 54, 55, 56, 57, 58]" :key="i + 'popular'">
                     <div v-if="i >= products.length - 6" class="product milk">
@@ -94,41 +121,57 @@
                             v-if="i >= products.length - 6"
                             class="product-name"
                         >
-                            {{ products[i].title }} x {{ products[i].count }}
-                            <div class="product-note">
-                                {{ products[i].note }}
-                            </div>
+                            {{ $t(products[i].title) }} x
+                            {{ products[i].count }}
                         </div>
                     </div>
                 </div>
             </div>
-            <p>
+
+            <p v-if="lang === 'et'" class="padding">
                 Vahel oldi valikutes vägagi resoluutsed. Üks vanapaar valis
                 poest kahe peale vaid teadusartiklite kogu ja 100 liitrit
                 viskit. Nad selgitasid tiimile hiljem, et kõik muud valikud olid
                 mõttetud.
             </p>
+            <p v-else class="padding">
+                At times, the choices were quite resolute. One elderly couple
+                chose to buy only a collection of scientific articles and 100
+                liters of whiskey from the store. They later explained to the
+                team that all other choices were pointless.
+            </p>
 
-            <h3 class="title">
+            <h3 class="title" v-if="lang === 'et'">
                 Küsimustikkudest saime kena ülevaate, kuidas osalejad suhtuvad
                 nii inimkonda, loodusesse kui tulevikku.
             </h3>
+            <h3 class="title" v-else>
+                From the questionnaires, we gained a good overview of how
+                participants view humanity, nature, and the future.
+            </h3>
+
             <div class="questions-block">
                 <div
                     class="quiz-answers"
                     :key="question.question"
                     v-for="question in questionsPreCapsule"
                 >
-                    <strong>{{ question.question }} </strong>
+                    <strong>{{ $t(question.question) }} </strong>
                     <Doughnut :data="questionDoughnutData(question)" />
                 </div>
             </div>
 
-            <h3>
+            <h3 v-if="lang === 'et'" class="padding">
                 Kapslite sees läksid küsimused juba tõsisemaks. Tunnistame, et
                 kaptenid manipuleerisid vajadusel hääletustulemustega, et nende
                 missioon ikka jätkuks. Samas on põnev vaadata, kuidas inimesed
                 päriselt hääletasid.
+            </h3>
+            <h3 v-else>
+                Inside the capsules, the questions became more serious. We admit
+                that the captains occasionally manipulated the voting results to
+                ensure the continuity of their mission. However, it's
+                fascinating to see how people actually voted.
             </h3>
             <div class="questions-block">
                 <div
@@ -136,40 +179,66 @@
                     :key="question.question"
                     v-for="question in capsuleQuestions"
                 >
-                    <strong>{{ question.question }} </strong>
+                    <strong>{{ $t(question.question) }} </strong>
                     <Doughnut :data="questionDoughnutData(question)" />
                 </div>
             </div>
 
-            <h3 class="title">
-                Mõnda tulemust ei moonutanud kaptenid aga kunagi.
-            </h3>
-            <p>
-                Nii oli see näiteks vastutöötaja karistamise puhul. Seal jäi
-                alati peale grupi tahe. Valdavalt valiti karistuseks
-                ühiskondlikult kasulik töö. Kahel juhul aga otsustati ausalt ja
-                tulemusi muutmata hukkamise kasuks. Violettide kapslis pakuti
-                osaleja poolt karistuseks välja sundpaaritamine.
-            </p>
+            <div class="padding" v-if="lang === 'et'">
+                <h3 class="title">
+                    Mõnda tulemust ei moonutanud kaptenid aga kunagi.
+                </h3>
+                <p>
+                    Nii oli see näiteks vastutöötaja karistamise puhul. Seal jäi
+                    alati peale grupi tahe. Valdavalt valiti karistuseks
+                    ühiskondlikult kasulik töö. Kahel juhul aga otsustati ausalt
+                    ja tulemusi muutmata hukkamise kasuks. Violettide kapslis
+                    pakuti osaleja poolt karistuseks välja sundpaaritamine.
+                </p>
 
-            <p>
-                Ka kaptenite mahahääletamine oli alati aus. See oli ka meie
-                tiimi eesmärk - me tahtsime, et inimesed hakkaksid oma kapteni
-                vastu mässama. Me tahtsime, et kaptenid kukuksid igal õhtul.
-            </p>
-            <p>
-                Meie suureks üllatuseks aga läks mahahääletamine läbi vaid
-                <strong>12 korral 40st (30%)</strong>.
-            </p>
+                <p>
+                    Ka kaptenite mahahääletamine oli alati aus. See oli ka meie
+                    tiimi eesmärk - me tahtsime, et inimesed hakkaksid oma
+                    kapteni vastu mässama. Me tahtsime, et kaptenid kukuksid
+                    igal õhtul.
+                </p>
+                <p>
+                    Meie suureks üllatuseks aga läks mahahääletamine läbi vaid
+                    <strong>12 korral 40st (30%)</strong>.
+                </p>
+            </div>
+
+            <div class="padding" v-else>
+                <h3 class="title">
+                    However, some results were never distorted by the captains.
+                </h3>
+                <p>
+                    This was the case, for example, in the punishment of
+                    saboteurs. The group's will always prevailed. Mostly, a
+                    socially useful work sentence was chosen as the punishment.
+                    In two cases, however, execution was honestly chosen without
+                    altering the results. In the Violet capsule, one participant
+                    suggested forced pairing as a punishment.
+                </p>
+                <p>
+                    Even the voting off of captains was always fair. This was
+                    our team's goal - we wanted people to rebel against their
+                    captains. We wanted the captains to fall every night.
+                </p>
+                <p>
+                    To our surprise, however, the voting off only passed
+                    <strong>12 out of 40 times (30%)</strong>.
+                </p>
+            </div>
 
             <table class="colors-table shadow">
                 <thead>
                     <tr>
                         <td>KP</td>
-                        <td class="bg-violet">Violett</td>
-                        <td class="bg-lime">Laim</td>
-                        <td class="bg-turq">Turkiis</td>
-                        <td class="bg-silver">Hobevalge</td>
+                        <td class="bg-violet">{{ $t('violett') }}</td>
+                        <td class="bg-lime">{{ $t('laim') }}</td>
+                        <td class="bg-turq">{{ $t('türkiis') }}</td>
+                        <td class="bg-silver">{{ $t('hõbevalge') }}</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -181,32 +250,52 @@
                         <td>3/10</td>
                     </tr>
                     <tr v-for="i in 28" :key="'killed' + captainWasKilled[i]">
-                        <td v-if="captainWasKilled[i]">{{ i }}. jaanuar</td>
                         <td v-if="captainWasKilled[i]">
-                            {{ captainWasKilled[i].violet ? 'kukutati' : '-' }}
+                            {{ i }}. {{ $t('jaanuar') }}
                         </td>
                         <td v-if="captainWasKilled[i]">
-                            {{ captainWasKilled[i].lime ? 'kukutati' : '-' }}
+                            {{
+                                captainWasKilled[i].violet
+                                    ? $t('kukutati')
+                                    : '-'
+                            }}
                         </td>
                         <td v-if="captainWasKilled[i]">
-                            {{ captainWasKilled[i].turq ? 'kukutati' : '-' }}
+                            {{
+                                captainWasKilled[i].lime ? $t('kukutati') : '-'
+                            }}
+                        </td>
+                        <td v-if="captainWasKilled[i]">
+                            {{
+                                captainWasKilled[i].turq ? $t('kukutati') : '-'
+                            }}
                         </td>
                         <td
                             v-if="captainWasKilled[i]"
                             :class="captainWasKilled[i].silver"
                         >
-                            {{ captainWasKilled[i].silver ? 'kukutati' : '-' }}
+                            {{
+                                captainWasKilled[i].silver
+                                    ? $t('kukutati')
+                                    : '-'
+                            }}
                         </td>
                     </tr>
                 </tbody>
             </table>
 
             <div class="title"></div>
-            <p>
+            <p v-if="lang === 'et'" class="padding">
                 Paistab, et oma juhtide mahahääletamine (isegi, kui nad seda
                 ilmselgelt vääriks) on eestlastele hirmus raske. Või äkki
                 maarjamaalastele meeldivadki fanaatilised liidrid? Kes teab. Kes
                 teab. Kes teab…
+            </p>
+            <p v-else class="padding">
+                It seems that voting out their leaders (even if they clearly
+                deserve it) is terribly difficult for Estonians. Or maybe the
+                people of the land of Mary actually like fanatical leaders? Who
+                knows. Who knows. Who knows...
             </p>
         </div>
     </div>
@@ -219,6 +308,8 @@ import { questionnairesAmounts } from '@/views/Finale/stats/questions';
 import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
 import { Doughnut } from 'vue-chartjs';
 import { capsuleQuestions } from '@/views/Finale/stats/capsule-questions';
+import { capsuleQuestionsEn } from '@/views/Finale/stats/capsule-questions-en';
+import { questionnairesAmountsEn } from '@/views/Finale/stats/questions-en';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -227,9 +318,17 @@ export default {
         Doughnut,
     },
     computed: {
+        lang() {
+            return sessionStorage.getItem('lang') || 'et';
+        },
         capsulesDivisionDoughnutInfo() {
             return {
-                labels: ['Violett', 'Laim', 'Turkiis', 'Hobevalge'],
+                labels: [
+                    this.$t('violett'),
+                    this.$t('laim'),
+                    this.$t('türkiis'),
+                    this.$t('hõbevalge'),
+                ],
                 datasets: [
                     {
                         backgroundColor: [
@@ -250,7 +349,7 @@ export default {
         },
         capsulesActualDoughnutInfo() {
             return {
-                labels: ['Violett', 'Laim', 'Turkiis', 'Hobevalge'],
+                labels: ['Violett', 'Laim', 'Turkiis', 'hõbevalge'],
                 datasets: [
                     {
                         backgroundColor: [
@@ -270,10 +369,12 @@ export default {
             };
         },
         questionsPreCapsule() {
-            return questionnairesAmounts;
+            return this.lang === 'et'
+                ? questionnairesAmounts
+                : questionnairesAmountsEn;
         },
         capsuleQuestions() {
-            return capsuleQuestions;
+            return this.lang === 'et' ? capsuleQuestions : capsuleQuestionsEn;
         },
         violetCapsules() {
             return [16, 17, 16, 18, 16, 18, 22, 11, 19, 15].reduce((a, b) => {
@@ -439,8 +540,22 @@ export default {
     p {
         max-width: 800px;
         margin: auto;
+        padding-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    h1,
+    h2,
+    h3 {
+        padding-bottom: 1rem;
+    }
+
+    .padding {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
+
 .questions-block {
     display: flex;
     flex-wrap: wrap;
@@ -459,8 +574,10 @@ export default {
 
 .single-doughnut {
     margin: auto;
+
     div {
     }
+
     max-width: 400px;
     width: 100%;
 }

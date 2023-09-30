@@ -13,7 +13,7 @@
             src="http://167.71.52.104/viva_intro.mp4"
         >
             <track
-                src="/subs/viva_intro_sub.vtt"
+                :src="`/${lang}/viva_intro_sub.vtt`"
                 label="Eesti"
                 kind="subtitles"
                 default
@@ -37,6 +37,15 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    computed: {
+        lang() {
+            return sessionStorage.getItem('lang') || 'et';
+        },
+    },
+};
+</script>
 <style lang="scss">
 @import '../../vars';
 .video-wrapper {

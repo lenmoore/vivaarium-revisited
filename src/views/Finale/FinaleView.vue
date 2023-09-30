@@ -1,5 +1,5 @@
 <template>
-    <div class="finale-container">
+    <div class="finale-container" v-if="lang === 'et'">
         <button
             class="menu-btn"
             id="menu-mobile"
@@ -73,6 +73,80 @@
             </div>
         </div>
     </div>
+    <div v-else class="finale-container">
+        <button
+            class="menu-btn"
+            id="menu-mobile"
+            v-if="!showMenuMobile"
+            @click="showMenuMobile = true"
+        >
+            menu
+        </button>
+        <div class="menu" :class="{ open: showMenuMobile }">
+            <img
+                v-if="showMenuMobile"
+                src="/android-chrome-512x512.png"
+                alt=""
+                height="200"
+                width="200"
+            />
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.about' }"
+                @click="showMenuMobile = false"
+                >About Vivarium</RouterLink
+            >
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.dramaturg' }"
+                @click="showMenuMobile = false"
+                >Feedback</RouterLink
+            >
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.stats' }"
+                @click="showMenuMobile = false"
+                >Statistics</RouterLink
+            >
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'overview.viva' }"
+                @click="showMenuMobile = false"
+                >Pocket Vivarium
+            </RouterLink>
+            <RouterLink
+                class="menu-btn"
+                :to="{ name: 'video-player', query: { code: 'v1' } }"
+                @click="showMenuMobile = false"
+            >
+                Back to the Capsule
+            </RouterLink>
+            <button
+                class="dnone"
+                v-if="showMenuMobile"
+                @click="showMenuMobile = false"
+            >
+                Close
+            </button>
+        </div>
+        <RouterView />
+
+        <div class="footer">
+            <div class="py-2">
+                Website: <a href="www.vatteater.ee">www.vatteater.ee</a>
+            </div>
+            <div class="py-2">
+                Email:
+                <a href="vat@vatteater.ee" type="email">vat@vatteater.ee</a>
+            </div>
+            <div class="py-2">
+                Find us on
+                <a href="https://www.facebook.com/teatervat">Facebook</a>,
+                <a href="https://www.instagram.com/vatteater/">Instagram</a>,
+                TikTok
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -81,6 +155,11 @@ export default {
         return {
             showMenuMobile: true,
         };
+    },
+    computed: {
+        lang() {
+            return sessionStorage.getItem('lang') || 'et';
+        },
     },
 };
 </script>
