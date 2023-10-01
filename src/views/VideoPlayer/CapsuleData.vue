@@ -1,6 +1,6 @@
 <template>
     <FloatingWindow
-        title="Kapslis kaasas"
+        :title="$t('Kapslis kaasas')"
         :disable-drag="isMobile"
         id="capsule-data-window"
     >

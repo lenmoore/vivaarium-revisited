@@ -22,7 +22,9 @@
         >
             {{ $t('kohver') }}
         </div>
-        <div class="exit-player" @click="exit">{{ $t('Loe kokkuvotet') }}</div>
+        <div class="icon wide exit-player" @click="exit">
+            {{ $t('Loe kokkuvotet') }}
+        </div>
     </div>
 </template>
 
@@ -123,6 +125,10 @@ export default {
         cursor: pointer;
         width: 4rem;
         text-align: left;
+        &.wide {
+            width: 8rem;
+            font-size: 0.85rem;
+        }
 
         &.open {
             background-color: #21d57e;
