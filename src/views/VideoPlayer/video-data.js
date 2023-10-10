@@ -635,7 +635,7 @@ export const videos = {
         21: {
             title: 'türkiis - video 14',
             subtitle: 'finaal. inimesed valjuvad',
-            videoUrl: 'http://167.71.52.104/finaal.mp4',
+            videoUrl: '/videos/finaal.mp4',
             showLootBox: false,
             autoplay: true,
             number: 21,
