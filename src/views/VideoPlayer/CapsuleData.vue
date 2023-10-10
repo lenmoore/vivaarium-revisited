@@ -26,7 +26,7 @@ export default {
     props: {
         color: {
             type: String,
-            default: localStorage.getItem('active_player_color')[0],
+            default: localStorage.getItem('active_player_color')[0] || 'v',
         },
     },
     computed: {
