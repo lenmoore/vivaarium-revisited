@@ -10,7 +10,7 @@
                     query: { ...$route.query },
                 })
             "
-            src="http://167.71.52.104/viva_intro.mp4"
+            src="http://vivaarium.ee/01_welcome_2_vivaarium.mp4"
         >
             <track
                 :src="`/${lang}/viva_intro_sub.vtt`"
